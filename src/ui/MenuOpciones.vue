@@ -15,7 +15,7 @@ roleUser.value = localStorage.getItem('role') || ''
     class="w-full h-full items-center flex flex-col shadow shadow-border-primary bg-background-primary sticky top-0"
   >
     <div
-      class="flex flex-col justify-center items-center border-b-3 gap-3 border-border-primary w-full"
+      class="flex flex-col justify-center items-center border-b gap-3 border-border-primary w-full"
     >
       <div class="w-full flex p-3">
         <img
