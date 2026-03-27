@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background-primary: #0f1a30;
+  --color-background-secondary: #243059;
+  --color-background-page: #faf6ee;
+  --color-border-primary: #c9a84c;
+  --color-text-titles: #e8c97a;
+  --color-text-suaves: #f5e9c8;
+  --color-text-secondary: #f0e9d8;
+  --color-background-cards: #ffffff;
+  --color-semantico-one: #c0392b;
+  --color-semantico-two: #2471a3;
+  --color-semantico-three: #1e8449;
+}
+
+.html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+#app {
+  width: 100%;
+  height: 100%;
+}
