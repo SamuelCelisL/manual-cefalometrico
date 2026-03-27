@@ -20,22 +20,22 @@ import EquipoTrabajo from '@/ui/EquipoTrabajo.vue'
         <div class="w-full flex flex-col">
           <CabeceraPage />
         </div>
-        <div class="w-full flex flex-col">
+        <div class="w-full flex flex-col" id="puntocefalicos" data-seccion>
           <PuntosCefalicos />
         </div>
-        <div class="w-full flex flex-col">
+        <div class="w-full flex flex-col" id="medidadhorizontales" data-seccion>
           <MedidasHorizontales />
         </div>
-        <div class="w-full flex flex-col">
+        <div class="w-full flex flex-col" id="medidasverticales" data-seccion>
           <MedidasVerticales />
         </div>
-        <div class="w-full flex flex-col">
+        <div class="w-full flex flex-col" id="medidasdentales" data-seccion>
           <MedidasDentales />
         </div>
-        <div class="w-full flex flex-col">
+        <div class="w-full flex flex-col" id="espaciofaringeo" data-seccion>
           <EspacioFaringeo />
         </div>
-        <div class="w-full flex flex-col">
+        <div class="w-full flex flex-col" id="equipotrabajo" data-seccion>
           <EquipoTrabajo />
         </div>
 

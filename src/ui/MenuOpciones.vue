@@ -1,13 +1,44 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
 import IconsSVG from '@/components/IconsSVG.vue'
-// import ModalValidarEliminacion from '@/ui/ModalValidarEliminacion.vue'
-// import router from '@/router'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+
+const seccionActiva = ref('puntos')
 
 const roleUser = ref<string>('')
-const route = useRoute()
 roleUser.value = localStorage.getItem('role') || ''
+
+const irASeccion = (id: string) => {
+  seccionActiva.value = id // activa inmediatamente
+  const el = document.getElementById(id)
+  const container = document.querySelector('.overflow-y-auto')
+
+  if (el && container) {
+    container.scrollTo({
+      top: el.offsetTop,
+      behavior: 'smooth',
+    })
+  }
+}
+
+onMounted(() => {
+  const secciones = document.querySelectorAll('[data-seccion]')
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          seccionActiva.value = entry.target.id
+        }
+      })
+    },
+    {
+      root: document.querySelector('.overflow-y-auto'), // MUY IMPORTANTE en tu caso
+      threshold: 0.5, // cuando 50% esté visible
+    },
+  )
+
+  secciones.forEach((sec) => observer.observe(sec))
+})
 </script>
 
 <template>
@@ -35,10 +66,11 @@ roleUser.value = localStorage.getItem('role') || ''
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-          route.path === '/inicio'
+          seccionActiva === 'puntocefalicos'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
+        @click="irASeccion('puntocefalicos')"
       >
         <IconsSVG name="iconoBrillo" />
         Puntos Cefalométricos
@@ -46,10 +78,11 @@ roleUser.value = localStorage.getItem('role') || ''
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-          route.path === '/inicio/proyectos' || route.path === '/inicio/grupos'
+          seccionActiva === 'medidadhorizontales'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
+        @click="irASeccion('medidadhorizontales')"
       >
         <IconsSVG name="iconoHome" />
         Medidas Horizontales
@@ -57,10 +90,11 @@ roleUser.value = localStorage.getItem('role') || ''
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
-          route.path === '/inicio/ajustes'
+          seccionActiva === 'medidasverticales'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
+        @click="irASeccion('medidasverticales')"
       >
         <IconsSVG name="iconoSeñalWifi" />
         Medidas Verticales
@@ -69,10 +103,11 @@ roleUser.value = localStorage.getItem('role') || ''
       <button
         :class="[
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
-          route.path === '/inicio/cuenta'
+          seccionActiva === 'medidasdentales'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
+        @click="irASeccion('medidasdentales')"
       >
         <IconsSVG name="iconoDental" />
         Medidas Dentales
@@ -80,10 +115,11 @@ roleUser.value = localStorage.getItem('role') || ''
       <button
         :class="[
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
-          route.path === '/inicio/ayuda'
+          seccionActiva === 'espaciofaringeo'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
+        @click="irASeccion('espaciofaringeo')"
       >
         <IconsSVG name="iconoAyuda" />
         Espacio Faríngeo
@@ -91,10 +127,11 @@ roleUser.value = localStorage.getItem('role') || ''
       <button
         :class="[
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
-          route.path === '/inicio/ayuda'
+          seccionActiva === 'equipotrabajo'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
+        @click="irASeccion('equipotrabajo')"
       >
         <IconsSVG name="iconoUsuarios" />
         Equipo de Trabajo
