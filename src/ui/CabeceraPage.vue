@@ -17,7 +17,7 @@
           crecimiento.
         </p>
       </div>
-      <div class="md:w-[20%] h-40 flex p-1">
+      <div class="md:w-[20%] p-2 h-70 flex justify-center">
         <img src="../assets/images/Imagen2.png" alt="Foto de Ejemplo" />
       </div>
     </div>
