@@ -71,47 +71,66 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex">
+  <div class="w-full flex justify-center">
     <div
-      class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-103 transition-all duration-200"
+      class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
     >
-      <div class="flex bg-background-primary rounded-t-xl px-5 py-1">
-        <h2 class="text-xl font-bold text-text-suaves font-sans">{{ title }}</h2>
+      <!-- HEADER -->
+      <div class="bg-background-primary rounded-t-xl px-4 py-2">
+        <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
+          {{ title }}
+        </h2>
       </div>
-      <div class="flex rounded-b-xl px-3 items-center">
-        <div class="shrink-0 border-r border-gray-400 flex items-center justify-center">
-          <img :src="imageSrc" :alt="title" class="size-80" />
+
+      <!-- BODY -->
+      <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
+        <!-- IMAGEN -->
+        <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
+          <img :src="imageSrc" :alt="title" class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain" />
         </div>
-        <div class="flex flex-col gap-2 py-2 pl-5 w-lg">
+
+        <!-- CONTENIDO -->
+        <div class="flex flex-col gap-2 flex-1 text-sm md:text-base">
           <p>{{ text1 }}</p>
           <p>{{ text2 }}</p>
           <p v-if="text3">{{ text3 }}</p>
+
           <p v-if="norma" class="text-blue-600">{{ norma }}</p>
           <p v-if="rango" class="text-blue-600">{{ rango }}</p>
           <p v-if="h" class="text-blue-600">{{ h }}</p>
           <p v-if="m" class="text-blue-600">{{ m }}</p>
-          <div class="my-2">
-            <table>
-              <thead class="border-t border-gray-400">
-                <th class="text-red-600 uppercase px-2">{{ titulotabla1 }}</th>
-                <th class="text-green-600 uppercase px-2">{{ titulotabla2 }}</th>
-                <th class="text-yellow-600 uppercase px-2">{{ titulotabla3 }}</th>
+
+          <!-- TABLA -->
+          <div class="my-2 overflow-x-auto">
+            <table class="w-full text-[10px] sm:text-sm text-center border border-gray-300">
+              <thead class="border-b border-gray-400">
+                <tr>
+                  <th class="text-red-600 uppercase px-2 py-1">
+                    {{ titulotabla1 }}
+                  </th>
+                  <th class="text-green-600 uppercase px-2 py-1">
+                    {{ titulotabla2 }}
+                  </th>
+                  <th class="text-yellow-600 uppercase px-2 py-1">
+                    {{ titulotabla3 }}
+                  </th>
+                </tr>
               </thead>
-              <tbody class="border-t border-b border-gray-400">
-                <td class="p-2">
-                  <p class="flex text-center justify-center">{{ tabla1 }}</p>
-                </td>
-                <td class="p-2">
-                  <p class="flex text-center justify-center">{{ tabla2 }}</p>
-                </td>
-                <td class="p-2">
-                  <p class="flex text-center justify-center">{{ tabla3 }}</p>
-                </td>
+              <tbody>
+                <tr class="border-t border-gray-300">
+                  <td class="p-2">{{ tabla1 }}</td>
+                  <td class="p-2">{{ tabla2 }}</td>
+                  <td class="p-2">{{ tabla3 }}</td>
+                </tr>
               </tbody>
             </table>
           </div>
-          <div v-if="citacion" class="flex justify-center items-center">
-            <p class="text-center text-[10px] text-gray-800">{{ citacion }}</p>
+
+          <!-- CITACIÓN -->
+          <div v-if="citacion" class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs text-gray-600">
+              {{ citacion }}
+            </p>
           </div>
         </div>
       </div>

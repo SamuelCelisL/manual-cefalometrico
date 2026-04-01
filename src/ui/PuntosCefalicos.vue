@@ -22,7 +22,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
         </div>
       </div>
       <div class="flex flex-col gap-5">
-        <div class="flex w-full gap-2 justify-center items-center">
+        <div class="flex flex-col md:flex-row w-full gap-2 justify-center items-center">
           <img
             src="../assets/images/calco cefalometria.png"
             alt="Puntos Cefalicos"
@@ -36,7 +36,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
           <h2 class="text-2xl font-bold text-background-primary font-serif">
             Puntos Cefalométricos de Análisis de Steiner
           </h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <TarjetPoints title="N" body="Punto más anterior de la sutura frontonasal." />
             <TarjetPoints
               title="S"
