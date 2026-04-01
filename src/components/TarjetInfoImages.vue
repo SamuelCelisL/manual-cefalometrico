@@ -10,35 +10,62 @@ defineProps({
   },
   text1: {
     type: String,
-    required: true,
+    required: false,
   },
   text2: {
     type: String,
-    required: true,
+    required: false,
+  },
+  text3: {
+    type: String,
+    required: false,
   },
   norma: {
     type: String,
-    required: true,
+    required: false,
   },
   rango: {
     type: String,
-    required: true,
+    required: false,
+  },
+  h: {
+    type: String,
+    required: false,
+  },
+  m: {
+    type: String,
+    required: false,
+  },
+  titulotabla1: {
+    type: String,
+    default: 'MEDIDA AUMENTADA',
+    required: false,
   },
   tabla1: {
     type: String,
-    required: true,
+    required: false,
+  },
+  titulotabla2: {
+    type: String,
+    default: 'MEDIDA EN NORMA',
+    required: false,
   },
   tabla2: {
     type: String,
-    required: true,
+    required: false,
+  },
+  titulotabla3: {
+    type: String,
+    default: 'MEDIDA DISMINUIDA',
+    required: false,
   },
   tabla3: {
     type: String,
-    required: true,
+    required: false,
   },
   citacion: {
     type: String,
-    required: true,
+    required: false,
   },
 })
 </script>
@@ -58,14 +85,17 @@ defineProps({
         <div class="flex flex-col gap-2 py-2 pl-5 w-lg">
           <p>{{ text1 }}</p>
           <p>{{ text2 }}</p>
-          <p class="text-blue-600">{{ norma }}</p>
-          <p class="text-blue-600">{{ rango }}</p>
+          <p v-if="text3">{{ text3 }}</p>
+          <p v-if="norma" class="text-blue-600">{{ norma }}</p>
+          <p v-if="rango" class="text-blue-600">{{ rango }}</p>
+          <p v-if="h" class="text-blue-600">{{ h }}</p>
+          <p v-if="m" class="text-blue-600">{{ m }}</p>
           <div class="my-2">
             <table>
               <thead class="border-t border-gray-400">
-                <th class="text-red-600 uppercase px-2">Media Aumentada</th>
-                <th class="text-green-600 uppercase px-2">Media en Norma</th>
-                <th class="text-yellow-600 uppercase px-2">Media Disminuida</th>
+                <th class="text-red-600 uppercase px-2">{{ titulotabla1 }}</th>
+                <th class="text-green-600 uppercase px-2">{{ titulotabla2 }}</th>
+                <th class="text-yellow-600 uppercase px-2">{{ titulotabla3 }}</th>
               </thead>
               <tbody class="border-t border-b border-gray-400">
                 <td class="p-2">
@@ -80,7 +110,7 @@ defineProps({
               </tbody>
             </table>
           </div>
-          <div class="flex justify-center items-center">
+          <div v-if="citacion" class="flex justify-center items-center">
             <p class="text-center text-[10px] text-gray-800">{{ citacion }}</p>
           </div>
         </div>
