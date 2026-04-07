@@ -28,7 +28,6 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
       </div>
       <!-- CUERPO SECCIÓN -->
       <div class="flex flex-col gap-5">
-        
         <div class="flex flex-col md:flex-row w-full gap-3 justify-center items-center">
           <img
             src="../assets/images/calco cefalometria.png"

@@ -18,6 +18,8 @@ watch(openMenu, (newValue) => {
     document.body.style.overflow = ''
   }
 })
+
+const contenedorScroll = ref<HTMLElement | null>(null)
 </script>
 
 <template>
@@ -68,7 +70,7 @@ watch(openMenu, (newValue) => {
         <div v-if="openMenu" class="fixed inset-0 z-40 flex">
           <!-- MENÚ A LA IZQUIERDA -->
           <div class="w-100 bg-gray-100 shadow-xl transform">
-            <MenuOpciones />
+            <MenuOpciones :contenedorScroll="contenedorScroll" />
           </div>
 
           <!-- FONDO -->
@@ -76,9 +78,12 @@ watch(openMenu, (newValue) => {
         </div>
       </Transition>
       <div class="hidden md:block md:max-w-[20%] w-full">
-        <MenuOpciones />
+        <MenuOpciones :contenedorScroll="contenedorScroll" />
       </div>
-      <div class="w-full h-full flex flex-col items-center gap-5 overflow-y-auto">
+      <div
+        ref="contenedorScroll"
+        class="w-full h-full flex flex-col items-center gap-5 overflow-y-auto"
+      >
         <div class="w-full flex flex-col">
           <CabeceraPage />
         </div>

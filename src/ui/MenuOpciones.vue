@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import IconsSVG from '@/components/IconsSVG.vue'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 
 const seccionActiva = ref('inicioSteiner')
 const subtituloActivo = ref('inicioSteiner')
@@ -8,6 +8,10 @@ const menuAbierto = ref<string | null>(null)
 
 const roleUser = ref<string>('')
 roleUser.value = localStorage.getItem('role') || ''
+
+const props = defineProps<{
+  contenedorScroll: HTMLElement | null
+}>()
 
 const toggleMenu = (menu: string) => {
   menuAbierto.value = menuAbierto.value === menu ? null : menu
@@ -17,10 +21,9 @@ const irASubtitulo = (id: string) => {
   seccionActiva.value = id // activa inmediatamente
   subtituloActivo.value = id // activa inmediatamente
   const el = document.getElementById(id)
-  const container = document.querySelector('.overflow-y-auto')
 
-  if (el && container) {
-    container.scrollTo({
+  if (el && props.contenedorScroll) {
+    props.contenedorScroll.scrollTo({
       top: el.offsetTop,
       behavior: 'smooth',
     })
@@ -37,7 +40,10 @@ const obtenerSeccionPadre = (id: string) => {
   return ''
 }
 
-onMounted(() => {
+onMounted(async () => {
+  await nextTick()
+
+  if (!props.contenedorScroll) return
   const secciones = document.querySelectorAll('[data-seccion]')
 
   const observer = new IntersectionObserver(
@@ -52,7 +58,7 @@ onMounted(() => {
       })
     },
     {
-      root: document.querySelector('.overflow-y-auto'), // MUY IMPORTANTE en tu caso
+      root: props.contenedorScroll, // MUY IMPORTANTE en tu caso
       threshold: 0.1, // cuando 50% esté visible
     },
   )
@@ -81,7 +87,7 @@ onMounted(() => {
       </div>
     </div>
     <!-- BOTONES -->
-    <div class="h-[75%] w-full pt-4 flex flex-col items-center">
+    <div class="h-[75%] overflow-y-auto w-full pt-4 items-center flex flex-col">
       <h3 class="font-mono text-md text-text-titles w-full text-start px-5">Contenido</h3>
       <button
         :class="[
@@ -171,9 +177,9 @@ onMounted(() => {
         @click="toggleMenu('medidadhorizontales')"
       >
         <IconsSVG name="iconoHome" />
-        Medidas Horizontales
+        Autor 2
       </button>
-      <div v-if="menuAbierto === 'medidadhorizontales'" class="w-full pl-5 flex flex-col">
+      <!-- <div v-if="menuAbierto === 'medidadhorizontales'" class="w-full pl-5 flex flex-col">
         <button
           @click="irASubtitulo('steiner-puntos')"
           :class="[
@@ -221,7 +227,7 @@ onMounted(() => {
         >
           Análisis de Wits
         </button>
-      </div>
+         </div> -->
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
@@ -231,7 +237,7 @@ onMounted(() => {
         ]"
       >
         <IconsSVG name="iconoSeñalWifi" />
-        Medidas Verticales
+        Autor 3
       </button>
 
       <button
@@ -243,7 +249,7 @@ onMounted(() => {
         ]"
       >
         <IconsSVG name="iconoDental" />
-        Medidas Dentales
+        Autor 4
       </button>
       <button
         :class="[
@@ -254,7 +260,7 @@ onMounted(() => {
         ]"
       >
         <IconsSVG name="iconoAyuda" />
-        Espacio Faríngeo
+        Autor 5
       </button>
       <button
         :class="[
