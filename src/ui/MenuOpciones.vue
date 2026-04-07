@@ -87,7 +87,7 @@ onMounted(async () => {
       </div>
     </div>
     <!-- BOTONES -->
-    <div class="h-[75%] overflow-y-auto w-full pt-4 items-center flex flex-col">
+    <div class="h-[80%] overflow-y-auto w-full pt-4 items-center flex flex-col scroll-custom">
       <h3 class="font-mono text-md text-text-titles w-full text-start px-5">Contenido</h3>
       <button
         :class="[
@@ -274,7 +274,7 @@ onMounted(async () => {
         Equipo de Trabajo
       </button>
     </div>
-    <div class="w-full h-[10%] flex justify-center items-center border-t border-border-primary/30">
+    <div class="w-full h-[5%] flex justify-center items-center border-t border-border-primary/30">
       <h1
         class="text-white/30 w-full text-center text-[8px] sm:text-[10px] md:text-[12px] lg:text-md"
       >
@@ -283,3 +283,29 @@ onMounted(async () => {
     </div>
   </div>
 </template>
+
+<style>
+.scroll-custom {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 transparent;
+}
+
+/* Chrome, Edge, Safari */
+.scroll-custom::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-custom::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+  background-color: rgba(120, 120, 120, 0.5);
+  border-radius: 9999px;
+  transition: background-color 0.3s;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(120, 120, 120, 0.8);
+}
+</style>
