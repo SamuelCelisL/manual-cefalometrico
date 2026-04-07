@@ -5,9 +5,14 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
 <template>
   <div class="w-full px-4">
     <div class="flex flex-col gap-4 px-4">
+      <!-- TITULO SECCIÓN -->
       <div class="w-full flex flex-col">
         <div class="w-full flex pb-2 gap-2">
-          <h1 class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles">
+          <h1
+            class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles"
+            id="inicioSteiner"
+            data-seccion
+          >
             01
           </h1>
           <div class="flex flex-col justify-end">
@@ -21,7 +26,9 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
           <div class="bg-text-titles h-0.5 rounded" style="width: 7%"></div>
         </div>
       </div>
+      <!-- CUERPO SECCIÓN -->
       <div class="flex flex-col gap-5">
+        
         <div class="flex flex-col md:flex-row w-full gap-3 justify-center items-center">
           <img
             src="../assets/images/calco cefalometria.png"
@@ -32,7 +39,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
         </div>
 
         <!--! PUNTOS CEFALOMETRICOS -->
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4" id="PuntosCefalometricosSteiner" data-seccion>
           <h2 class="text-2xl font-bold text-background-primary font-serif">
             Puntos Cefalométricos de Análisis de Steiner
           </h2>
@@ -126,7 +133,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
         </div>
 
         <!-- !Análisis de Steiner RELACION VERTICAL -->
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4" id="relacionVerticalSteiner" data-seccion>
           <h2 class="text-2xl font-bold text-background-primary font-serif">
             Análisis de Steiner: Relación Vertical
           </h2>
@@ -173,7 +180,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
         </div>
 
         <!--! Análisis de Steiner RELACION DENTAL -->
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4" id="relacionDentalSteiner" data-seccion>
           <h2 class="text-2xl font-bold text-background-primary font-serif">
             Análisis de Steiner: Relación Dental
           </h2>
@@ -268,7 +275,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
         </div>
 
         <!--! Análisis de Wits-->
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4" id="witsSteiner" data-seccion>
           <h2 class="text-2xl font-bold text-background-primary font-serif">Análisis de Wits</h2>
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
             <TarjetInfoImages

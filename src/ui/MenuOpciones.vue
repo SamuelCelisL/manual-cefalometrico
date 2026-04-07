@@ -2,13 +2,20 @@
 import IconsSVG from '@/components/IconsSVG.vue'
 import { ref, onMounted } from 'vue'
 
-const seccionActiva = ref('puntos')
+const seccionActiva = ref('inicioSteiner')
+const subtituloActivo = ref('inicioSteiner')
+const menuAbierto = ref<string | null>(null)
 
 const roleUser = ref<string>('')
 roleUser.value = localStorage.getItem('role') || ''
 
-const irASeccion = (id: string) => {
+const toggleMenu = (menu: string) => {
+  menuAbierto.value = menuAbierto.value === menu ? null : menu
+}
+
+const irASubtitulo = (id: string) => {
   seccionActiva.value = id // activa inmediatamente
+  subtituloActivo.value = id // activa inmediatamente
   const el = document.getElementById(id)
   const container = document.querySelector('.overflow-y-auto')
 
@@ -20,6 +27,16 @@ const irASeccion = (id: string) => {
   }
 }
 
+const obtenerSeccionPadre = (id: string) => {
+  if (id.startsWith('inicio')) return 'inicioSteiner'
+  if (id.startsWith('Puntos')) return 'PuntosCefalometricosSteiner'
+  if (id.startsWith('relacionVertical')) return 'relacionVerticalSteiner'
+  if (id.startsWith('relacionDental')) return 'relacionDentalSteiner'
+  if (id.startsWith('wits')) return 'witsSteiner'
+
+  return ''
+}
+
 onMounted(() => {
   const secciones = document.querySelectorAll('[data-seccion]')
 
@@ -27,13 +44,16 @@ onMounted(() => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          seccionActiva.value = entry.target.id
+          const id = entry.target.id
+          // seccionActiva.value = entry.target.id
+          subtituloActivo.value = id
+          seccionActiva.value = obtenerSeccionPadre(id)
         }
       })
     },
     {
       root: document.querySelector('.overflow-y-auto'), // MUY IMPORTANTE en tu caso
-      threshold: 0.5, // cuando 50% esté visible
+      threshold: 0.1, // cuando 50% esté visible
     },
   )
 
@@ -66,15 +86,81 @@ onMounted(() => {
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-          seccionActiva === 'puntocefalicos'
+          seccionActiva === 'inicioSteiner' ||
+          seccionActiva === 'PuntosCefalometricosSteiner' ||
+          seccionActiva === 'relacionVerticalSteiner' ||
+          seccionActiva === 'relacionDentalSteiner' ||
+          seccionActiva === 'witsSteiner'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
-        @click="irASeccion('puntocefalicos')"
+        @click="toggleMenu('puntocefalicos')"
       >
         <IconsSVG name="iconoBrillo" />
-        Puntos Cefalométricos
+        Steiner
       </button>
+      <div v-if="menuAbierto === 'puntocefalicos'" class="w-full pl-5 flex flex-col">
+        <button
+          @click="irASubtitulo('inicioSteiner')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'inicioSteiner'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Inicio
+        </button>
+
+        <button
+          @click="irASubtitulo('PuntosCefalometricosSteiner')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center text-left w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'PuntosCefalometricosSteiner'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Puntos Cefalométricos de Análisis de Steiner
+        </button>
+
+        <button
+          @click="irASubtitulo('relacionVerticalSteiner')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'relacionVerticalSteiner'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Análisis de Steiner: Relación Vertical
+        </button>
+
+        <button
+          @click="irASubtitulo('relacionDentalSteiner')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'relacionDentalSteiner'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Análisis de Steiner: Relación Dental
+        </button>
+
+        <button
+          @click="irASubtitulo('witsSteiner')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'witsSteiner'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Análisis de Wits
+        </button>
+      </div>
+
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
@@ -82,11 +168,60 @@ onMounted(() => {
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
-        @click="irASeccion('medidadhorizontales')"
+        @click="toggleMenu('medidadhorizontales')"
       >
         <IconsSVG name="iconoHome" />
         Medidas Horizontales
       </button>
+      <div v-if="menuAbierto === 'medidadhorizontales'" class="w-full pl-5 flex flex-col">
+        <button
+          @click="irASubtitulo('steiner-puntos')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            seccionActiva === 'medidadhorizontales'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Perro
+        </button>
+
+        <button
+          @click="irASubtitulo('steiner-vertical')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            seccionActiva === 'medidadhorizontales'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Gato
+        </button>
+
+        <button
+          @click="irASubtitulo('steiner-dental')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            seccionActiva === 'medidadhorizontales'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Relación Dental
+        </button>
+
+        <button
+          @click="irASubtitulo('steiner-wits')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            seccionActiva === 'medidadhorizontales'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Análisis de Wits
+        </button>
+      </div>
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
@@ -94,7 +229,6 @@ onMounted(() => {
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
-        @click="irASeccion('medidasverticales')"
       >
         <IconsSVG name="iconoSeñalWifi" />
         Medidas Verticales
@@ -107,7 +241,6 @@ onMounted(() => {
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
-        @click="irASeccion('medidasdentales')"
       >
         <IconsSVG name="iconoDental" />
         Medidas Dentales
@@ -119,7 +252,6 @@ onMounted(() => {
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
-        @click="irASeccion('espaciofaringeo')"
       >
         <IconsSVG name="iconoAyuda" />
         Espacio Faríngeo
@@ -131,7 +263,6 @@ onMounted(() => {
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
-        @click="irASeccion('equipotrabajo')"
       >
         <IconsSVG name="iconoUsuarios" />
         Equipo de Trabajo
