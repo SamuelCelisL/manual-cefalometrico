@@ -198,7 +198,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
           </div>
         </div>
 
-        <!--! Análisis de Steiner RELACION DENTAL -->
+        <!--! Medidas Verticales Mcnamara -->
         <div class="flex flex-col gap-4" id="medidasVerticalesMcnamara" data-seccion>
           <h2 class="text-2xl font-bold text-background-primary font-serif">Medidas Verticales</h2>
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
@@ -255,29 +255,71 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
           </div>
         </div>
 
-        <!--! Análisis de Wits-->
-        <div class="flex flex-col gap-4" id="witsSteiner" data-seccion>
-          <h2 class="text-2xl font-bold text-background-primary font-serif">Análisis de Wits</h2>
+        <!--! Medidas Dentales-->
+        <div class="flex flex-col gap-4" id="medidasDentalesMcnamara" data-seccion>
+          <h2 class="text-2xl font-bold text-background-primary font-serif">Medidas Dentales</h2>
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
             <TarjejtInforImages2
-              title="Wits = Distancia entre AO y BO"
-              imageSrc="/images/wits = distancia entre ao y bo.png"
-              text1="Al plano oclusal bisectado se proyectan líneas perpendiculares desde A y B, formando puntos AO y BO, se mide la distancia horizontal entre ellos. Determina la relación anteroposterior entre maxilar superior e inferior"
-              text2="AO anterior a BO = valor positivo (+)."
-              text3="BO anterior a AO = valore negativo (-)."
-              tituloNorma="Norma hombres"
-              norma=" -1mm +/- 1.9"
-              tituloRango="Norma mujeres"
-              rango=" 0mm +/- 1.77"
-              Valores1="Valores positivos fuera de la norma"
-              tabla1="Clase II esquelética
-"
-              Valores2="Valores en Norma"
-              tabla2="Clase I esquelética
-"
-              Valores3="VALORES NEGATIVOS FUERA DE LA NORMA"
-              tabla3="Clase III esquelética"
-              citacion="Jacobson A. The “Wits” appraisal of jaw disharmony. American Journal of Orthodontics [Internet]. 1975 Feb 1;67(2):125–38. Available from: https://www.ncbi.nlm.nih.gov/pubmed/1054214"
+              title="Incisivo superior - vertical punto A"
+              imageSrc="/images/Incisivo superior-vertical punto A.png"
+              text1="Distancia que existe entre el punto A y la parte más anterior del incisivo superior."
+              text2="Indica la ubicación anteroposterior del incisivo superior."
+              :tabla="false"
+              norma="Norma:"
+              m="M: 5.4 mm+/- 1.7"
+              h="H:5.3 mm +/- 2.0"
+              Valores1="Valores mayores a la norma"
+              tabla1="Protrusión del incisivo superior"
+              Valores3="Valores menores a la norma"
+              tabla3="Retrusión del incisivo superior"
+              citacion="McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta. Ann Arbor, Michigan: Needham Press; 1995."
+            />
+            <TarjejtInforImages2
+              title="Incisivo inferior línea A - Pg"
+              imageSrc="/images/Incisivo inferior linea A-Pg.png"
+              text1="Distancia que existe entre el borde más anterior del incisivo inferior y el plano A - Pogonion."
+              text2="Indica la ubicación anteroposterior del incisivo superior."
+              :tabla="false"
+              norma="Norma:"
+              m="M: 2,7 mm+/- 1.7"
+              h="H:2.3 mm +/- 2.1"
+              Valores1="Valores mayores a la norma"
+              tabla1="Protrusión del incisivo inferior"
+              Valores3="Valores menores a la norma"
+              tabla3="Retrusión del incisivo inferior"
+              citacion="McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta. Ann Arbor, Michigan: Needham Press; 1995."
+            />
+          </div>
+        </div>
+
+        <!--! Medidas Faringeas -->
+        <div class="flex flex-col gap-4" id="medidasFaringeasMcnamara" data-seccion>
+          <h2 class="text-2xl font-bold text-background-primary font-serif">Medidas Faringeas</h2>
+          <div class="flex flex-col justify-center items-center gap-4 mb-2">
+            <TarjejtInforImages2
+              title="Espacio faríngeo superior"
+              imageSrc="/images/Espacio faringeo superior.png"
+              text1="Es la distancia que existe entre el contorno posterior del paladar blando y el punto más cercano sobre la pared faríngea posterior."
+              :tabla="false"
+              norma="Norma : 17.4mm:"
+              Valores1="Valores mayores a la norma"
+              tabla1="tubo aéreo amplio"
+              Valores3="Valores menores a la norma"
+              tabla3="tubo aéreo estrecho"
+              citacion="McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta. Ann Arbor, Michigan: Needham Press; 1995."
+            />
+            <TarjejtInforImages2
+              title="Espacio faríngeo inferior"
+              imageSrc="/images/Espacio faringeo inferior.png"
+              text1="Es la distancia que existe entre el contorno posterior de la lengua  y el borde inferior de la mandíbula y el punto más cercano de la pared posterior de la faringe.."
+              text2="Indica el diámetro del tubo aéreo inferior."
+              :tabla="false"
+              norma="Norma : 11 a 12mm"
+              Valores1="Valores mayores a la norma"
+              tabla1="tubo aéreo amplio"
+              Valores3="Valores menores a la norma"
+              tabla3="tubo aéreo estrecho"
+              citacion="McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta. Ann Arbor, Michigan: Needham Press; 1995."
             />
           </div>
         </div>

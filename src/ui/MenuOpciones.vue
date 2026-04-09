@@ -39,6 +39,8 @@ const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('PuntosCefalometricosMacnamara')) return 'PuntosCefalometricosMacnamara'
   if (id.startsWith('MedidasHorizontalesMcnamara')) return 'MedidasHorizontalesMcnamara'
   if (id.startsWith('medidasVerticalesMcnamara')) return 'medidasVerticalesMcnamara'
+  if (id.startsWith('medidasDentalesMcnamara')) return 'medidasDentalesMcnamara'
+  if (id.startsWith('medidasFaringeasMcnamara')) return 'medidasFaringeasMcnamara'
 
   return ''
 }
@@ -176,7 +178,9 @@ onMounted(async () => {
           seccionActiva === 'medidashorizontales' ||
           subtituloActivo === 'PuntosCefalometricosMcnamara' ||
           subtituloActivo === 'MedidasHorizontalesMcnamara' ||
-          subtituloActivo === 'medidasVerticalesMcnamara'
+          subtituloActivo === 'medidasVerticalesMcnamara' ||
+          subtituloActivo === 'medidasDentalesMcnamara' ||
+          subtituloActivo === 'medidasFaringeasMcnamara'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
@@ -220,6 +224,30 @@ onMounted(async () => {
           ]"
         >
           Medidas Verticales
+        </button>
+
+        <button
+          @click="irASubtitulo('medidasDentalesMcnamara')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'medidasDentalesMcnamara'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Medidas Dentales
+        </button>
+
+        <button
+          @click="irASubtitulo('medidasFaringeasMcnamara')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'medidasFaringeasMcnamara'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Medidas Faringeas
         </button>
       </div>
       <button
