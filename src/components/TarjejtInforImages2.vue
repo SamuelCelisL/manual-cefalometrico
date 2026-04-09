@@ -86,6 +86,15 @@ defineProps({
     type: String,
     required: false,
   },
+  Valores4: {
+    type: String,
+    default: 'MEDIDA DISMINUIDA',
+    required: false,
+  },
+  tabla4: {
+    type: String,
+    required: false,
+  },
   citacion: {
     type: String,
     required: false,
@@ -104,6 +113,14 @@ defineProps({
     required: false,
   },
   h: {
+    type: String,
+    required: false,
+  },
+  anexo: {
+    type: String,
+    required: false,
+  },
+  anexo2: {
     type: String,
     required: false,
   },
@@ -153,7 +170,7 @@ defineProps({
                   <td v-if="SD1" class="p-2">{{ SD1 }}</td>
                   <td v-if="rango1" class="p-2">{{ rango1 }}</td>
                 </tr>
-                <tr class="border-t border-gray-300">
+                <tr v-if="norma2 || SD2 || rango2" class="border-t border-gray-300">
                   <td v-if="norma2" class="p-2 text-blue-600">Mujer</td>
                   <td v-if="norma2" class="p-2">{{ norma2 }}</td>
                   <td v-if="SD2" class="p-2">{{ SD2 }}</td>
@@ -167,7 +184,7 @@ defineProps({
           <p v-if="m" class="text-blue-600">{{ m }}</p>
           <p v-if="h" class="text-blue-600">{{ h }}</p>
 
-          <div v-if="tabla1 " class="flex gap-2">
+          <div v-if="tabla1" class="flex gap-2">
             <p class="text-red-600 uppercase">{{ Valores1 }}:</p>
             <p class="">{{ tabla1 }}</p>
           </div>
@@ -178,6 +195,18 @@ defineProps({
           <div v-if="tabla3" class="flex gap-2">
             <p class="text-yellow-600 uppercase">{{ Valores3 }}:</p>
             <p class="">{{ tabla3 }}</p>
+          </div>
+          <div v-if="tabla4" class="flex gap-2">
+            <p class="text-blue-600 uppercase">{{ Valores4 }}:</p>
+            <p class="">{{ tabla4 }}</p>
+          </div>
+
+          <div v-if="anexo" class="flex gap-2">
+            <p class=""><span class="font-semibold">Anexo:</span> {{ anexo }}</p>
+          </div>
+
+          <div v-if="anexo2" class="flex gap-2">
+            <p class="text-gray-600">{{ anexo2 }}</p>
           </div>
 
           <!-- CITACIÓN -->

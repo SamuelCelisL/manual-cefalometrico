@@ -105,12 +105,12 @@ onMounted(async () => {
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
-        @click="toggleMenu('puntocefalicos')"
+        @click="toggleMenu('steinerView')"
       >
         <IconsSVG name="iconoBrillo" />
         Steiner
       </button>
-      <div v-if="menuAbierto === 'puntocefalicos'" class="w-full pl-5 flex flex-col">
+      <div v-if="menuAbierto === 'steinerView'" class="w-full pl-5 flex flex-col">
         <button
           @click="irASubtitulo('inicioSteiner')"
           :class="[
@@ -175,7 +175,7 @@ onMounted(async () => {
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-          seccionActiva === 'medidashorizontales' ||
+          seccionActiva === 'mcnamaraView' ||
           subtituloActivo === 'PuntosCefalometricosMcnamara' ||
           subtituloActivo === 'MedidasHorizontalesMcnamara' ||
           subtituloActivo === 'medidasVerticalesMcnamara' ||
@@ -184,12 +184,12 @@ onMounted(async () => {
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
-        @click="toggleMenu('medidashorizontales')"
+        @click="toggleMenu('mcnamaraView')"
       >
         <IconsSVG name="iconoHome" />
         Mcnamara
       </button>
-      <div v-if="menuAbierto === 'medidashorizontales'" class="w-full pl-5 flex flex-col">
+      <div v-if="menuAbierto === 'mcnamaraView'" class="w-full pl-5 flex flex-col">
         <button
           @click="irASubtitulo('PuntosCefalometricosMcnamara')"
           :class="[
@@ -250,17 +250,33 @@ onMounted(async () => {
           Medidas Faringeas
         </button>
       </div>
+
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
-          seccionActiva === 'medidasverticales'
+          seccionActiva === 'leganburstoneView' ||
+          subtituloActivo === 'PuntosCefalometricosLeganBurstone'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
+        @click="toggleMenu('leganburstoneView')"
       >
         <IconsSVG name="iconoSeñalWifi" />
         Legan y Burstone
       </button>
+      <div v-if="menuAbierto === 'leganburstoneView'" class="w-full pl-5 flex flex-col">
+        <button
+          @click="irASubtitulo('PuntosCefalometricosLeganBurstone')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'PuntosCefalometricosLeganBurstone'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Tejidos Blandos: Puntos Cefalométricos
+        </button>
+      </div>
 
       <button
         :class="[
@@ -273,6 +289,7 @@ onMounted(async () => {
         <IconsSVG name="iconoDental" />
         Saossuni
       </button>
+
       <button
         :class="[
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
@@ -284,6 +301,7 @@ onMounted(async () => {
         <IconsSVG name="iconoAyuda" />
         Grummons
       </button>
+
       <button
         :class="[
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import MenuOpciones from '@/ui/MenuOpciones.vue'
 import CabeceraPage from '@/ui/CabeceraPage.vue'
-import PuntosCefalicos from '@/ui/PuntosCefalicos.vue'
-import MedidasHorizontales from '@/ui/MedidasHorizontales.vue'
-import MedidasVerticales from '@/ui/MedidasVerticales.vue'
+import SteinerView from '@/ui/SteinerView.vue'
+import McnamaraView from '@/ui/McnamaraView.vue'
+import LeganBurstoneView from '@/ui/LeganBurstoneView.vue'
 import MedidasDentales from '@/ui/MedidasDentales.vue'
 import EspacioFaringeo from '@/ui/EspacioFaringeo.vue'
 import BimlerView from '@/ui/BimlerView.vue'
@@ -88,14 +88,14 @@ const contenedorScroll = ref<HTMLElement | null>(null)
         <div class="w-full flex flex-col">
           <CabeceraPage />
         </div>
-        <div class="w-full flex flex-col" id="puntocefalicos" data-seccion>
-          <PuntosCefalicos />
+        <div class="w-full flex flex-col" id="steinerView" data-seccion>
+          <SteinerView />
         </div>
-        <div class="w-full flex flex-col" id="medidashorizontales" data-seccion>
-          <MedidasHorizontales />
+        <div class="w-full flex flex-col" id="mcnamaraView" data-seccion>
+          <McnamaraView />
         </div>
-        <div class="w-full flex flex-col" id="medidasverticales" data-seccion>
-          <MedidasVerticales />
+        <div class="w-full flex flex-col" id="leganburstoneView" data-seccion>
+          <LeganBurstoneView />
         </div>
         <div class="w-full flex flex-col" id="medidasdentales" data-seccion>
           <MedidasDentales />
