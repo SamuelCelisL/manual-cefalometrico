@@ -4,12 +4,12 @@
       <div class="w-full flex flex-col">
         <div class="w-full flex pb-2 gap-2">
           <h1 class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles">
-            03
+            06
           </h1>
           <div class="flex flex-col justify-end">
-            <h1 class="text-4xl font-bold text-background-primary font-serif">Legan y Burstone</h1>
+            <h1 class="text-4xl font-bold text-background-primary font-serif">Bimler</h1>
             <h3 class="text-sm font-serif text-border-primary/80">
-              En cada seccion conoceremos a los encargados
+              Por: 1. Tatiana Rosero - 2. Daniela Narvaez
             </h3>
           </div>
         </div>

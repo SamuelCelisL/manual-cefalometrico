@@ -6,6 +6,7 @@ import MedidasHorizontales from '@/ui/MedidasHorizontales.vue'
 import MedidasVerticales from '@/ui/MedidasVerticales.vue'
 import MedidasDentales from '@/ui/MedidasDentales.vue'
 import EspacioFaringeo from '@/ui/EspacioFaringeo.vue'
+import BimlerView from '@/ui/BimlerView.vue'
 import EquipoTrabajo from '@/ui/EquipoTrabajo.vue'
 
 import { ref, watch } from 'vue'
@@ -101,6 +102,9 @@ const contenedorScroll = ref<HTMLElement | null>(null)
         </div>
         <div class="w-full flex flex-col" id="espaciofaringeo" data-seccion>
           <EspacioFaringeo />
+        </div>
+        <div class="w-full flex flex-col" id="bimler" data-seccion>
+          <BimlerView />
         </div>
         <div class="w-full flex flex-col" id="equipotrabajo" data-seccion>
           <EquipoTrabajo />
