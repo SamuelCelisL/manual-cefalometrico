@@ -14,7 +14,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
           <div class="flex flex-col justify-end">
             <h1 class="text-4xl font-bold text-background-primary font-serif">Legan y Burstone</h1>
             <h3 class="text-sm font-serif text-border-primary/80">
-              En cada seccion conoceremos a los encargados
+              En cada sección conoceremos a los encargados
             </h3>
           </div>
         </div>
