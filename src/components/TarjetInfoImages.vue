@@ -20,23 +20,25 @@ defineProps({
     type: String,
     required: false,
   },
+  tituloNorma: {
+    type: String,
+    default: 'Norma',
+    required: false,
+  },
   norma: {
     type: String,
+    required: false,
+  },
+  tituloRango: {
+    type: String,
+    default: 'Rango',
     required: false,
   },
   rango: {
     type: String,
     required: false,
   },
-  h: {
-    type: String,
-    required: false,
-  },
-  m: {
-    type: String,
-    required: false,
-  },
-  titulotabla1: {
+  Valores1: {
     type: String,
     default: 'MEDIDA AUMENTADA',
     required: false,
@@ -45,16 +47,16 @@ defineProps({
     type: String,
     required: false,
   },
-  titulotabla2: {
+  Valores2: {
     type: String,
-    default: 'MEDIDA EN NORMA',
+    default: 'MEDIDAD EN NORMA',
     required: false,
   },
   tabla2: {
     type: String,
     required: false,
   },
-  titulotabla3: {
+  Valores3: {
     type: String,
     default: 'MEDIDA DISMINUIDA',
     required: false,
@@ -95,35 +97,35 @@ defineProps({
           <p>{{ text2 }}</p>
           <p v-if="text3">{{ text3 }}</p>
 
-          <p v-if="norma" class="text-blue-600">{{ norma }}</p>
-          <p v-if="rango" class="text-blue-600">{{ rango }}</p>
-          <p v-if="h" class="text-blue-600">{{ h }}</p>
-          <p v-if="m" class="text-blue-600">{{ m }}</p>
-
           <!-- TABLA -->
-          <div class="my-2 overflow-x-auto">
-            <table class="w-full text-[10px] sm:text-sm text-center border border-gray-300">
+          <div class="my-2 overflow-x-auto flex items-center justify-center">
+            <table class="w-auto text-[10px] sm:text-sm text-center border border-gray-300">
               <thead class="border-b border-gray-400">
                 <tr>
-                  <th class="text-red-600 uppercase px-2 py-1">
-                    {{ titulotabla1 }}
-                  </th>
-                  <th class="text-green-600 uppercase px-2 py-1">
-                    {{ titulotabla2 }}
-                  </th>
-                  <th class="text-yellow-600 uppercase px-2 py-1">
-                    {{ titulotabla3 }}
-                  </th>
+                  <th v-if="norma" class="text-blue-600 uppercase px-5 py-1">{{ tituloNorma }}</th>
+                  <th v-if="rango" class="text-blue-600 uppercase px-2 py-1">{{ tituloRango }}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="border-t border-gray-300">
-                  <td class="p-2">{{ tabla1 }}</td>
-                  <td class="p-2">{{ tabla2 }}</td>
-                  <td class="p-2">{{ tabla3 }}</td>
+                  <td v-if="norma" class="p-2 text-blue-600">{{ norma }}</td>
+                  <td v-if="rango" class="p-2 text-blue-600">{{ rango }}</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <div class="flex gap-2">
+            <p class="text-red-600 uppercase">{{ Valores1 }}:</p>
+            <p class="">{{ tabla1 }}</p>
+          </div>
+          <div class="flex gap-2">
+            <p class="text-green-600 uppercase">{{ Valores2 }}:</p>
+            <p class="">{{ tabla2 }}</p>
+          </div>
+          <div class="flex gap-2">
+            <p class="text-yellow-600 uppercase">{{ Valores3 }}:</p>
+            <p class="">{{ tabla3 }}</p>
           </div>
 
           <!-- CITACIÓN -->
