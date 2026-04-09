@@ -31,11 +31,14 @@ const irASubtitulo = (id: string) => {
 }
 
 const obtenerSeccionPadre = (id: string) => {
-  if (id.startsWith('inicio')) return 'inicioSteiner'
-  if (id.startsWith('Puntos')) return 'PuntosCefalometricosSteiner'
-  if (id.startsWith('relacionVertical')) return 'relacionVerticalSteiner'
-  if (id.startsWith('relacionDental')) return 'relacionDentalSteiner'
-  if (id.startsWith('wits')) return 'witsSteiner'
+  if (id.startsWith('inicioSteiner')) return 'inicioSteiner'
+  if (id.startsWith('PuntosCefalometricosSteiner')) return 'PuntosCefalometricosSteiner'
+  if (id.startsWith('relacionVerticalSteiner')) return 'relacionVerticalSteiner'
+  if (id.startsWith('relacionDentalSteiner')) return 'relacionDentalSteiner'
+  if (id.startsWith('witsSteiner')) return 'witsSteiner'
+  if (id.startsWith('PuntosCefalometricosMacnamara')) return 'PuntosCefalometricosMacnamara'
+  if (id.startsWith('MedidasHorizontalesMcnamara')) return 'MedidasHorizontalesMcnamara'
+  if (id.startsWith('medidasVerticalesMcnamara')) return 'medidasVerticalesMcnamara'
 
   return ''
 }
@@ -170,64 +173,55 @@ onMounted(async () => {
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-          seccionActiva === 'medidadhorizontales'
+          seccionActiva === 'medidashorizontales' ||
+          subtituloActivo === 'PuntosCefalometricosMcnamara' ||
+          subtituloActivo === 'MedidasHorizontalesMcnamara' ||
+          subtituloActivo === 'medidasVerticalesMcnamara'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
-        @click="toggleMenu('medidadhorizontales')"
+        @click="toggleMenu('medidashorizontales')"
       >
         <IconsSVG name="iconoHome" />
-        Autor 2
+        Mcnamara
       </button>
-      <!-- <div v-if="menuAbierto === 'medidadhorizontales'" class="w-full pl-5 flex flex-col">
+      <div v-if="menuAbierto === 'medidashorizontales'" class="w-full pl-5 flex flex-col">
         <button
-          @click="irASubtitulo('steiner-puntos')"
+          @click="irASubtitulo('PuntosCefalometricosMcnamara')"
           :class="[
             ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-            seccionActiva === 'medidadhorizontales'
+            subtituloActivo === 'PuntosCefalometricosMcnamara'
               ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
               : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
           ]"
         >
-          Perro
+          Puntos Cefalométricos
         </button>
 
         <button
-          @click="irASubtitulo('steiner-vertical')"
+          @click="irASubtitulo('MedidasHorizontalesMcnamara')"
           :class="[
-            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-            seccionActiva === 'medidadhorizontales'
+            ' pl-5 py-2 flex gap-2 items-center text-left w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'MedidasHorizontalesMcnamara'
               ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
               : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
           ]"
         >
-          Gato
+          Medidas Horizontales
         </button>
 
         <button
-          @click="irASubtitulo('steiner-dental')"
+          @click="irASubtitulo('medidasVerticalesMcnamara')"
           :class="[
             ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-            seccionActiva === 'medidadhorizontales'
+            subtituloActivo === 'medidasVerticalesMcnamara'
               ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
               : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
           ]"
         >
-          Relación Dental
+          Medidas Verticales
         </button>
-
-        <button
-          @click="irASubtitulo('steiner-wits')"
-          :class="[
-            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-            seccionActiva === 'medidadhorizontales'
-              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
-              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
-          ]"
-        >
-          Análisis de Wits
-        </button>
-         </div> -->
+      </div>
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',

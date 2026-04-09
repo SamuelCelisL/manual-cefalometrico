@@ -90,7 +90,7 @@ const contenedorScroll = ref<HTMLElement | null>(null)
         <div class="w-full flex flex-col" id="puntocefalicos" data-seccion>
           <PuntosCefalicos />
         </div>
-        <div class="w-full flex flex-col" id="medidadhorizontales" data-seccion>
+        <div class="w-full flex flex-col" id="medidashorizontales" data-seccion>
           <MedidasHorizontales />
         </div>
         <div class="w-full flex flex-col" id="medidasverticales" data-seccion>
