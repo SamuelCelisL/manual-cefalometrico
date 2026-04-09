@@ -41,6 +41,7 @@ const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('medidasVerticalesMcnamara')) return 'medidasVerticalesMcnamara'
   if (id.startsWith('medidasDentalesMcnamara')) return 'medidasDentalesMcnamara'
   if (id.startsWith('medidasFaringeasMcnamara')) return 'medidasFaringeasMcnamara'
+  if (id.startsWith('PuntosCefalometricosLeganBurstone')) return 'PuntosCefalometricosLeganBurstone'
 
   return ''
 }

@@ -124,6 +124,16 @@ defineProps({
     type: String,
     required: false,
   },
+  tituloFila1: {
+    type: String,
+    default: 'Hombre',
+    required: false,
+  },
+  tituloFila2: {
+    type: String,
+    default: 'Mujer',
+    required: false,
+  },
 })
 </script>
 
@@ -165,13 +175,13 @@ defineProps({
               </thead>
               <tbody>
                 <tr class="border-t border-gray-300">
-                  <td v-if="norma1" class="p-2 text-blue-600">Hombre</td>
+                  <td v-if="norma1" class="p-2 text-blue-600">{{ tituloFila1 }}</td>
                   <td v-if="norma1" class="p-2">{{ norma1 }}</td>
                   <td v-if="SD1" class="p-2">{{ SD1 }}</td>
                   <td v-if="rango1" class="p-2">{{ rango1 }}</td>
                 </tr>
                 <tr v-if="norma2 || SD2 || rango2" class="border-t border-gray-300">
-                  <td v-if="norma2" class="p-2 text-blue-600">Mujer</td>
+                  <td v-if="norma2" class="p-2 text-blue-600">{{ tituloFila2 }}</td>
                   <td v-if="norma2" class="p-2">{{ norma2 }}</td>
                   <td v-if="SD2" class="p-2">{{ SD2 }}</td>
                   <td v-if="rango2" class="p-2">{{ rango2 }}</td>
