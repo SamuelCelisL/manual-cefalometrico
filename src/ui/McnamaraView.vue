@@ -63,6 +63,10 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               body="Punto más profundo del contorno anterior del maxilar superior."
             />
           </div>
+        </div>
+
+        <!--! Tabla4 -->
+        <div class="flex flex-col gap-4" id="TablaBurlingtonMcnamara" data-seccion>
           <!-- Tabla 4 -->
           <div class="flex flex-col w-full gap-3 justify-center items-center">
             <h1 class="text-xl text-center font-bold text-background-primary font-serif px-4">
@@ -75,6 +79,16 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               class="rounded-lg shadow-lg"
             />
           </div>
+          <div class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs text-gray-600">
+              McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta.
+              Ann Arbor, Michigan: Needham Press; 1995.
+            </p>
+          </div>
+        </div>
+
+        <!--! Tabla3 -->
+        <div class="flex flex-col gap-4" id="TablaBoltonMcnamara" data-seccion>
           <!-- Tabla 3 -->
           <div class="flex flex-col w-full gap-3 justify-center items-center">
             <h1 class="text-xl text-center font-bold text-background-primary font-serif px-4">
@@ -87,6 +101,16 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               class="rounded-lg shadow-lg"
             />
           </div>
+          <div class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs text-gray-600">
+              McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta.
+              Ann Arbor, Michigan: Needham Press; 1995.
+            </p>
+          </div>
+        </div>
+
+        <!--! Tabla 1 -->
+        <div class="flex flex-col gap-4" id="TablaAnnArborMcnamara" data-seccion>
           <!-- Tabla 1 -->
           <div class="flex flex-col w-full gap-3 justify-center items-center">
             <h1 class="text-xl text-center font-bold text-background-primary font-serif px-4">
@@ -99,6 +123,10 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               class="rounded-lg shadow-lg"
             />
           </div>
+        </div>
+
+        <!--! Tabla 5 -->
+        <div class="flex flex-col gap-4">
           <!-- Tabla 5 -->
           <div class="flex flex-col w-full gap-3 justify-center items-center">
             <h1 class="text-xl text-center font-bold text-background-primary font-serif px-4">
@@ -109,6 +137,12 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               alt="Tabla 5. Normas Compuestas"
               class="rounded-lg shadow-lg"
             />
+          </div>
+          <div class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs text-gray-600">
+              McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta.
+              Ann Arbor, Michigan: Needham Press; 1995.
+            </p>
           </div>
         </div>
 

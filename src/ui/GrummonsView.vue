@@ -491,8 +491,6 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
           </div>
         </div>
       </div>
-
-      <p class="text-lg mt-4">EN DESARROLLO...</p>
     </div>
   </div>
 </template>

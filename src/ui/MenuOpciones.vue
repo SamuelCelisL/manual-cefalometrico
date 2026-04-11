@@ -37,6 +37,9 @@ const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('relacionDentalSteiner')) return 'relacionDentalSteiner'
   if (id.startsWith('witsSteiner')) return 'witsSteiner'
   if (id.startsWith('PuntosCefalometricosMacnamara')) return 'PuntosCefalometricosMacnamara'
+  if (id.startsWith('TablaBurlingtonMcnamara')) return 'TablaBurlingtonMcnamara'
+  if (id.startsWith('TablaBoltonMcnamara')) return 'TablaBoltonMcnamara'
+  if (id.startsWith('TablaAnnArborMcnamara')) return 'TablaAnnArborMcnamara'
   if (id.startsWith('MedidasHorizontalesMcnamara')) return 'MedidasHorizontalesMcnamara'
   if (id.startsWith('medidasVerticalesMcnamara')) return 'medidasVerticalesMcnamara'
   if (id.startsWith('medidasDentalesMcnamara')) return 'medidasDentalesMcnamara'
@@ -179,6 +182,9 @@ onMounted(async () => {
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
           seccionActiva === 'mcnamaraView' ||
           subtituloActivo === 'PuntosCefalometricosMcnamara' ||
+          subtituloActivo === 'TablaBurlingtonMcnamara' ||
+          subtituloActivo === 'TablaBoltonMcnamara' ||
+          subtituloActivo === 'TablaAnnArborMcnamara' ||
           subtituloActivo === 'MedidasHorizontalesMcnamara' ||
           subtituloActivo === 'medidasVerticalesMcnamara' ||
           subtituloActivo === 'medidasDentalesMcnamara' ||
@@ -202,6 +208,39 @@ onMounted(async () => {
           ]"
         >
           Puntos Cefalométricos
+        </button>
+        <button
+          @click="irASubtitulo('TablaBurlingtonMcnamara')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'TablaBurlingtonMcnamara'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Tabla de Burlington
+        </button>
+        <button
+          @click="irASubtitulo('TablaBoltonMcnamara')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'TablaBoltonMcnamara'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Tabla de Bolton
+        </button>
+        <button
+          @click="irASubtitulo('TablaAnnArborMcnamara')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'TablaAnnArborMcnamara'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Tabla de Ann Arbor
         </button>
 
         <button
