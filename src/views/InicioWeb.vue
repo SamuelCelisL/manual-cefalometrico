@@ -5,7 +5,7 @@ import SteinerView from '@/ui/SteinerView.vue'
 import McnamaraView from '@/ui/McnamaraView.vue'
 import LeganBurstoneView from '@/ui/LeganBurstoneView.vue'
 import MedidasDentales from '@/ui/MedidasDentales.vue'
-import EspacioFaringeo from '@/ui/EspacioFaringeo.vue'
+import GrummonsView from '@/ui/GrummonsView.vue'
 import BimlerView from '@/ui/BimlerView.vue'
 import EquipoTrabajo from '@/ui/EquipoTrabajo.vue'
 
@@ -100,8 +100,8 @@ const contenedorScroll = ref<HTMLElement | null>(null)
         <div class="w-full flex flex-col" id="medidasdentales" data-seccion>
           <MedidasDentales />
         </div>
-        <div class="w-full flex flex-col" id="espaciofaringeo" data-seccion>
-          <EspacioFaringeo />
+        <div class="w-full flex flex-col" id="grummons" data-seccion>
+          <GrummonsView />
         </div>
         <div class="w-full flex flex-col" id="bimler" data-seccion>
           <BimlerView />

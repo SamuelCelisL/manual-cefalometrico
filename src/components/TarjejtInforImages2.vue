@@ -1,5 +1,10 @@
 <script setup lang="ts">
 defineProps({
+  name: {
+    type: String,
+    default: 'TarjejtInforImages2',
+    required: false,
+  },
   title: {
     type: String,
     required: true,
@@ -17,6 +22,10 @@ defineProps({
     required: false,
   },
   text3: {
+    type: String,
+    required: false,
+  },
+  text4: {
     type: String,
     required: false,
   },
@@ -138,7 +147,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="w-full flex justify-center">
+  <div v-if="name === 'TarjejtInforImages2'" class="w-full flex justify-center">
     <div
       class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
     >
@@ -219,6 +228,41 @@ defineProps({
             <p class="text-gray-600">{{ anexo2 }}</p>
           </div>
 
+          <!-- CITACIÓN -->
+          <div v-if="citacion" class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs text-gray-600">
+              {{ citacion }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div v-if="name === 'TarjejtInforImages3'" class="w-full flex justify-center">
+    <div
+      class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
+    >
+      <!-- HEADER -->
+      <div class="bg-background-primary rounded-t-xl px-4 py-2">
+        <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
+          {{ title }}
+        </h2>
+      </div>
+
+      <!-- BODY -->
+      <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
+        <!-- IMAGEN -->
+        <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
+          <img :src="imageSrc" :alt="title" class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain" />
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
+          <p><span class="font-semibold">PH (Plano Horizontal):</span>{{ text1 }}</p>
+          <p>{{ text2 }}</p>
+          <p v-if="text3"><span class="font-semibold">PM (Plano Mandibular):</span>{{ text3 }}</p>
+          <p v-if="text4"><span class="font-semibold">NF (Suelo Nasal):</span>{{ text4 }}</p>
           <!-- CITACIÓN -->
           <div v-if="citacion" class="flex justify-center">
             <p class="text-center text-[10px] md:text-xs text-gray-600">

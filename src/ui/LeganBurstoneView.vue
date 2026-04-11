@@ -38,7 +38,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
           <div class="flex flex-col lg:flex-row gap-4">
             <div class="flex flex-col w-full gap-3 justify-center items-center">
               <img
-                src="../../public/images/Puntos cefalometrico LeganBurstone 1.png"
+                src="/images/Puntos cefalometrico LeganBurstone 1.png"
                 alt="Puntos cefalometrico LeganBurstone 1"
                 class="rounded-lg shadow-lg"
               />
@@ -79,7 +79,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
           <div class="flex flex-col lg:flex-row gap-4">
             <div class="flex flex-col w-full gap-3 justify-center items-center">
               <img
-                src="../../public/images/Puntos cefalometrico LeganBurstone 2.png"
+                src="/images/Puntos cefalometrico LeganBurstone 2.png"
                 alt="Puntos cefalometrico LeganBurstone 2"
                 class="rounded-lg shadow-lg"
               />
@@ -108,6 +108,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               />
             </div>
           </div>
+
           <div class="flex justify-center">
             <p class="text-center text-[10px] md:text-xs text-gray-600">
               Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980).
@@ -184,6 +185,112 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               Valores3="Medida norma"
               tabla3="Normotrusion mandibular"
               citacion="Legan, H. L., & Burstone, C. J. (1980). Soft tissue cephalometric analysis for orthognathic surgery. Journal of Oral Surgery, 38(10), 744–751 -- Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980). Cephalometric analysis of dentofacial normals. American Journal of Orthodontics, 78(4), 404–420"
+            />
+          </div>
+          <p class="text-lg mt-4">EN DESARROLLO...</p>
+        </div>
+
+        <!--! PUNTOS CEFALOMETRICOS -->
+        <div class="flex flex-col gap-4" id="PuntosCefalometricosLeganBurstone" data-seccion>
+          <div class="flex flex-col justify-end">
+            <h2 class="text-2xl font-bold text-background-primary font-serif">Tejidos Duros</h2>
+          </div>
+
+          <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex flex-col w-full gap-3 justify-center items-center">
+              <img
+                src="/images/Puntos cefalometricos LeganBurstone 3.png"
+                alt="Puntos cefalometrico LeganBurstone 3"
+                class="rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <TarjetPoints
+                title="Articular (Ar)"
+                body="Intersección entre la base del cráneo y el borde posterior del cóndilo mandibular."
+              />
+              <TarjetPoints
+                title="Punto B supramental"
+                body="La mayor concavidad de la mandíbula entre infradental y pogonion, generalmente por debajo de los ápices de los dientes incisivos inferiores."
+              />
+              <TarjetPoints
+                title="Gnation (Gn)"
+                body="Punto intermedio entre pogonion y mentón, se localiza bisectando la línea facial N-Pg y el plano mandibular."
+              />
+              <TarjetPoints
+                title="Gonion (Go)"
+                body="Punto localizado por la bisectriz del ángulo formado por la tangente del borde posterior de la rama mandibular y el borde inferior de la mandíbula."
+              />
+              <TarjetPoints
+                title="Menton (Me)"
+                body="Punto más inferior de la sínfisis mandibular en el plano medio sagital."
+              />
+              <TarjetPoints
+                title="Pogonion (Pg)"
+                body="Punto más anterior del contorno del mentón."
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex flex-col w-full gap-3 justify-center items-center">
+              <img
+                src="/images/Puntos cefalometricos LeganBurstone 4.png"
+                alt="Puntos cefalometricos LeganBurstone 4"
+                class="rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <TarjetPoints title="Silla Turca (S)" body="Punto medio de la silla turca." />
+              <TarjetPoints
+                title="Nasion (N)"
+                body="Punto más anterior formado por la sutura naso frontal."
+              />
+              <TarjetPoints
+                title="Espina nasal anterior (ENA)"
+                body="Punto más anterior del piso nasal; la punta de la premaxila en el plano medio sagital."
+              />
+              <TarjetPoints
+                title="Espina nasal posterior (ENP)"
+                body="Proceso formado por los extremos mediales unidos que se proyectan del borde posterior de los dos huesos palatinos."
+              />
+              <TarjetPoints
+                title="Punto A o subespinal"
+                body="La mayor concavidad del maxilar entre la espina nasal anterior y prostion, generalmente alrededor del ápice de los incisivos centrales superiores."
+              />
+              <TarjetPoints
+                title="Fisura Pterigomaxilar (Ptm)"
+                body="Punto más posterior en el contorno anterior de la tuberosidad del maxilar."
+              />
+            </div>
+          </div>
+
+          <div class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs text-gray-600">
+              Burstone, C. J., James, R. B., Legan, H., Murphy, G. A., & Norton, L. A. (1978).
+              Cephalometrics for orthognathic surgery. Journal of Oral Surgery, 36(4), 269-277.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs text-gray-600">
+              Scheideman GB, Legan H L, Bell WH. Cephalometric analysis of dentofacial normals. Am J
+              Orthod vol 78 N.4 . october 1980 ;404–20.
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center gap-4 mb-2">
+            <TarjejtInforImages2
+              name="TarjejtInforImages3"
+              title="Planos de referencia"
+              imageSrc="/images/Plano de referencia.png"
+              text1="Se traza una línea que una punto S y punto N."
+              text2="Se traza una línea a 7° arriba del plano S-N con punto de origen N"
+              text3="Plano construido desde Punto Me hasta el ángulo de la mandíbula Punto Go."
+              text4="Plano construido que une ENP con ENA."
+              citacion="Burstone, C. J., James, R. B., Legan, H., Murphy, G. A., & Norton, L. A. (1978). Cephalometrics for orthognathic surgery. Journal of Oral Surgery, 36(4), 269-277. -- Scheideman GB, Legan H L, Bell WH. Cephalometric analysis of dentofacial normals. Am J Orthod vol 78 N.4 . october 1980 ;404–20.
+"
             />
           </div>
           <p class="text-lg mt-4">EN DESARROLLO...</p>

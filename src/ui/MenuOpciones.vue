@@ -42,6 +42,7 @@ const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('medidasDentalesMcnamara')) return 'medidasDentalesMcnamara'
   if (id.startsWith('medidasFaringeasMcnamara')) return 'medidasFaringeasMcnamara'
   if (id.startsWith('PuntosCefalometricosLeganBurstone')) return 'PuntosCefalometricosLeganBurstone'
+  if (id.startsWith('PuntosCefalometricosGrummons')) return 'PuntosCefalometricosGrummons'
 
   return ''
 }
@@ -294,14 +295,28 @@ onMounted(async () => {
       <button
         :class="[
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
-          seccionActiva === 'espaciofaringeo'
+          seccionActiva === 'grummons' || subtituloActivo === 'PuntosCefalometricosGrummons'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
+        @click="toggleMenu('grummons')"
       >
         <IconsSVG name="iconoAyuda" />
         Grummons
       </button>
+      <div v-if="menuAbierto === 'grummons'" class="w-full pl-5 flex flex-col">
+        <button
+          @click="irASubtitulo('PuntosCefalometricosGrummons')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'PuntosCefalometricosGrummons'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Puntos Cefalométricos
+        </button>
+      </div>
 
       <button
         :class="[
@@ -314,6 +329,7 @@ onMounted(async () => {
         <IconsSVG name="iconoAyuda" />
         Bimler
       </button>
+
       <button
         :class="[
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
