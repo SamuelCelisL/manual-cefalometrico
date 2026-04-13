@@ -29,6 +29,15 @@ defineProps({
     type: String,
     required: false,
   },
+  tituloSD: {
+    type: String,
+    default: 'SD',
+    required: false,
+  },
+  SD: {
+    type: String,
+    required: false,
+  },
   tituloRango: {
     type: String,
     default: 'Rango',
@@ -62,6 +71,10 @@ defineProps({
     required: false,
   },
   tabla3: {
+    type: String,
+    required: false,
+  },
+  anexo: {
     type: String,
     required: false,
   },
@@ -100,16 +113,24 @@ defineProps({
           <!-- TABLA -->
           <div class="my-2 overflow-x-auto flex items-center justify-center">
             <table class="w-auto text-[10px] sm:text-sm text-center border border-gray-300">
-              <thead class="border-b border-gray-400">
+              <thead class="border-b border-gray-400 bg-blue-200">
                 <tr>
-                  <th v-if="norma" class="text-blue-600 uppercase px-5 py-1">{{ tituloNorma }}</th>
-                  <th v-if="rango" class="text-blue-600 uppercase px-2 py-1">{{ tituloRango }}</th>
+                  <th class="uppercase px-5 py-1 border border-gray-400">
+                    {{ tituloNorma }}
+                  </th>
+                  <th class="uppercase px-2 py-1 border border-gray-400">
+                    {{ tituloSD }}
+                  </th>
+                  <th class="uppercase px-2 py-1 border border-gray-400">
+                    {{ tituloRango }}
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="border-t border-gray-300">
-                  <td v-if="norma" class="p-2 text-blue-600">{{ norma }}</td>
-                  <td v-if="rango" class="p-2 text-blue-600">{{ rango }}</td>
+                  <td class="p-2 border border-gray-400">{{ norma }}</td>
+                  <td class="p-2 border border-gray-400">{{ SD }}</td>
+                  <td class="p-2 border border-gray-400">{{ rango }}</td>
                 </tr>
               </tbody>
             </table>
@@ -126,6 +147,13 @@ defineProps({
           <div class="flex gap-2">
             <p class="text-yellow-600 uppercase">{{ Valores3 }}:</p>
             <p class="">{{ tabla3 }}</p>
+          </div>
+
+          <!-- CITACIÓN -->
+          <div v-if="anexo" class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs">
+              {{ anexo }}
+            </p>
           </div>
 
           <!-- CITACIÓN -->

@@ -135,7 +135,6 @@ defineProps({
   },
   tituloFila1: {
     type: String,
-    default: 'Hombre',
     required: false,
   },
   tituloFila2: {
@@ -174,26 +173,32 @@ defineProps({
           <!-- TABLA -->
           <div v-if="tabla" class="my-2 overflow-x-auto flex items-center justify-center">
             <table class="w-auto text-[10px] sm:text-sm text-center border border-gray-300">
-              <thead class="border-b border-gray-400">
+              <thead class="border-b border-gray-400 bg-blue-200">
                 <tr>
-                  <th v-if="norma1" class="text-blue-600 uppercase px-5 py-1"></th>
-                  <th v-if="norma1" class="text-blue-600 uppercase px-5 py-1">{{ tituloNorma }}</th>
-                  <th v-if="SD1" class="text-blue-600 uppercase px-2 py-1">{{ tituloSD }}</th>
-                  <th v-if="rango1" class="text-blue-600 uppercase px-2 py-1">{{ tituloRango }}</th>
+                  <th v-if="tituloFila1" class="uppercase px-5 py-1 border border-gray-600"></th>
+                  <th v-if="norma1" class="uppercase px-5 py-1 border border-gray-600">
+                    {{ tituloNorma }}
+                  </th>
+                  <th v-if="SD1" class="uppercase px-2 py-1 border border-gray-600">
+                    {{ tituloSD }}
+                  </th>
+                  <th v-if="rango1" class="uppercase px-2 py-1 border border-gray-600">
+                    {{ tituloRango }}
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="border-t border-gray-300">
-                  <td v-if="norma1" class="p-2 text-blue-600">{{ tituloFila1 }}</td>
-                  <td v-if="norma1" class="p-2">{{ norma1 }}</td>
-                  <td v-if="SD1" class="p-2">{{ SD1 }}</td>
-                  <td v-if="rango1" class="p-2">{{ rango1 }}</td>
+                  <td v-if="tituloFila1" class="p-2 border border-gray-600">{{ tituloFila1 }}</td>
+                  <td v-if="norma1" class="p-2 border border-gray-600">{{ norma1 }}</td>
+                  <td v-if="SD1" class="p-2 border border-gray-600">{{ SD1 }}</td>
+                  <td v-if="rango1" class="p-2 border border-gray-600">{{ rango1 }}</td>
                 </tr>
                 <tr v-if="norma2 || SD2 || rango2" class="border-t border-gray-300">
-                  <td v-if="norma2" class="p-2 text-blue-600">{{ tituloFila2 }}</td>
-                  <td v-if="norma2" class="p-2">{{ norma2 }}</td>
-                  <td v-if="SD2" class="p-2">{{ SD2 }}</td>
-                  <td v-if="rango2" class="p-2">{{ rango2 }}</td>
+                  <td v-if="tituloFila2" class="p-2 border border-gray-600">{{ tituloFila2 }}</td>
+                  <td v-if="norma2" class="p-2 border border-gray-600">{{ norma2 }}</td>
+                  <td v-if="SD2" class="p-2 border border-gray-600">{{ SD2 }}</td>
+                  <td v-if="rango2" class="p-2 border border-gray-600">{{ rango2 }}</td>
                 </tr>
               </tbody>
             </table>

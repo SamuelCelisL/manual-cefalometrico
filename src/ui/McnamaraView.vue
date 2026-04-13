@@ -29,39 +29,91 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
           <h2 class="text-2xl font-bold text-background-primary font-serif">
             Puntos Cefalométricos
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <TarjetPoints title="Ba" body="Punto más antero inferior del foramen occipital." />
-            <TarjetPoints title="Co" body="Punto más posterosuperior del cóndilo mandibular." />
-            <TarjetPoints title="ENA" body="Punto más anterior del proceso espinoso." />
-            <TarjetPoints
-              title="Ptm"
-              body="Punto más posterosuperior del contorno de la fisura pterigomaxilar."
-            />
-            <TarjetPoints
-              title="Gn"
-              body="Punto más anterior e inferior del contorno mandibular."
-            />
-            <TarjetPoints
-              title="Go"
-              body="Punto ubicado parte más posteroinferior de la
+          <!-- Puntos Cefalométricos 1 -->
+          <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex flex-col w-full gap-3 justify-center items-center">
+              <img
+                src="/images/Puntos cefalometricos Mcnamara.png"
+                alt="Puntos cefalometrico Mcnamara"
+                class="rounded-lg shadow-lg"
+              />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <TarjetPoints
+                title="<span class='text-pink-500'>Ba</span>"
+                body="Punto más antero inferior del foramen occipital."
+              />
+              <TarjetPoints
+                title="<span class='text-cyan-500'>Co</span>"
+                body="Punto más posterosuperior del cóndilo mandibular."
+              />
+              <TarjetPoints
+                title="<span class='text-orange-500'>ENA</span>"
+                body="Punto más anterior del proceso espinoso."
+              />
+              <TarjetPoints
+                title="<span class='text-purple-800'>Ptm</span>"
+                body="Punto más posterosuperior del contorno de la fisura pterigomaxilar."
+              />
+              <TarjetPoints
+                title="<span class='text-pink-600'>Gn</span>"
+                body="Punto más anterior e inferior del contorno mandibular."
+              />
+              <TarjetPoints
+                title="<span class='text-blue-700'>Go</span>"
+                body="Punto ubicado parte más posteroinferior de la
               silueta mandibular."
-            />
-            <TarjetPoints title="Me" body="Punto más inferior de la sínfisis mandibular." />
-            <TarjetPoints title="N" body="Punto más anterior de la sutura frontonasal." />
-            <TarjetPoints title="Punto D" body="Punto más central de la sínfisis mentoniana." />
-            <TarjetPoints title="Or" body="Punto más inferior en el margen infraorbital." />
-            <TarjetPoints
-              title="Pg"
-              body="Punto más prominente ubicado en parte anterior de la sínfisis mentoniana."
-            />
-            <TarjetPoints
-              title="Po"
-              body="Punto más alto ubicado sobre el meato auditivo externo."
-            />
-            <TarjetPoints
-              title="A"
-              body="Punto más profundo del contorno anterior del maxilar superior."
-            />
+              />
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs text-gray-600">
+              McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta.
+              Ann Arbor, Michigan: Needham Press; 1995.
+            </p>
+          </div>
+
+          <!-- Puntos Cefalométricos 2 -->
+          <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex flex-col w-full gap-3 justify-center items-center">
+              <img
+                src="/images/Puntos cefalometricos Mcnamara 2.png"
+                alt="Puntos cefalometrico Mcnamara"
+                class="rounded-lg shadow-lg"
+              />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <TarjetPoints
+                title="<span class='text-green-800/60'>Me</span>"
+                body="Punto más inferior de la sínfisis mandibular."
+              />
+              <TarjetPoints
+                title="<span class='text-rose-400'>N</span>"
+                body="Punto más anterior de la sutura frontonasal."
+              />
+              <TarjetPoints
+                title="<span class='text-cyan-500'>Or</span>"
+                body="Punto más inferior en el margen infraorbital."
+              />
+              <TarjetPoints
+                title="<span class='text-orange-400'>Pg</span>"
+                body="Punto más prominente ubicado en parte anterior de la sínfisis mentoniana."
+              />
+              <TarjetPoints
+                title="<span class='text-purple-500'>Po</span>"
+                body="Punto más alto ubicado sobre el meato auditivo externo."
+              />
+              <TarjetPoints
+                title="<span class='text-purple-700/80'>A</span>"
+                body="Punto más profundo del contorno anterior del maxilar superior."
+              />
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <p class="text-center text-[10px] md:text-xs text-gray-600">
+              McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta.
+              Ann Arbor, Michigan: Needham Press; 1995.
+            </p>
           </div>
         </div>
 
@@ -157,6 +209,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               imageSrc="/images/N- perpendicular a A.png"
               text1="Es la distancia que existe entre el punto A y una línea perpendicular a Frankfort( Po- Or) que baje desde nasion."
               text2="Indica la posición anteroposterior del maxilar con respecto a la base del cráneo."
+              tituloFila1="Hombre"
               norma1="1.1 mm"
               SD1="2.7 mm"
               rango1="-1.6 mm - 3.8 mm"
@@ -173,6 +226,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               imageSrc="/images/N- perpendicular a Pg.png"
               text1="Es la distancia que existe entre el punto Pg y una línea perpendicular a Frankfort (Po-Or) que baje desde nasion."
               text2="Indica la posición anteroposterior de la mandíbula con respecto a la base del cráneo."
+              tituloFila1="Hombre"
               norma1="-0.3 mm"
               SD1="3.8mm"
               rango1=" -4.1mm a 3.5mm"
@@ -256,6 +310,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               imageSrc="/images/Angulo del plano mandibular.png"
               text1="Es la ángulo formado por el plano de Frankfort(Po-Or) y el plano mandibular (Go-Me)."
               text2="Indica la inclinación del borde inferior de la mandíbula con respecto a la base del cráneo."
+              tituloFila1="Hombre"
               norma1="21,3°"
               SD1="3.9"
               rango1="17.4° a 25.2°"
@@ -276,10 +331,13 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               text1="Es el ángulo formado entre el eje facial y el plano Basion -Nasion."
               text2="Indica la ubicación vertical del mentón en relación a la base del cráneo."
               text3="Al valor que da se le resta 90°."
-              :tabla="false"
-              norma="Norma:"
-              m="M: 0.2° +/-3.2"
-              h="H: 0,5° +/-3.5"
+              tituloFila1="Hombre"
+              norma1="0.5°"
+              SD1="3.5"
+              rango1=" -3° a 4°"
+              norma2="0,2°"
+              SD2="3,2°"
+              rango2=" -3 a 3,4°"
               Valores1="Valores mayores a la norma"
               tabla1="Patrón facial hiperdivergente"
               Valores3="Valores menores a la norma"
@@ -298,12 +356,17 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               imageSrc="/images/Incisivo superior-vertical punto A.png"
               text1="Distancia que existe entre el punto A y la parte más anterior del incisivo superior."
               text2="Indica la ubicación anteroposterior del incisivo superior."
-              :tabla="false"
-              norma="Norma:"
-              m="M: 5.4 mm+/- 1.7"
-              h="H:5.3 mm +/- 2.0"
+              tituloFila1="Hombre"
+              norma1="5,3mm"
+              SD1="2,0"
+              rango1=" 3,3mm a 7,3mm"
+              norma2="5,4mm"
+              SD2="1,7"
+              rango2=" 3,7mm a 7,1mm"
               Valores1="Valores mayores a la norma"
               tabla1="Protrusión del incisivo superior"
+              Valores2="Valores en la norma"
+              tabla2="Normotrusión del incisivo superior"
               Valores3="Valores menores a la norma"
               tabla3="Retrusión del incisivo superior"
               citacion="McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta. Ann Arbor, Michigan: Needham Press; 1995."
@@ -313,12 +376,17 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               imageSrc="/images/Incisivo inferior linea A-Pg.png"
               text1="Distancia que existe entre el borde más anterior del incisivo inferior y el plano A - Pogonion."
               text2="Indica la ubicación anteroposterior del incisivo superior."
-              :tabla="false"
-              norma="Norma:"
-              m="M: 2,7 mm+/- 1.7"
-              h="H:2.3 mm +/- 2.1"
+              tituloFila1="Hombre"
+              norma1="2,3mm"
+              SD1="2,1"
+              rango1="0,2mm a 4,4mm"
+              norma2="2,7mm"
+              SD2="1,7"
+              rango2="1mm a 4,4mm"
               Valores1="Valores mayores a la norma"
               tabla1="Protrusión del incisivo inferior"
+              Valores2="Valores en la norma"
+              tabla2="Normotrusion del incisivo inferior"
               Valores3="Valores menores a la norma"
               tabla3="Retrusión del incisivo inferior"
               citacion="McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta. Ann Arbor, Michigan: Needham Press; 1995."
@@ -334,10 +402,11 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               title="Espacio faríngeo superior"
               imageSrc="/images/Espacio faringeo superior.png"
               text1="Es la distancia que existe entre el contorno posterior del paladar blando y el punto más cercano sobre la pared faríngea posterior."
-              :tabla="false"
-              norma="Norma : 17.4mm:"
+              norma1="17.4mm"
               Valores1="Valores mayores a la norma"
               tabla1="tubo aéreo amplio"
+              Valores2="Valores en la norma"
+              tabla2="Tubo aereo adecuado"
               Valores3="Valores menores a la norma"
               tabla3="tubo aéreo estrecho"
               citacion="McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta. Ann Arbor, Michigan: Needham Press; 1995."
@@ -347,10 +416,11 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               imageSrc="/images/Espacio faringeo inferior.png"
               text1="Es la distancia que existe entre el contorno posterior de la lengua  y el borde inferior de la mandíbula y el punto más cercano de la pared posterior de la faringe.."
               text2="Indica el diámetro del tubo aéreo inferior."
-              :tabla="false"
-              norma="Norma : 11 a 12mm"
+              norma1="11 a 12mm"
               Valores1="Valores mayores a la norma"
               tabla1="tubo aéreo amplio"
+              Valores2="Valores en la norma"
+              tabla2="Tubo aereo adecuado"
               Valores3="Valores menores a la norma"
               tabla3="tubo aéreo estrecho"
               citacion="McNamara JA Jr, Brudon WL. Tratamiento ortodóncico y ortopédico en la dentición mixta. Ann Arbor, Michigan: Needham Press; 1995."

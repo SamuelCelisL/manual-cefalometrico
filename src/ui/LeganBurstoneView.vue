@@ -35,46 +35,6 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               Por: 1. Natalia Báron - 2. Karla Palacio
             </h3>
           </div>
-          <div class="flex flex-col lg:flex-row gap-4">
-            <div class="flex flex-col w-full gap-3 justify-center items-center">
-              <img
-                src="/images/Puntos cefalometrico LeganBurstone 1.png"
-                alt="Puntos cefalometrico LeganBurstone 1"
-                class="rounded-lg shadow-lg"
-              />
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              <TarjetPoints
-                title="Glabela (G)"
-                body="Punto más prominente en el plano sagital de la frente."
-              />
-              <TarjetPoints
-                title="Columnela (cm)"
-                body="Punto más anterior en la columnela de la nariz."
-              />
-              <TarjetPoints
-                title="Subnasal (Sn)"
-                body="Punto en el cual el tabique nasal se une con el labio superior."
-              />
-              <TarjetPoints
-                title="Labrarle superior (Ls)"
-                body="Punto que indica el borde mucocutáneo del labio superior."
-              />
-              <TarjetPoints
-                title="Stomion inferior (Stmi)"
-                body="Punto superior en el bermellón del labio inferior."
-              />
-              <TarjetPoints
-                title="Stomion superior (Stms)"
-                body="Punto inferior en el bermellón del labio superior."
-              />
-              <TarjetPoints
-                title="Labrale inferior (Li)"
-                body="Punto que indica el borde mucocutáneo del labio inferior."
-              />
-            </div>
-          </div>
 
           <div class="flex flex-col lg:flex-row gap-4">
             <div class="flex flex-col w-full gap-3 justify-center items-center">
@@ -87,24 +47,65 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
               <TarjetPoints
-                title="Surco mentolabial (Si)"
+                title="<span class='text-orange-400'>Surco mentolabial (Si)</span>"
                 body="Punto de mayor concavidad entre el labio inferior y el mentón."
               />
               <TarjetPoints
-                title="Pogonion del tejido blando (Pg')"
+                title="<span class='text-purple-800/60'>Pogonion del tejido blando (Pg')</span>"
                 body="Punto más anterior en la barbilla del tejido blando."
               />
               <TarjetPoints
-                title="Gnation de tejido blando (Gn ')"
+                title="<span class='text-pink-400'>Gnation de tejido blando (Gn ')</span>"
                 body="Punto medio construido entre pogonion de tejidos blandos y mentón de tejidos blandos; se ubica exactamente en la intersección del plano Subnasal- Pogonion con el plano Punto cervical - Mentón."
               />
               <TarjetPoints
-                title="Tejido blando mentón (Me´)"
+                title="<span class='text-green-400/70'>Tejido blando mentón (Me´)</span>"
                 body="Punto más bajo en el contorno de la barbilla del tejido blando."
               />
               <TarjetPoints
-                title="Punto cervical (C)"
+                title="<span class='text-orange-400'>Punto cervical (C)</span>"
                 body="Punto más interno entre el área submental y el cuello situado en la intersección de líneas trazadas tangentes al cuello y áreas submentales."
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex flex-col w-full gap-3 justify-center items-center">
+              <img
+                src="/images/Puntos cefalometrico LeganBurstone 1.png"
+                alt="Puntos cefalometrico LeganBurstone 1"
+                class="rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <TarjetPoints
+                title="<span class='text-cyan-600'>Glabela (G)</span>"
+                body="Punto más prominente en el plano sagital de la frente."
+              />
+              <TarjetPoints
+                title="<span class='text-orange-400'>Columnela (cm)</span>"
+                body="Punto más anterior en la columnela de la nariz."
+              />
+              <TarjetPoints
+                title="<span class='text-pink-500'>Subnasal (Sn)</span>"
+                body="Punto en el cual el tabique nasal se une con el labio superior."
+              />
+              <TarjetPoints
+                title="<span class='text-green-400/70'>Labrarle superior (Ls)</span>"
+                body="Punto que indica el borde mucocutáneo del labio superior."
+              />
+              <TarjetPoints
+                title="<span class='text-purple-800/60'>Stomion inferior (Stmi)</span>"
+                body="Punto superior en el bermellón del labio inferior."
+              />
+              <TarjetPoints
+                title="<span class='text-purple-600'>Stomion superior (Stms)</span>"
+                body="Punto inferior en el bermellón del labio superior."
+              />
+              <TarjetPoints
+                title="<span class='text-blue-700/70'>Labrale inferior (Li)</span>"
+                body="Punto que indica el borde mucocutáneo del labio inferior."
               />
             </div>
           </div>
@@ -121,7 +122,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
             <TarjejtInforImages2
               title="Plano de referencia horizontal (PH)"
               imageSrc="/images/Plano de referencia horizontal (PH).png"
-              text1="Construido trazando una línea a través del Nasión 7° hacia arriba desde la silla turca.."
+              text1="Construido trazando una línea a través del Nasión 7° hacia arriba desde la silla turca."
               Valores1="Nasion (N)"
               tabla1="Punto más anterior de la sutura frontonasal, ubicada sobre el plano sagital medio."
               Valores4="Silla turca (S)"
@@ -134,6 +135,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               imageSrc="/images/Angulo de la convexidad facial o angulo del contorno facial.png"
               text1="Se considera un àngulo positivo cuando el plano (Sn–Pg`)."
               text2="se encuentra detrás del plano (G´- Sn) y negativo cuando está adelante.."
+              titulo-fila1="Hombres"
               norma1="10.8°"
               SD1="4,2°"
               rango1=" 6.6° a 15°"
@@ -145,7 +147,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               Valores2="Ángulo disminuido"
               tabla2="perfil facial cóncavo"
               anexo="El artículo no especifica cuando hay un perfil recto, sin embargo se debe observar clínicamente al paciente lo cual se determina si tiene un perfil recto o se podría mencionar paciente dentro de los parámetros de la norma con tendencia a cóncavo o convexo"
-              anexo2=" * Medidas modificadas por el artículo de 1980"
+              anexo2=" * Normas modificadas por el artículo de 1980"
               citacion="Legan, H. L., & Burstone, C. J. (1980). Soft tissue cephalometric analysis for orthognathic surgery. Journal of Oral Surgery, 38(10), 744–751 -- Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980). Cephalometric analysis of dentofacial normals. American Journal of Orthodontics, 78(4), 404–420"
             />
 
@@ -154,7 +156,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               imageSrc="/images/Posicion maxilar (Sn-G--Ph).png"
               text1="Distancia en mm de Sn a un punto equidistante, ubicado sobre el plano G´ vertical (G’v) que sea paralelo al plano horizontal de referencia(PH)."
               text2="- Se considera una medida positiva cuando (Sn) se encuentra delante del plano (G´v)."
-              texto3="- Si se encuentra por detrás, será una Sn medida negativa."
+              text3="- Si se encuentra por detrás, será una Sn medida negativa."
               tituloFila1="Hombre y Mujeres"
               norma1="6mm"
               SD1="3mm"
@@ -163,7 +165,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               tabla1="protrusión maxilar."
               Valores2="Medida está disminuida"
               tabla2="retrusión maxilar"
-              Valores3="Medida norma"
+              Valores3="Medida normal"
               tabla3="Normotrusion maxilar"
               citacion="Legan, H. L., & Burstone, C. J. (1980). Soft tissue cephalometric analysis for orthognathic surgery. Journal of Oral Surgery, 38(10), 744–751 -- Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980). Cephalometric analysis of dentofacial normals. American Journal of Orthodontics, 78(4), 404–420"
             />
@@ -182,12 +184,89 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               tabla1="Protrusión mandibular."
               Valores2="Medida disminuida"
               tabla2="Retrusión mandibular"
-              Valores3="Medida norma"
+              Valores3="Medida normal"
               tabla3="Normotrusion mandibular"
               citacion="Legan, H. L., & Burstone, C. J. (1980). Soft tissue cephalometric analysis for orthognathic surgery. Journal of Oral Surgery, 38(10), 744–751 -- Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980). Cephalometric analysis of dentofacial normals. American Journal of Orthodontics, 78(4), 404–420"
             />
+            <TarjejtInforImages2
+              title="Relación de la altura vertical (G’-Sn/Sn-Me’/(PH))"
+              imageSrc="/images/Relacion de la altura vertical (G-Sn--Sn-Me--(PH)).png"
+              text1="Se trazan tres líneas paralelas al plano horizontal de referencia (PH). Cuyos orígenes serán los puntos (G ‘), (Sn) y Me ‘. Para sacar la relación se divide la distancia (G’-Sn) entre la distancia (Sn-Me’)."
+              tituloFila1="Hombre"
+              norma1="0.96 mm"
+              SD1="0,7 mm"
+              rango1=" 0.26 a 1.66 mm"
+              norma2="1,02 mm"
+              SD2="1.36mm"
+              rango2="-5.18  a 7.22 mm"
+              Valores1="Norma aumentada"
+              tabla1="tercio inferior disminuido en relación al tercio superior."
+              Valores2="Norma disminuida"
+              tabla2="altura del tercio inferior aumentada en relación al tercio superior"
+              Valores3="Norma normal"
+              tabla3="relación adecuada o proporcional"
+              anexo2="* Medidas modificadas por el artículo de 1980"
+              citacion="Legan, H. L., & Burstone, C. J. (1980). Soft tissue cephalometric analysis for orthognathic surgery. Journal of Oral Surgery, 38(10), 744–751 -- Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980). Cephalometric analysis of dentofacial normals. American Journal of Orthodontics, 78(4), 404–420."
+            />
+            <TarjejtInforImages2
+              title="Ángulo del cuello y tercio inferior de la cara (Sn-Gn’-C)"
+              imageSrc="/images/Angulo del cuello y tercio inferior de la cara (Sn-Gn-C).png"
+              text1="Está formado por la intersección de los planos (Sn-Gn´) y (Gn’-C). Indica la proyección del mentón en relación al cuello."
+              tituloFila1="Hombres y Mujeres"
+              norma1="100°"
+              SD1="7°."
+              rango1="93°- 107°"
+              Valores1="Ángulo está aumentado"
+              tabla1="se considera mentón deficiente."
+              Valores2="Ángulo está disminuido"
+              tabla2=" se considera un mentón prominente."
+              Valores3="Ángulo normal"
+              tabla3="mentón adecuado"
+              citacion="Legan, H. L., & Burstone, C. J. (1980). Soft tissue cephalometric analysis for orthognathic surgery. Journal of Oral Surgery, 38(10), 744–751 -- Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980). Cephalometric analysis of dentofacial normals. American Journal of Orthodontics, 78(4), 404–420."
+            />
+            <TarjejtInforImages2
+              title="Relación de la altura y profundidad vertical inferior (Sn-Gn’/C-Gn’)"
+              imageSrc="/images/Relacion de la altura profundidad vertical inferior (Sn-Gn--C-gn).png"
+              text1="Es la relación existente entre la distancia (Sn- Gn´) con respecto a la distancia (C- Gn´). Para sacar la relación se divide la distancia (Sn-Gn´) entre la distancia (C-Gn’)."
+              tituloFila1="Hombre"
+              norma1="0.96 mm"
+              SD1="0,7 mm"
+              rango1="0.26° a 1.66°"
+              norma2="1,02 mm"
+              SD2="1.36mm"
+              rango2=" -5.18 ° a 7.22°"
+              Valores1="Norma aumentada"
+              tabla1="Cuello corto"
+              Valores2="Norma disminuida"
+              tabla2="Cuello largo"
+              Valores3="Norma normal"
+              tabla3="Cuello adecuado "
+              anexo2="* Medidas modificadas por el artículo de 1980"
+              citacion="Legan, H. L., & Burstone, C. J. (1980). Soft tissue cephalometric analysis for orthognathic surgery. Journal of Oral Surgery, 38(10), 744–751 -- Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980). Cephalometric analysis of dentofacial normals. American Journal of Orthodontics, 78(4), 404–420."
+            />
+            <TarjejtInforImages2
+              title="Ángulo Nasolabial (Cm-Sn-Ls)"
+              imageSrc="/images/Angulo nasolabial (Cm-Sn-Ls).png"
+              text1="POSICIÓN Y FORMA LABIAL"
+              text2="Se forma de la intersección de los planos (Cm-Sn) y (Sn-Ls)."
+              text3="Se utiliza para evaluar la posición del labio superior"
+              tituloFila1="Hombre"
+              norma1="111,4°"
+              SD1="11,7°"
+              rango1=" 99.7° a 123.1°"
+              norma2="111,9°"
+              SD2="8,4°"
+              rango2="103,5° a 120.3°"
+              Valores1="Ángulo aumentado"
+              tabla1="Abierto"
+              Valores2="Ángulo disminuido"
+              tabla2="Cerrado"
+              Valores3="Ángulo normal"
+              tabla3="Adecuado"
+              anexo2="* Medidas modificadas por el artículo de 1980"
+              citacion="Legan, H. L., & Burstone, C. J. (1980). Soft tissue cephalometric analysis for orthognathic surgery. Journal of Oral Surgery, 38(10), 744–751 -- Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980). Cephalometric analysis of dentofacial normals. American Journal of Orthodontics, 78(4), 404–420."
+            />
           </div>
-          <p class="text-lg mt-4">EN DESARROLLO...</p>
         </div>
 
         <!--! PUNTOS CEFALOMETRICOS -->
