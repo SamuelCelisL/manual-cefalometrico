@@ -53,6 +53,7 @@ const obtenerSeccionPadre = (id: string) => {
     return 'MaxilarmandibularLeganBurstoneDuros'
   if (id.startsWith('TejidosDurosDentalesLeganBurstone')) return 'TejidosDurosDentalesLeganBurstone'
   if (id.startsWith('PuntosCefalometricosSaossuni')) return 'PuntosCefalometricosSaossuni'
+  if (id.startsWith('ProporcionesHorizontalesSaossuni')) return 'ProporcionesHorizontalesSaossuni'
   if (id.startsWith('PuntosCefalometricosGrummons')) return 'PuntosCefalometricosGrummons'
 
   return ''
@@ -307,7 +308,8 @@ onMounted(async () => {
           subtituloActivo === 'PuntosCefalometricosLeganBurstone' ||
           subtituloActivo === 'PuntosCefalometricosLeganBurstoneDuros' ||
           subtituloActivo === 'VerticalesqueleticoLeganBurstoneDuros' ||
-          subtituloActivo === 'MaxilarmandibularLeganBurstoneDuros'
+          subtituloActivo === 'MaxilarmandibularLeganBurstoneDuros' ||
+          subtituloActivo === 'TejidosDurosDentalesLeganBurstone'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
@@ -377,7 +379,9 @@ onMounted(async () => {
       <button
         :class="[
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
-          seccionActiva === 'saossuni'
+          seccionActiva === 'saossuni' ||
+          subtituloActivo === 'PuntosCefalometricosSaossuni' ||
+          subtituloActivo === 'ProporcionesHorizontalesSaossuni'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
@@ -398,6 +402,17 @@ onMounted(async () => {
           ]"
         >
           Puntos Cefalométricos
+        </button>
+        <button
+          @click="irASubtitulo('ProporcionesHorizontalesSaossuni')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'ProporcionesHorizontalesSaossuni'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Proporciones Horizontales
         </button>
       </div>
 
@@ -437,18 +452,6 @@ onMounted(async () => {
       >
         <IconsSVG name="iconoAyuda" />
         Bimler
-      </button>
-
-      <button
-        :class="[
-          'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
-          seccionActiva === 'equipotrabajo'
-            ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
-            : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
-        ]"
-      >
-        <IconsSVG name="iconoUsuarios" />
-        Equipo de Trabajo
       </button>
     </div>
     <div class="w-full h-[5%] flex justify-center items-center border-t border-border-primary/30">

@@ -7,7 +7,6 @@ import LeganBurstoneView from '@/ui/LeganBurstoneView.vue'
 import SaossuniView from '@/ui/SaossuniView.vue'
 import GrummonsView from '@/ui/GrummonsView.vue'
 import BimlerView from '@/ui/BimlerView.vue'
-import EquipoTrabajo from '@/ui/EquipoTrabajo.vue'
 
 import { ref, watch } from 'vue'
 
@@ -83,7 +82,7 @@ const contenedorScroll = ref<HTMLElement | null>(null)
       </div>
       <div
         ref="contenedorScroll"
-        class="w-full h-full flex flex-col items-center gap-5 overflow-y-auto"
+        class="w-full h-full flex flex-col items-center gap-5 pb-5 overflow-y-auto"
       >
         <div class="w-full flex flex-col">
           <CabeceraPage />
@@ -105,9 +104,6 @@ const contenedorScroll = ref<HTMLElement | null>(null)
         </div>
         <div class="w-full flex flex-col" id="bimler" data-seccion>
           <BimlerView />
-        </div>
-        <div class="w-full flex flex-col" id="equipotrabajo" data-seccion>
-          <EquipoTrabajo />
         </div>
       </div>
     </div>
