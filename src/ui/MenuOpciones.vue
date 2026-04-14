@@ -47,6 +47,8 @@ const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('PuntosCefalometricosLeganBurstone')) return 'PuntosCefalometricosLeganBurstone'
   if (id.startsWith('PuntosCefalometricosLeganBurstoneDuros'))
     return 'PuntosCefalometricosLeganBurstoneDuros'
+  if (id.startsWith('VerticalesqueleticoLeganBurstoneDuros'))
+    return 'VerticalesqueleticoLeganBurstoneDuros'
   if (id.startsWith('PuntosCefalometricosSaossuni')) return 'PuntosCefalometricosSaossuni'
   if (id.startsWith('PuntosCefalometricosGrummons')) return 'PuntosCefalometricosGrummons'
 
@@ -299,7 +301,9 @@ onMounted(async () => {
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
           seccionActiva === 'leganburstoneView' ||
-          subtituloActivo === 'PuntosCefalometricosLeganBurstone'
+          subtituloActivo === 'PuntosCefalometricosLeganBurstone' ||
+          subtituloActivo === 'PuntosCefalometricosLeganBurstoneDuros' ||
+          subtituloActivo === 'VerticalesqueleticoLeganBurstoneDuros'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
@@ -330,6 +334,17 @@ onMounted(async () => {
           ]"
         >
           Tejidos Duros: Puntos Cefalométricos
+        </button>
+        <button
+          @click="irASubtitulo('VerticalesqueleticoLeganBurstoneDuros')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'VerticalesqueleticoLeganBurstoneDuros'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Vertical Esquelético
         </button>
       </div>
 
