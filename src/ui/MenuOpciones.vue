@@ -51,6 +51,7 @@ const obtenerSeccionPadre = (id: string) => {
     return 'VerticalesqueleticoLeganBurstoneDuros'
   if (id.startsWith('MaxilarmandibularLeganBurstoneDuros'))
     return 'MaxilarmandibularLeganBurstoneDuros'
+  if (id.startsWith('TejidosDurosDentalesLeganBurstone')) return 'TejidosDurosDentalesLeganBurstone'
   if (id.startsWith('PuntosCefalometricosSaossuni')) return 'PuntosCefalometricosSaossuni'
   if (id.startsWith('PuntosCefalometricosGrummons')) return 'PuntosCefalometricosGrummons'
 
@@ -359,6 +360,17 @@ onMounted(async () => {
           ]"
         >
           Maxilar - Mandibular
+        </button>
+        <button
+          @click="irASubtitulo('TejidosDurosDentalesLeganBurstone')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'TejidosDurosDentalesLeganBurstone'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Tejidos Duros Dentales
         </button>
       </div>
 
