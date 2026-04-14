@@ -830,6 +830,41 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
             />
           </div>
         </div>
+
+        <!--! Maxilar - Mandibular Tejidos Duros -->
+        <div class="flex flex-col gap-4" id="MaxilarmandibularLeganBurstoneDuros" data-seccion>
+          <div class="flex flex-col justify-end">
+            <h2 class="text-2xl font-bold text-background-primary font-serif">
+              Tejidos Duros: Maxilar - Mandibular
+            </h2>
+          </div>
+
+          <div class="flex flex-col justify-center items-center gap-4 mb-2">
+            <TarjejtInforImages2
+              title="Longitud anteroposterior del maxilar"
+              imageSrc="/images/Longitud anteroposterior del maxilar.png"
+              text1="Se traza una línea con punto de origen en ENA perpendicular al PH y una línea con punto de origen ENP perpendicular al PH."
+              text2="Se mide la distancia de ambas líneas sobre el PH"
+              text3="Determina el tamaño del maxilar"
+              Vacio=""
+              tituloFila1="Hombres"
+              norma1="56,4 mm"
+              SD1="2,7  mm"
+              rango1="53,7 a 59,1 mm"
+              tituloFila2="Mujeres"
+              norma2="53,1 mm"
+              SD2="2,9 mm"
+              rango2="50,2 a 56 mm"
+              Valores1="Valor aumentado"
+              tabla1="Macrognatismo maxilar"
+              Valores2="Valor en la norma"
+              tabla2="Normognatismo maxilar"
+              Valores3="Valor disminuido"
+              tabla3="Micrognatismo maxilar"
+              citacion="Burstone, C. J., James, R. B., Legan, H., Murphy, G. A., & Norton, L. A. (1978). Cephalometrics for orthognathic surgery. Journal of Oral Surgery, 36(4), 269-277. -- Scheideman GB, Legan H L, Bell WH. Cephalometric analysis of dentofacial normals. Am J Orthod vol 78 N.4 . october 1980 ;404–20."
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
