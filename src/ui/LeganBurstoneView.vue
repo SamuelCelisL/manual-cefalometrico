@@ -25,7 +25,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
 
       <!-- CUERPO SECCIÓN -->
       <div class="flex flex-col gap-5">
-        <!--! PUNTOS CEFALOMETRICOS -->
+        <!--! PUNTOS CEFALOMETRICOS Tejidos Blandos -->
         <div class="flex flex-col gap-4" id="PuntosCefalometricosLeganBurstone" data-seccion>
           <div class="flex flex-col justify-end">
             <h2 class="text-2xl font-bold text-background-primary font-serif">
@@ -279,7 +279,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               tabla1="aumentado"
               Valores2="Valor disminuido"
               tabla2="disminuido"
-              Valores3="Valor en la normal"
+              Valores3="Valor en la norma"
               tabla3="adecuado"
               citacion="Legan, H. L., & Burstone, C. J. (1980). Soft tissue cephalometric analysis for orthognathic surgery. Journal of Oral Surgery, 38(10), 744–751 -- Scheideman, G. B., Bell, W. H., Legan, H. L., Finn, R. A., & Reisch, J. S. (1980). Cephalometric analysis of dentofacial normals. American Journal of Orthodontics, 78(4), 404–420."
             />
@@ -348,8 +348,8 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
           </div>
         </div>
 
-        <!--! PUNTOS CEFALOMETRICOS -->
-        <div class="flex flex-col gap-4" id="PuntosCefalometricosLeganBurstone" data-seccion>
+        <!--! PUNTOS CEFALOMETRICOS Tejidos Duros -->
+        <div class="flex flex-col gap-4" id="PuntosCefalometricosLeganBurstoneDuros" data-seccion>
           <div class="flex flex-col justify-end">
             <h2 class="text-2xl font-bold text-background-primary font-serif">Tejidos Duros</h2>
           </div>
@@ -365,27 +365,27 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <TarjetPoints
-                title="Articular (Ar)"
+                title="<span class='text-red-600'>Articular (Ar)</span>"
                 body="Intersección entre la base del cráneo y el borde posterior del cóndilo mandibular."
               />
               <TarjetPoints
-                title="Punto B supramental"
+                title="<span class='text-blue-600'>Punto B supramental</span>"
                 body="La mayor concavidad de la mandíbula entre infradental y pogonion, generalmente por debajo de los ápices de los dientes incisivos inferiores."
               />
               <TarjetPoints
-                title="Gnation (Gn)"
+                title="<span class='text-yellow-900'>Gnation (Gn)</span>"
                 body="Punto intermedio entre pogonion y mentón, se localiza bisectando la línea facial N-Pg y el plano mandibular."
               />
               <TarjetPoints
-                title="Gonion (Go)"
+                title="<span class='text-pink-500'>Gonion (Go)</span>"
                 body="Punto localizado por la bisectriz del ángulo formado por la tangente del borde posterior de la rama mandibular y el borde inferior de la mandíbula."
               />
               <TarjetPoints
-                title="Menton (Me)"
+                title="<span class='text-green-400/70'>Menton (Me)</span>"
                 body="Punto más inferior de la sínfisis mandibular en el plano medio sagital."
               />
               <TarjetPoints
-                title="Pogonion (Pg)"
+                title="<span class='text-yellow-300'>Pogonion (Pg)</span>"
                 body="Punto más anterior del contorno del mentón."
               />
             </div>
@@ -401,25 +401,28 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <TarjetPoints title="Silla Turca (S)" body="Punto medio de la silla turca." />
               <TarjetPoints
-                title="Nasion (N)"
+                title="<span class='text-red-600'>Silla Turca (S)</span>"
+                body="Punto medio de la silla turca."
+              />
+              <TarjetPoints
+                title="<span class='text-blue-600'>Nasion (N)</span>"
                 body="Punto más anterior formado por la sutura naso frontal."
               />
               <TarjetPoints
-                title="Espina nasal anterior (ENA)"
+                title="<span class='text-purple-500'>Espina nasal anterior (ENA)</span>"
                 body="Punto más anterior del piso nasal; la punta de la premaxila en el plano medio sagital."
               />
               <TarjetPoints
-                title="Espina nasal posterior (ENP)"
+                title="<span class='text-green-500'>Espina nasal posterior (ENP)</span>"
                 body="Proceso formado por los extremos mediales unidos que se proyectan del borde posterior de los dos huesos palatinos."
               />
               <TarjetPoints
-                title="Punto A o subespinal"
+                title="<span class='text-pink-500'>Punto A o subespinal</span>"
                 body="La mayor concavidad del maxilar entre la espina nasal anterior y prostion, generalmente alrededor del ápice de los incisivos centrales superiores."
               />
               <TarjetPoints
-                title="Fisura Pterigomaxilar (Ptm)"
+                title="<span class='text-yellow-900'>Fisura Pterigomaxilar (Ptm)</span>"
                 body="Punto más posterior en el contorno anterior de la tuberosidad del maxilar."
               />
             </div>
@@ -450,8 +453,105 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
               citacion="Burstone, C. J., James, R. B., Legan, H., Murphy, G. A., & Norton, L. A. (1978). Cephalometrics for orthognathic surgery. Journal of Oral Surgery, 36(4), 269-277. -- Scheideman GB, Legan H L, Bell WH. Cephalometric analysis of dentofacial normals. Am J Orthod vol 78 N.4 . october 1980 ;404–20.
 "
             />
+            <TarjejtInforImages2
+              title="Longitud Base craneal total"
+              imageSrc="/images/Longitud base craneal total.png"
+              text1="Se trazan una línea perpendicular (90°)  al plano horizontal (PH) cuyo origen sea (Ar) y se mide la distancia de Ar hasta punto N."
+              text2="Evalúa la longitud total de la base del cráneo"
+              Vacio="Ar-N"
+              tituloFila1="Hombres"
+              norma1="92,2 mm"
+              SD1="3,6 mm"
+              rango1="88.6 - 95.8 mm"
+              tituloFila2="Mujeres"
+              norma2="86,2 mm"
+              SD2="5,1 mm"
+              rango2="81,1 - 91,3 mm"
+              Valores1="Valor aumentado"
+              tabla1="Longitud Base craneal aumentada"
+              Valores3="Valor disminuido"
+              tabla3="Longitud Base craneal disminuida"
+              Valores2="Valor en la norma"
+              tabla2="Longitud Base craneal Adecuada"
+              anexo2="* Normas modificadas por el artículo de 1980"
+              citacion="Burstone, C. J., James, R. B., Legan, H., Murphy, G. A., & Norton, L. A. (1978). Cephalometrics for orthognathic surgery. Journal of Oral Surgery, 36(4), 269-277. -- Scheideman GB, Legan H L, Bell WH. Cephalometric analysis of dentofacial normals. Am J Orthod vol 78 N.4 . october 1980 ;404–20."
+            />
+            <TarjejtInforImages2
+              title="Longitud Base craneal Posterior"
+              imageSrc="/images/Longitud base craneal posterior.png"
+              text1="Se traza una línea con punto de origen en Ptm perpendicular al PH y una línea con punto de origen Ar perpendicular al PH."
+              text2="se mide la distancia de ambas líneas sobre el PH"
+              text3="Evalúa la longitud de la Base del cráneo posterior"
+              Vacio="Ar-Ptm"
+              tituloFila1="Hombres"
+              norma1="37,7 mm"
+              SD1="2,6 mm"
+              rango1="35,1 - 40,3 mm"
+              tituloFila2="Mujeres"
+              norma2="35,4 mm"
+              SD2="3,3 mm"
+              rango2="32,1 - 38,7 mm"
+              Valores1="Valor aumentado"
+              tabla1="Longitud Base craneal posterior aumentada"
+              Valores2="Valor en la norma"
+              tabla2="Longitud Base craneal posterior Adecuada"
+              Valores3="Valor disminuido"
+              tabla3="Longitud Base craneal posterior  disminuida"
+              anexo2="* Normas modificadas por el artículo de 1980"
+              citacion="Burstone, C. J., James, R. B., Legan, H., Murphy, G. A., & Norton, L. A. (1978). Cephalometrics for orthognathic surgery. Journal of Oral Surgery, 36(4), 269-277. -- Scheideman GB, Legan H L, Bell WH. Cephalometric analysis of dentofacial normals. Am J Orthod vol 78 N.4 . october 1980 ;404–20."
+            />
+            <TarjejtInforImages2
+              title="Longitud Base craneal Anterior"
+              imageSrc="/images/Longitud base craneal anterior.png"
+              text1="Se traza una línea con punto de origen en Ptm perpendicular al PH  y se mide la distancia hasta N"
+              text2="Evalúa la longitud de la Base del cráneo Anterior"
+              Vacio="Ptm-N"
+              tituloFila1="Hombres"
+              norma1="54,5 mm"
+              SD1="3,6 mm"
+              rango1="50,9 - 58,1 mm"
+              tituloFila2="Mujeres"
+              norma2="50,8 mm"
+              SD2="3,5 mm"
+              rango2="47,3 - 54,3 mm"
+              Valores1="Valor aumentado"
+              tabla1="Longitud Base craneal anterior aumentada"
+              Valores2="Valor en la norma"
+              tabla2="Longitud Base craneal anterior Adecuada"
+              Valores3="Valor disminuido"
+              tabla3="Longitud Base craneal anterior disminuida"
+              anexo2="* Normas modificadas por el artículo de 1980"
+              citacion="Burstone, C. J., James, R. B., Legan, H., Murphy, G. A., & Norton, L. A. (1978). Cephalometrics for orthognathic surgery. Journal of Oral Surgery, 36(4), 269-277. -- Scheideman GB, Legan H L, Bell WH. Cephalometric analysis of dentofacial normals. Am J Orthod vol 78 N.4 . october 1980 ;404–20."
+            />
+            <TarjejtInforImages2
+              title="Ángulo de la Convexidad Esquelética"
+              imageSrc="/images/Angulo de la convexidad esqueletica.png"
+              text1="Se traza un plano de Punto N a punto A"
+              text2="Se traza un plano de Punto A a punto Pg"
+              text3="Se mide el Ángulo inferior"
+              text4="Evalúa el perfil esquelético"
+              Vacio="N-A-Pg"
+              tituloFila1="Hombres"
+              norma1="-0,6°"
+              SD1="4,3"
+              rango1="-4,9 a  3,7°"
+              tituloFila2="Mujeres"
+              norma2="2,0°"
+              SD2="4,7"
+              rango2="-2,7 a 6,7 °"
+              Valores1="Valor aumentado"
+              tabla1="Perfil esquelético convexo "
+              Valores2="Valor en la norma"
+              tabla2="Perfil Recto  ** Autor no da el Diagnóstico**"
+              Valores3="Valor disminuido"
+              tabla3="Perfil esquelético Cóncavo"
+              anexo="<br/> <span class='text-green-400'>Positivo:</span> Cuando A-Pg está detrás de N-A <br/>
+ <span class='text-green-400'>Negativo:</span> Cuando A-Pg está delante de N-A
+"
+              anexo2="* Normas modificadas por el artículo de 1980"
+              citacion="Burstone, C. J., James, R. B., Legan, H., Murphy, G. A., & Norton, L. A. (1978). Cephalometrics for orthognathic surgery. Journal of Oral Surgery, 36(4), 269-277. -- Scheideman GB, Legan H L, Bell WH. Cephalometric analysis of dentofacial normals. Am J Orthod vol 78 N.4 . october 1980 ;404–20."
+            />
           </div>
-          <p class="text-lg mt-4">EN DESARROLLO...</p>
         </div>
       </div>
     </div>

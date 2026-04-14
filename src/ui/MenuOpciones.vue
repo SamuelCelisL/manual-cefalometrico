@@ -45,6 +45,8 @@ const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('medidasDentalesMcnamara')) return 'medidasDentalesMcnamara'
   if (id.startsWith('medidasFaringeasMcnamara')) return 'medidasFaringeasMcnamara'
   if (id.startsWith('PuntosCefalometricosLeganBurstone')) return 'PuntosCefalometricosLeganBurstone'
+  if (id.startsWith('PuntosCefalometricosLeganBurstoneDuros'))
+    return 'PuntosCefalometricosLeganBurstoneDuros'
   if (id.startsWith('PuntosCefalometricosSaossuni')) return 'PuntosCefalometricosSaossuni'
   if (id.startsWith('PuntosCefalometricosGrummons')) return 'PuntosCefalometricosGrummons'
 
@@ -317,6 +319,17 @@ onMounted(async () => {
           ]"
         >
           Tejidos Blandos: Puntos Cefalométricos
+        </button>
+        <button
+          @click="irASubtitulo('PuntosCefalometricosLeganBurstoneDuros')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'PuntosCefalometricosLeganBurstoneDuros'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Tejidos Duros: Puntos Cefalométricos
         </button>
       </div>
 

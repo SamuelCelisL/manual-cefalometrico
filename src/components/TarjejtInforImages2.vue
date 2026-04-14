@@ -29,6 +29,10 @@ defineProps({
     type: String,
     required: false,
   },
+  Vacio: {
+    type: String,
+    required: false,
+  },
   tituloNorma: {
     type: String,
     default: 'Norma',
@@ -169,13 +173,16 @@ defineProps({
           <p>{{ text1 }}</p>
           <p>{{ text2 }}</p>
           <p v-if="text3">{{ text3 }}</p>
+          <p v-if="text4">{{ text4 }}</p>
 
           <!-- TABLA -->
           <div v-if="tabla" class="my-2 overflow-x-auto flex items-center justify-center">
             <table class="w-auto text-[10px] sm:text-sm text-center border border-gray-300">
               <thead class="border-b border-gray-400 bg-blue-200">
                 <tr>
-                  <th v-if="tituloFila1" class="uppercase px-5 py-1 border border-gray-600"></th>
+                  <th v-if="tituloFila1" class="px-5 py-1 border border-gray-600">
+                    {{ Vacio }}
+                  </th>
                   <th v-if="norma1" class="uppercase px-5 py-1 border border-gray-600">
                     {{ tituloNorma }}
                   </th>
@@ -226,7 +233,7 @@ defineProps({
           </div>
 
           <div v-if="anexo" class="flex gap-2">
-            <p class=""><span class="font-semibold">Anexo:</span> {{ anexo }}</p>
+            <p><span class="font-semibold">Anexo:</span> <span v-html="anexo"></span></p>
           </div>
 
           <div v-if="anexo2" class="flex gap-2">
