@@ -55,7 +55,8 @@ const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('PuntosCefalometricosSaossuni')) return 'PuntosCefalometricosSaossuni'
   if (id.startsWith('ProporcionesHorizontalesSaossuni')) return 'ProporcionesHorizontalesSaossuni'
   if (id.startsWith('PuntosCefalometricosGrummons')) return 'PuntosCefalometricosGrummons'
-
+  if (id.startsWith('PuntosCefalometricosBimler')) return 'PuntosCefalometricosBimler'
+  if (id.startsWith('MedidasAngularesBimler')) return 'MedidasAngularesBimler'
   return ''
 }
 
@@ -445,15 +446,43 @@ onMounted(async () => {
       <button
         :class="[
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
-          seccionActiva === 'bimler'
+          seccionActiva === 'bimler' ||
+          subtituloActivo === 'PuntosCefalometricosBimler' ||
+          subtituloActivo === 'MedidasAngularesBimler'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
+        @click="toggleMenu('bimler')"
       >
         <IconsSVG name="iconoAyuda" />
         Bimler
       </button>
+      <div v-if="menuAbierto === 'bimler'" class="w-full pl-5 flex flex-col">
+        <button
+          @click="irASubtitulo('PuntosCefalometricosBimler')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'PuntosCefalometricosBimler'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Puntos Cefalométricos
+        </button>
+        <button
+          @click="irASubtitulo('MedidasAngularesBimler')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'MedidasAngularesBimler'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Medidas Angulares
+        </button>
+      </div>
     </div>
+
     <div class="w-full h-[5%] flex justify-center items-center border-t border-border-primary/30">
       <h1
         class="text-white/30 w-full text-center text-[8px] sm:text-[10px] md:text-[12px] lg:text-md"
