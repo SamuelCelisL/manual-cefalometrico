@@ -57,6 +57,7 @@ const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('PuntosCefalometricosGrummons')) return 'PuntosCefalometricosGrummons'
   if (id.startsWith('PuntosCefalometricosBimler')) return 'PuntosCefalometricosBimler'
   if (id.startsWith('MedidasAngularesBimler')) return 'MedidasAngularesBimler'
+  if (id.startsWith('MedidasLinealesBimler')) return 'MedidasLinealesBimler'
   return ''
 }
 
@@ -448,7 +449,8 @@ onMounted(async () => {
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
           seccionActiva === 'bimler' ||
           subtituloActivo === 'PuntosCefalometricosBimler' ||
-          subtituloActivo === 'MedidasAngularesBimler'
+          subtituloActivo === 'MedidasAngularesBimler' ||
+          subtituloActivo === 'MedidasLinealesBimler'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
@@ -479,6 +481,17 @@ onMounted(async () => {
           ]"
         >
           Medidas Angulares
+        </button>
+        <button
+          @click="irASubtitulo('MedidasLinealesBimler')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'MedidasLinealesBimler'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Medidas Lineales
         </button>
       </div>
     </div>
