@@ -44,9 +44,9 @@ const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('medidasVerticalesMcnamara')) return 'medidasVerticalesMcnamara'
   if (id.startsWith('medidasDentalesMcnamara')) return 'medidasDentalesMcnamara'
   if (id.startsWith('medidasFaringeasMcnamara')) return 'medidasFaringeasMcnamara'
-  if (id.startsWith('PuntosCefalometricosLeganBurstone')) return 'PuntosCefalometricosLeganBurstone'
   if (id.startsWith('PuntosCefalometricosLeganBurstoneDuros'))
     return 'PuntosCefalometricosLeganBurstoneDuros'
+  if (id.startsWith('PuntosCefalometricosLeganBurstone')) return 'PuntosCefalometricosLeganBurstone'
   if (id.startsWith('VerticalesqueleticoLeganBurstoneDuros'))
     return 'VerticalesqueleticoLeganBurstoneDuros'
   if (id.startsWith('MaxilarmandibularLeganBurstoneDuros'))
@@ -72,7 +72,6 @@ onMounted(async () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.id
-          // seccionActiva.value = entry.target.id
           subtituloActivo.value = id
           seccionActiva.value = obtenerSeccionPadre(id)
         }
