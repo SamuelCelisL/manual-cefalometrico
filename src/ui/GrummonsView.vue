@@ -9,8 +9,12 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
     <div class="flex flex-col gap-4 px-4">
       <div class="w-full flex flex-col">
         <div class="w-full flex pb-2 gap-2">
-          <h1 class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles">
-            05
+          <h1
+            class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles"
+            id="PuntosCefalometricosGrummons"
+            data-seccion
+          >
+            06
           </h1>
           <div class="flex flex-col justify-end">
             <h1 class="text-4xl font-bold text-background-primary font-serif">Grummons</h1>
@@ -26,7 +30,7 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
       <!-- CUERPO SECCIÓN -->
       <div class="flex flex-col gap-5">
         <!--! PUNTOS CEFALOMETRICOS -->
-        <div class="flex flex-col gap-4" id="PuntosCefalometricosGrummons" data-seccion>
+        <div class="flex flex-col gap-4">
           <div class="flex flex-col justify-end">
             <h2 class="text-2xl font-bold text-background-primary font-serif">
               Puntos Cefalométricos

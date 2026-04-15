@@ -8,8 +8,12 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
     <div class="flex flex-col gap-4 px-4">
       <div class="w-full flex flex-col">
         <div class="w-full flex pb-2 gap-2">
-          <h1 class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles">
-            06
+          <h1
+            class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles"
+            id="PuntosCefalometricosBimler"
+            data-seccion
+          >
+            07
           </h1>
           <div class="flex flex-col justify-end">
             <h1 class="text-4xl font-bold text-background-primary font-serif">Bimler</h1>
@@ -23,7 +27,7 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
         </div>
       </div>
       <!--! PUNTOS CEFALOMETRICOS Tejidos Duros -->
-      <div class="flex flex-col gap-4" id="PuntosCefalometricosBimler" data-seccion>
+      <div class="flex flex-col gap-4">
         <div class="flex flex-col justify-end">
           <h2 class="text-2xl font-bold text-background-primary font-serif">
             Puntos Cefalométrico

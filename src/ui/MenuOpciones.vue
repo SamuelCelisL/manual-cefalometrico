@@ -115,8 +115,7 @@ onMounted(async () => {
           seccionActiva === 'inicioSteiner' ||
           seccionActiva === 'PuntosCefalometricosSteiner' ||
           seccionActiva === 'relacionVerticalSteiner' ||
-          seccionActiva === 'relacionDentalSteiner' ||
-          seccionActiva === 'witsSteiner'
+          seccionActiva === 'relacionDentalSteiner'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
             : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
         ]"
@@ -173,11 +172,25 @@ onMounted(async () => {
         >
           Análisis de Steiner: Relación Dental
         </button>
+      </div>
 
+      <button
+        :class="[
+          ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+          seccionActiva === 'witsView' || seccionActiva === 'witsSteiner'
+            ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+            : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+        ]"
+        @click="toggleMenu('witsView')"
+      >
+        <IconsSVG name="iconopersona" />
+        Wits
+      </button>
+      <div v-if="menuAbierto === 'witsView'" class="w-full pl-5 flex flex-col">
         <button
           @click="irASubtitulo('witsSteiner')"
           :class="[
-            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
             subtituloActivo === 'witsSteiner'
               ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
               : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',

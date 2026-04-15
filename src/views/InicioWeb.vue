@@ -9,6 +9,7 @@ import GrummonsView from '@/ui/GrummonsView.vue'
 import BimlerView from '@/ui/BimlerView.vue'
 
 import { ref, watch } from 'vue'
+import WitsView from '@/ui/WitsView.vue'
 
 const openMenu = ref<boolean>(false)
 watch(openMenu, (newValue) => {
@@ -89,6 +90,9 @@ const contenedorScroll = ref<HTMLElement | null>(null)
         </div>
         <div class="w-full flex flex-col" id="steinerView" data-seccion>
           <SteinerView />
+        </div>
+        <div class="w-full flex flex-col" id="witsView" data-seccion>
+          <WitsView />
         </div>
         <div class="w-full flex flex-col" id="mcnamaraView" data-seccion>
           <McnamaraView />

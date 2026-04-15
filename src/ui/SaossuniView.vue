@@ -10,8 +10,12 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
     <div class="flex flex-col gap-4 px-4">
       <div class="w-full flex flex-col">
         <div class="w-full flex pb-2 gap-2">
-          <h1 class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles">
-            04
+          <h1
+            class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles"
+            id="PuntosCefalometricosSaossuni"
+            data-seccion
+          >
+            05
           </h1>
           <div class="flex flex-col justify-end">
             <h1 class="text-4xl font-bold text-background-primary font-serif">Saossuni</h1>
@@ -25,7 +29,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
       <!-- CUERPO SECCIÓN -->
       <div class="flex flex-col gap-5">
         <!--! PUNTOS CEFALOMETRICOS -->
-        <div class="flex flex-col gap-4" id="PuntosCefalometricosSaossuni" data-seccion>
+        <div class="flex flex-col gap-4">
           <h2 class="text-2xl font-bold text-background-primary font-serif">
             Puntos Cefalométricos
           </h2>

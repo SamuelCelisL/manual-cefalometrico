@@ -8,8 +8,12 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
     <div class="flex flex-col gap-4 px-4">
       <div class="w-full flex flex-col">
         <div class="w-full flex pb-2 gap-2">
-          <h1 class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles">
-            02
+          <h1
+            class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles"
+            id="PuntosCefalometricosMcnamara"
+            data-seccion
+          >
+            03
           </h1>
           <div class="flex flex-col justify-end">
             <h1 class="text-4xl font-bold text-background-primary font-serif">Mcnamara</h1>
@@ -25,7 +29,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
       <!-- CUERPO SECCIÓN -->
       <div class="flex flex-col gap-5">
         <!--! PUNTOS CEFALOMETRICOS -->
-        <div class="flex flex-col gap-4" id="PuntosCefalometricosMcnamara" data-seccion>
+        <div class="flex flex-col gap-4">
           <h2 class="text-2xl font-bold text-background-primary font-serif">
             Puntos Cefalométricos
           </h2>
