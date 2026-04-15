@@ -123,7 +123,7 @@ onMounted(async () => {
         ]"
         @click="toggleMenu('steinerView')"
       >
-        <IconsSVG name="iconoBrillo" />
+        <IconsSVG name="iconopersona" />
         Steiner
       </button>
       <div v-if="menuAbierto === 'steinerView'" class="w-full pl-5 flex flex-col">
@@ -205,7 +205,7 @@ onMounted(async () => {
         ]"
         @click="toggleMenu('mcnamaraView')"
       >
-        <IconsSVG name="iconoHome" />
+        <IconsSVG name="iconopersona" />
         Mcnamara
       </button>
       <div v-if="menuAbierto === 'mcnamaraView'" class="w-full pl-5 flex flex-col">
@@ -317,7 +317,7 @@ onMounted(async () => {
         ]"
         @click="toggleMenu('leganburstoneView')"
       >
-        <IconsSVG name="iconoSeñalWifi" />
+        <IconsSVG name="iconopersona" />
         Legan y Burstone
       </button>
       <div v-if="menuAbierto === 'leganburstoneView'" class="w-full pl-5 flex flex-col">
@@ -389,7 +389,7 @@ onMounted(async () => {
         ]"
         @click="toggleMenu('saossuni')"
       >
-        <IconsSVG name="iconoDental" />
+        <IconsSVG name="iconopersona" />
         Saossuni
       </button>
 
@@ -427,7 +427,7 @@ onMounted(async () => {
         ]"
         @click="toggleMenu('grummons')"
       >
-        <IconsSVG name="iconoAyuda" />
+        <IconsSVG name="iconopersona" />
         Grummons
       </button>
       <div v-if="menuAbierto === 'grummons'" class="w-full pl-5 flex flex-col">
@@ -456,7 +456,7 @@ onMounted(async () => {
         ]"
         @click="toggleMenu('bimler')"
       >
-        <IconsSVG name="iconoAyuda" />
+        <IconsSVG name="iconopersona" />
         Bimler
       </button>
       <div v-if="menuAbierto === 'bimler'" class="w-full pl-5 flex flex-col">

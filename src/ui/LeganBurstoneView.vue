@@ -352,6 +352,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
         <div class="flex flex-col gap-4" id="PuntosCefalometricosLeganBurstoneDuros" data-seccion>
           <div class="flex flex-col justify-end">
             <h2 class="text-2xl font-bold text-background-primary font-serif">Tejidos Duros</h2>
+            <h3 class="text-sm font-serif text-border-primary/80">Por: 1. Diany Alejandra Mazo</h3>
           </div>
 
           <div class="flex flex-col lg:flex-row gap-4">
@@ -631,6 +632,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
             <h2 class="text-2xl font-bold text-background-primary font-serif">
               Vertical Esquelético
             </h2>
+            <h3 class="text-sm font-serif text-border-primary/80">Por: 1. Mariel Bernal</h3>
           </div>
 
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
@@ -837,6 +839,7 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
             <h2 class="text-2xl font-bold text-background-primary font-serif">
               Tejidos Duros: Maxilar - Mandibular
             </h2>
+            <h3 class="text-sm font-serif text-border-primary/80">Por: 1. Pamela Freydel</h3>
           </div>
 
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
@@ -962,6 +965,9 @@ import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
             <h2 class="text-2xl font-bold text-background-primary font-serif">
               Tejidos Duros Dentales
             </h2>
+            <h3 class="text-sm font-serif text-border-primary/80">
+              Por: 1. Pamela Freydel - 2. Mariel Bernal
+            </h3>
           </div>
 
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
