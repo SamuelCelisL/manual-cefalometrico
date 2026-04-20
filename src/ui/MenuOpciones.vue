@@ -32,6 +32,7 @@ const irASubtitulo = (id: string) => {
 
 const obtenerSeccionPadre = (id: string) => {
   if (id.startsWith('inicioSteiner')) return 'inicioSteiner'
+  if (id.startsWith('TrazoCefalometricoSteiner')) return 'TrazoCefalometricoSteiner'
   if (id.startsWith('PuntosCefalometricosSteiner')) return 'PuntosCefalometricosSteiner'
   if (id.startsWith('relacionVerticalSteiner')) return 'relacionVerticalSteiner'
   if (id.startsWith('relacionDentalSteiner')) return 'relacionDentalSteiner'
@@ -113,6 +114,7 @@ onMounted(async () => {
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
           seccionActiva === 'inicioSteiner' ||
+          seccionActiva === 'TrazoCefalometricoSteiner' ||
           seccionActiva === 'PuntosCefalometricosSteiner' ||
           seccionActiva === 'relacionVerticalSteiner' ||
           seccionActiva === 'relacionDentalSteiner'
@@ -135,6 +137,18 @@ onMounted(async () => {
           ]"
         >
           Inicio
+        </button>
+
+        <button
+          @click="irASubtitulo('TrazoCefalometricoSteiner')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center text-left w-full transition-all duration-200 cursor-pointer font-sans ',
+            subtituloActivo === 'TrazoCefalometricoSteiner'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Trazo Cefalométrico
         </button>
 
         <button

@@ -49,7 +49,7 @@ defineProps({
   },
   Valores1: {
     type: String,
-    default: 'MEDIDA AUMENTADA',
+    default: 'VALOR AUMENTADO',
     required: false,
   },
   tabla1: {
@@ -58,7 +58,7 @@ defineProps({
   },
   Valores2: {
     type: String,
-    default: 'MEDIDAD EN NORMA',
+    default: 'VALOR EN NORMA',
     required: false,
   },
   tabla2: {
@@ -67,7 +67,7 @@ defineProps({
   },
   Valores3: {
     type: String,
-    default: 'MEDIDA DISMINUIDA',
+    default: 'VALOR DISMINUIDO',
     required: false,
   },
   tabla3: {

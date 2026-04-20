@@ -37,6 +37,54 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
           <h1 class="text-2xl font-bold text-background-primary font-serif">Calco Cefamoletría</h1>
         </div>
 
+        <!--! Trazo Cefalométrico -->
+        <div class="flex flex-col gap-4" id="TrazoCefalometricoSteiner" data-seccion>
+          <h2 class="text-2xl font-bold text-background-primary font-serif">Trazo Cefalométrico</h2>
+          <div class="w-full flex justify-center">
+            <div
+              class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
+            >
+              <!-- HEADER -->
+              <div class="bg-background-primary rounded-t-xl px-4 py-2">
+                <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
+                  Estructuras Anatomicas
+                </h2>
+              </div>
+
+              <!-- BODY -->
+              <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
+                <!-- IMAGEN -->
+                <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
+                  <img
+                    src="../assets/images/calco cefalometria.png"
+                    alt="Trazo cefalométrico"
+                    class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain"
+                  />
+                </div>
+
+                <!-- CONTENIDO -->
+                <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
+                  <p>Hueso frontal</p>
+                  <p>hueso nasal</p>
+                  <p>base craneal anterior</p>
+                  <p>borde posteroinferior de la orbita</p>
+                  <p>Hueso Cigomatico</p>
+                  <p>Hueso esfenoides</p>
+                  <p>Fosa pterigomaxilar</p>
+                  <p>Hueso maxilar y palatino</p>
+                  <p>Mandibula</p>
+                  <p>3 vertebras cervicales</p>
+                  <p>Conducto auditivo interno</p>
+                  <p>Incisivo central superior e inferior</p>
+                  <p>Primer molar superior e inferior</p>
+                  <p>Contorno de tejidos blandos</p>
+                  <p>Contorno de vias aereas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!--! PUNTOS CEFALOMETRICOS -->
         <div class="flex flex-col gap-4" id="PuntosCefalometricosSteiner" data-seccion>
           <h2 class="text-2xl font-bold text-background-primary font-serif">
@@ -250,7 +298,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               text2="Indica la inclinación anteroposterior del incisivo superior con respecto a la base de cráneo."
               norma="103°"
               SD="+/- 5.75°"
-              rango="97,25° +- 108,75°"
+              rango="97,25° a 108,75°"
               tabla1="Proinclinación del incisivo superior"
               tabla2="Normoinclinación"
               tabla3="Retroinclinación del incisivo superior"
