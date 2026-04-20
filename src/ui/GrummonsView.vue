@@ -305,9 +305,9 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
               viñeta1="Construcción de 2 polígonos"
               viñeta2="Co-Ag-Me y la intersección del plano Co-Co al plano MSR"
               viñeta3="Se debe realizar una superposición de los polígonos y determinar simetría o asimetría"
-              Medida1="Vertical <span class='text-green-600 font-semibold'>Co-Me</span>"
-              Medida2=" Horizontal <span class='text-blue-600 font-semibold'>Ag- Me</span>"
-              Medida3="Transversal <span class='text-pink-600 font-semibold'>Co- Ag</span>"
+              Medida1="Vertical <span class='text-blue-600 font-semibold'>Co-Ag</span>"
+              Medida2=" Horizontal <span class='text-green-600 font-semibold'>Co-MSR</span>"
+              Medida3="Transversal <span class='text-pink-600 font-semibold'>Ag-Me</span>"
             />
 
             <TarjetInfoImagesGrummons

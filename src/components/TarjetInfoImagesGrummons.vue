@@ -148,19 +148,19 @@ defineProps({
               </thead>
               <tbody>
                 <tr v-if="Medida1" class="border-t border-gray-300">
-                  <td class="p-2 text-green-600 font-semibold" v-html="Medida1"></td>
+                  <td class="p-2 font-semibold" v-html="Medida1"></td>
                   <td class="p-2">{{ derecho1 }}</td>
                   <td class="p-2">{{ izquierdo1 }}</td>
                   <td class="p-2"></td>
                 </tr>
                 <tr v-if="Medida2" class="border-t border-gray-300">
-                  <td class="p-2 text-blue-600 font-semibold" v-html="Medida2"></td>
+                  <td class="p-2 font-semibold" v-html="Medida2"></td>
                   <td class="p-2">{{ derecho2 }}</td>
                   <td class="p-2">{{ izquierdo2 }}</td>
                   <td class="p-2"></td>
                 </tr>
                 <tr v-if="Medida3" class="border-t border-gray-300">
-                  <td class="p-2 text-pink-600 font-semibold" v-html="Medida3"></td>
+                  <td class="p-2 font-semibold" v-html="Medida3"></td>
                   <td class="p-2">{{ derecho3 }}</td>
                   <td class="p-2">{{ izquierdo3 }}</td>
                   <td class="p-2"></td>
