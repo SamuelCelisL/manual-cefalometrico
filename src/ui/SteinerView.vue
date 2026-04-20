@@ -159,7 +159,6 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               tabla1="Protrusión maxilar"
               tabla2="Normotrusión maxilar"
               tabla3="Retrusión maxila"
-              citacion="Anexo: El autor no da desviaciòn estandar"
             />
             <TarjetInfoImages
               title="Ángulo SNB"
@@ -190,7 +189,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               imageSrc="/images/anguloSND.png"
               text1="Formado por los planos S-N y N-D"
               text2="Indica la ubicación anteroposterior del mentón respecto a la base del cráneo."
-              norma="76-77"
+              norma="76-77°"
               tabla1="Protrusión mandibular"
               tabla2="Normotrusión mandibular"
               tabla3="Retrusión mandibular"
@@ -230,7 +229,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               tabla1="Hiperdivergente puede sugerir patrón de crecimiento/ facial vertical"
               tabla2="Normodivergente"
               tabla3="Hipodivergente puede sugerir patrón de crecimiento/ facial horizontal"
-              anexo="Anexo: El autor no da desviación estandar"
+              anexo="Anexo: El autor no da desviación estandar ni rango"
               citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
             />
             <TarjetInfoImages

@@ -144,8 +144,8 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               name="TarjejtInforImages4"
               title="Planos de referencia"
               imageSrc="/images/Plano mandibular.png"
-              text1="<span class='font-semibold'>Plano mandibular:</span> plano bisectado que pase por la cuspide mesial de primero molares y bordes incisales de incisivos centrales."
-              text2="Error en el artículo original: sassouni realiza trazos del plano mandibular uniendo puntos Go y Me."
+              text1="<span class='font-semibold'>Plano mandibular:</span> Plano tangente de los bordes inferiores, anterior y posterior del cuerpo mandibular."
+              text2="Error en el artículo original: Sassouni realiza trazos del plano mandibular uniendo puntos Go y Me."
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
 
