@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TarjetPoints from '@/components/TarjetPoints.vue'
+import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
 import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
 </script>
 
@@ -151,6 +152,79 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
           </p>
         </div>
 
+        <TarjejtInforImages2
+          title="Sistemas de referencia"
+          imageSrc="/images/Sistemas de referencia sistema ortogonal.png"
+          text1="<span class='text-xl font-bold'>Sistema Ortogonal</span>"
+          text2="Sistema de coordenadas constituido por la horizontal de Frankfort (PF) y por la vertical que pasa por el punto T."
+          text3="<li class='list-disc ml-5'> Plano de frankfort u horizontal de PF se traza de Po hasta Or</li>"
+          text4="<li class='list-disc ml-5'> T se traza realizando una perpendicular a PF que pasa a través de la fisura pterigomaxilar (Ptm)</li>"
+        />
+        <TarjejtInforImages2
+          title="Sistemas de referencia"
+          imageSrc="/images/Sistemas de referencia sistema esferico.png"
+          text1="<span class='text-xl font-bold'>Sistema Esférico</span>"
+          text2="Representa las relaciones entre el equilibrio funcional de los músculos masticatorios, ATM y la interacción de los arcos dentarios. Se basa en la curva de spee."
+          text3="Puntos de referencia: Cm, Me, C, Ap."
+          text4="El centro del círculo que contiene la curva de Spee es el“centro Masticatorio” (CM)."
+        />
+        <!-- FACTORES DE BIMLER -->
+        <div class="w-full flex justify-center">
+          <div
+            class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
+          >
+            <!-- HEADER -->
+            <div class="bg-background-primary rounded-t-xl px-4 py-2">
+              <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
+                Factores de Bimler
+              </h2>
+            </div>
+
+            <!-- BODY -->
+            <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
+              <!-- IMAGEN -->
+              <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
+                <img
+                  src="/images/Factores de bimler.png"
+                  alt="Localización del punto cero (0)"
+                  class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain"
+                />
+              </div>
+
+              <!-- CONTENIDO -->
+              <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
+                <ol class="list-disc px-3">
+                  <li class="list-decimal">Factor 1 N-A. Ángulo superior del perfil</li>
+                  <li class="list-decimal">Factor 2 A-B. Ángulo inferior del perfil</li>
+                  <li class="list-decimal">Factor 3 M-Go. Inclinación Mandibular</li>
+                  <li class="list-decimal">Factor 4 ENA-ENP. Inclinación del plano palatino</li>
+                  <li class="list-decimal">Factor 5 Cls- Cli. Plano del clivus</li>
+                  <li class="list-decimal">Factor 6 Cm - M. Eje de stress de la dentición.</li>
+                  <li class="list-decimal">Factor 7 S-N. Inclinación de la base del cráneo</li>
+                  <li class="list-decimal">Factor 8 C - Go. Flexión de la rama mandibular</li>
+                </ol>
+
+                <div class="flex justify-center items-center md:pr-4">
+                  <img
+                    src="/images/Medidas angulares.png"
+                    alt="Localización del punto cero (0)"
+                    class="w-40 sm:w-52 md:w-64 lg:w-90 object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCION Analisis de Factores de Bimler -->
+      <div class="flex flex-col gap-4" id="AnalisisFactoresBimler" data-seccion>
+        <div class="flex flex-col justify-end">
+          <h2 class="text-2xl font-bold text-background-primary font-serif">
+            Análisis de Factores de Bimler
+          </h2>
+        </div>
+
         <div class="flex flex-col justify-center items-center gap-4 mb-2">
           <TarjetInfoImagesBimler
             title="Factor 1 N-A Ángulo superior del perfil"
@@ -166,7 +240,7 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             titulo2="Ortognata"
             SD1="-1° / 1°"
             titulo3="Prognata"
-            rango1="Más de 1°-2.5 / 0.5"
+            rango1="Más de 1°"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
@@ -175,15 +249,15 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             text1="Se traza el factor  desde el punto A al punto B, se coloca la base de la escuadra sobre el factor y se mide con respecto a PF."
             text2="Si B por detrás de A es (+)"
             text3="Si B por delante de A es (-)  "
-            text4="Mide la posición de la Mandíbula"
+            text4="Evalúa la posición de la Mandíbula"
             text5="Diagnostico:"
-            text6="<span class='font-semibold'>Norma 0° / 15° </span> <br/> <span>Si B está por detrás de A= Ángulo + </span> <br/> <span>Si B está por delante de A= Ángulo -</span>"
+            text6="<span class='font-semibold'>Norma 0° / 10° </span> <br/> <span>Si B está por detrás de A= Ángulo + </span> <br/> <span>Si B está por delante de A= Ángulo -</span>"
             titulo1="Progeno"
             norma1="Menor 0°"
             titulo2="Ortogeno"
-            SD1="0° / 15°"
+            SD1="0° / 10°"
             titulo3="Retrogeno"
-            rango1="Mayor de 15°"
+            rango1="Mayor de 10°"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
@@ -193,19 +267,19 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             text2="Se coloca la base de la escuadra sobre el factor, se posiciona el punto 0 en T y se mide con respecto a este."
             text3="Mide la inclinación Mandibular"
             text6="<span class='font-semibold'>Norma 15° / 30° </span>"
-            titulo1="Cara corrta"
+            titulo1="Dolicógnata"
             norma1="Menor 15°"
             norma2="Crecimiento Horizontal"
-            titulo2="Cara mediana"
+            titulo2="Mesógnata"
             SD1="15° / 30°"
             SD2="Crecimiento Neutro"
-            titulo3="Cara Larga"
+            titulo3="Leptógnata"
             rango1="Mayor de 30°- 45°"
             rango2="Crecimiento Vertical"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
-            title="Factor 4 ENA-ENP Inclinación del plano palatino"
+            title="Factor 4 ENA-ENP Inclinación vertical del maxilar"
             imageSrc="/images/Factor 4 ENA-ENP inclinacion del plano palatino.png"
             text1="Se traza el factor desde ENA a ENP"
             text2="Se coloca la base de la escuadra sobre él y se mide con respecto a T."
@@ -228,27 +302,27 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             text2="La base de la escuadra se coloca sobre el factor y se mide con respecto a PF."
             text3="Analiza el tipo facial en perfil y la dirección del crecimiento."
             text6="<span class='font-semibold'>Norma: 60° - 70° </span>"
-            titulo1="Cara corta y profunda"
+            titulo1="Inclinación baja"
             norma1="50° - 60°"
-            titulo2="Cara neutra"
+            titulo2="Inclinación media"
             SD1="60° - 70°"
-            titulo3="Cara larga y angosta"
+            titulo3="Inclinación alta"
             rango1="70° - 80°"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
-            title="Factor 7 S-N inclinacion de la base del craneo"
+            title="Factor 7 S-N inclinacion de la base del cráneo"
             imageSrc="/images/Factor 7 S-N inclinacion de la base del craneo.png"
             text1="Se traza  el plano S-N."
             text2="Se coloca la base de la escuadra en el factor y se mide el ángulo formado con la vertical de Tuber."
             text3="Analiza la inclinación de la base craneana."
             text6="<span class='font-semibold'>Norma 5.5° a 9.5°</span>"
-            titulo1="Cara corta inclinación baja"
-            norma1="5.5°"
-            titulo2="Cara mediana inclinación neutra"
+            titulo1="Inclinación baja"
+            norma1="< 5.5°"
+            titulo2="Inclinación neutra"
             SD1="5.5° 9.5°"
-            titulo3="Cara larga inclinación alta"
-            rango1="9.5°"
+            titulo3="Inclinación alta"
+            rango1="< 9.5°"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
@@ -283,12 +357,27 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             title="Ángulo del perfil (manera directa) N-A / A-B"
             imageSrc="/images/Angulo del perfil (manera directa) N-A -- A-B.png"
             text1="Suma algebraica Factor 1 más Factor 2 (F1+F2)."
-            norma1="<span class='p-2 w-full flex h-full bg-yellow-300'>Perfil cóncavo </span>"
-            norma2="<span class='p-2 w-full flex h-full bg-red-600'>Perfil Recto </span>"
-            norma3="<span class='p-2 w-full flex h-full bg-blue-600'>Perfil convexo </span>"
-            SD1="Menos de 0°"
-            SD2="0°-16°grados"
-            SD3="Más de 16 °"
+            norma1="<div class='flex p-3 w-full h-full bg-blue-600'>
+              <p>Perfil convexo </p>
+            </div>"
+            norma2="<div class='flex p-3 w-full h-full bg-red-600'>
+              <p class='flex w-full h-full'>Perfil Recto </p>
+            </div>"
+            norma3="<div class='flex p-3 w-full h-full bg-yellow-300'>
+              <p>Perfil convexo </p>
+            </div>"
+            SD1=" <div class='flex flex-col px-2'>
+              <span>Mas de 15° </span>
+              <span>Asociado a clase II</span>
+            </div>"
+            SD2="<div class='flex flex-col px-2'>
+              <span>0°-15°grados </span>
+              <span>Asociado a clase I</span>
+            </div>"
+            SD3="<div class='flex flex-col px-2'>
+              <span>Menos de 0° </span>
+              <span>Asociado a clase III</span>
+            </div>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
@@ -296,12 +385,12 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             title="Ángulo basal superior Cls-Cli / ENA-ENP"
             imageSrc="/images/Angulo basal superior Cls-Cli -- ENA-ENP.png"
             text1="Suma algebraica de F4 y F5."
-            norma1="<span class='p-2 w-full flex h-full bg-red-600'>Mesognata </span>"
-            norma2="<span class='p-2 w-full flex h-full bg-green-700'>Dolicognata </span>"
+            norma2="<span class='p-2 w-full flex h-full bg-red-600'>Mesognata </span>"
+            norma1="<span class='p-2 w-full flex h-full bg-green-700'>Dolicognata </span>"
             norma3="<span class='p-2 w-full flex h-full bg-yellow-300'>Leptognata </span>"
-            SD1="60-70°"
-            SD2="Más de 60°"
-            SD3="Menos de 70°"
+            SD1="<span class='px-2 '>50° - 60°</span>"
+            SD2="<span class='px-2'>60° - 70°</span>"
+            SD3="<span class='px-2 '>70° - 80°</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
@@ -310,12 +399,12 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             imageSrc="/images/Angulo basal inferior ENA-ENP -- Go-Me.png"
             text1="Está compuesto por los planos palatino y mandibular."
             text2="<span class='font-semibold'>Norma: 15°-30° </span> <br/> <span>Si F4 es negativo se suman F3 + F4 </span> <br/> <span>Si F4 es positivo se restan F3 – F4 </span>"
-            norma1="<span class='p-2 w-full flex h-full bg-red-600'>Mesognata </span>"
-            norma2="<span class='p-2 w-full flex h-full bg-green-700'>Dolicognata </span>"
+            norma2="<span class='p-2 w-full flex h-full bg-green-700'>Mesognata </span>"
+            norma1="<span class='p-2 w-full flex h-full bg-red-600'>Dolicognata </span>"
             norma3="<span class='p-2 w-full flex h-full bg-yellow-300'>Leptognata </span>"
-            SD1="15°-30°"
-            SD2="Menos de 15°"
-            SD3="Más de 30°"
+            SD1="<span class='px-2 '>0° - 14°</span>"
+            SD2="<span class='px-2'>15° - 30°</span>"
+            SD3="<span class='px-2 '>30° - 45°</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
@@ -323,12 +412,12 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             title="Ángulo Goniaco C - Go - Me"
             imageSrc="/images/Angulo Goniaco C - Go - Me.png"
             text1="Suma algebraica de: (F3 + F8  + 90)."
-            norma1="<span class='p-2 w-full flex h-full bg-green-700'>Dolicognata </span>"
-            norma2="<span class='p-2 w-full flex h-full bg-red-600'>Mesognata </span>"
-            norma3="<span class='p-2 w-full flex h-full bg-yellow-300'>Leptognata </span>"
-            SD1="Menos de 105°"
-            SD2="105° - 120°"
-            SD3="Más de 120°"
+            norma1="<span class='p-2 w-full flex h-full bg-green-700'>Hipogonia </span>"
+            norma2="<span class='p-2 w-full flex h-full bg-red-600'>Normogonia </span>"
+            norma3="<span class='p-2 w-full flex h-full bg-yellow-300'>Hipergonia </span>"
+            SD1="<span class='px-2 '>90° de 104°</span>"
+            SD2="<span class='px-2'>105° - 120°</span>"
+            SD3="<span class='px-2 '>Más 120°</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
@@ -336,12 +425,12 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             title="Inclinación del incisivo Superior"
             imageSrc="/images/Inclinacion del incisivo superior.png"
             text1="Formada por la prolongación del eje longitudinal de incisivo central superior a frankfort y se mide en  la parte interna"
-            norma1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>PROTRUSIÓN </span>"
-            norma2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>130°-120° </span>"
-            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>NORMOTRUSIÓN</span>"
-            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>121°-110°</span>"
-            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>RETRUSIÓN</span>"
-            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>111°-80°</span>"
+            norma1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>PROINCLINACIÓN </span>"
+            norma2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>130° - 121° </span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>NORMOINCLINACIÓN</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>120° - 110°</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>RETROINCLINACIÓN</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>109° - 80°</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
@@ -349,24 +438,24 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             title="Inclinación del incisivo inferior"
             imageSrc="/images/Inclinacion del incisivo inferior.png"
             text1="Se mide el ángulo formado por la  prolongación del eje  del incisivo inferior con frankfort en su parte externa"
-            norma1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>PROTRUSIÓN </span>"
-            norma2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>130°-120° </span>"
-            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>NORMOTRUSIÓN</span>"
-            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>121°-110°</span>"
-            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>RETRUSIÓN</span>"
-            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>111°-80°</span>"
+            norma1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>PROINCLINACIÓN </span>"
+            norma2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>130° - 121° </span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>NORMOINCLINACIÓN</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>120° - 110°</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>RETROINCLINACIÓN</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>109° - 80°</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
             name="numero2"
             title="Ángulo Interincisivo"
             imageSrc="/images/Angulo interincisivo Bimler.png"
-            norma1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>PROTRUSIÓN </span>"
-            norma2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>100°-120° </span>"
-            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>NORMOTRUSIÓN</span>"
-            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>121°-140°</span>"
-            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>RETRUSIÓN</span>"
-            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>141°-160°</span>"
+            norma1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>PROINCLINACIÓN </span>"
+            norma2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>100° - 119° </span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>NORMOINCLINACIÓN</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>120° - 139°</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>RETROINCLINACIÓN</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>140° - 160°</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
         </div>
@@ -379,19 +468,6 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
         </div>
 
         <div class="flex flex-col justify-center items-center gap-4 mb-2">
-          <TarjetInfoImagesBimler
-            name="numero2"
-            title="TM-T Posición ATM"
-            imageSrc="/images/TM-T posicion ATM.png"
-            text1="Se hace la  proyección perpendicular del punto C hasta el plano de frankfort y se denomina TM , luego se mide  la distancia en mm desde el punto TM a T"
-            norma1="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Pequeña </span>"
-            norma2="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>24-27mm </span>"
-            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>Mediana</span>"
-            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>28-32mm</span>"
-            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>Grande</span>"
-            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>33-36m</span>"
-            citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
-          />
           <TarjetInfoImagesBimler
             name="numero2"
             title="A´-T Longitud Horizontal del Maxilar"
@@ -407,9 +483,24 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
           />
           <TarjetInfoImagesBimler
             name="numero2"
+            title="TM-T Posición ATM"
+            imageSrc="/images/TM-T posicion ATM.png"
+            text1="Evalúa la clasificación estructural"
+            text2="Se hace la  proyección perpendicular del punto C hasta el plano de frankfort y se denomina TM , luego se mide  la distancia en mm desde el punto TM a T"
+            norma1="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Pequeña Clase II </span>"
+            norma2="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>24-27mm </span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>Mediana Clase I</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>28-32mm</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>Grande Clase III</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>33-36mm</span>"
+            citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
+          />
+          <TarjetInfoImagesBimler
+            name="numero2"
             title="A´- B´  Overjet óseo"
             imageSrc="/images/A-B overjet oseo.png"
-            text1="Se hace la proyección perpendicular del punto B hasta el plano de frankfort y se denomina B´luego se mide  la distancia en mm desde el punto A´- B´"
+            text1="Evalúa el overjet esquelético"
+            text2="Se hace la proyección perpendicular del punto B hasta el plano de frankfort y se denomina B´luego se mide  la distancia en mm desde el punto A´- B´"
             norma1="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Clase III</span>"
             norma2="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>menor a 0</span>"
             SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>Clase I</span>"
@@ -422,25 +513,21 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             name="numero2"
             title="TM- B´  Longitud del cuerpo Mandíbula"
             imageSrc="/images/TM-B longitud del cuerpo mandibula.png"
-            text1="Se mide de la distancia en mm desde el punto B´ al punto TM"
-            :tabla="false"
-            imagenInfo="/images/TM-B longitud del cuerpo mandibula info.png"
-            citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
-          />
-          <TarjetInfoImagesBimler
-            name="numero2"
-            title="S-N  Base Craneal Anterior"
-            imageSrc="/images/S-N base craneal anterior.png"
-            text1="Se mide la distancia en mm del punto N hasta el punto S"
-            :tabla="false"
-            imagenInfo="/images/S-N base craneal anterior info.png"
+            text1="Evalúa la longitud efectiva mandibular"
+            text2="Se mide de la distancia en mm desde el punto B´ al punto TM"
+            norma1="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>PEQUEÑO</span>"
+            norma2="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Menos de 76mm</span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>NORMAL</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>76mm - 80mm</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-700'>GRANDE</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-700'>Mayor a 80mm</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
             name="numero2"
             title="Cd- Gn Diagonal Mandibular"
             imageSrc="/images/Cd-Gn diagonal mandibular.png"
-            text1="Se mide la distancia en mm del punto Cd a el punto Gn"
+            text1="Se evalúa  la distancia en mm del punto Cd a el punto Gn"
             norma1="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Pequeña</span>"
             norma2="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>80-99mm</span>"
             SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>Mediana</span>"
@@ -451,50 +538,76 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
           />
           <TarjetInfoImagesBimler
             name="numero2"
+            title="S-N  Base Craneal Anterior"
+            imageSrc="/images/S-N base craneal anterior.png"
+            text1="Se evalúa la distancia en mm del punto N hasta el punto S"
+            norma1="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>DISMINUIDA</span>"
+            norma2="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Menos de 59mm</span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>PROMEDIO</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>60mm - 80mm</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-700'>AUMENTADA</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-700'>Mayor a 81mm</span>"
+            citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
+          />
+
+          <TarjetInfoImagesBimler
+            name="numero2"
             title="N-HF   Altura de Nasion"
             imageSrc="/images/N-HF altura de nasion.png"
-            text1="Se mide de la distancia en mm desde el punto N a la horizontal de Frankfort"
-            norma1="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Disminuida / Baja</span>"
-            norma2="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Menor de 25</span>"
-            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>Promedio</span>"
-            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>25 - 31 mm.</span>"
-            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>Aumentada / Alta</span>"
-            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>Mayor a 31</span>"
+            text1="Se evalúa  de la distancia en mm desde el punto N a la horizontal de Frankfort"
+            norma1="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>DISMINUIDA</span>"
+            norma2="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Menos de 24mm</span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>PROMEDIO</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>25mm - 31 mm</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>AUMENTADA</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-500'>Mayor a 32mm</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
             name="numero2"
             title="N-M Altura Facial Total"
             imageSrc="/images/N-M altura facial total.png"
-            text1="Se mide de la distancia en mm desde el punto N hasta el punto M"
-            :tabla="false"
-            imagenInfo="/images/N-M altura facial total info.png"
+            text1="Se evalúa de la distancia en mm desde el punto N hasta el punto M"
+            norma1="<span class='font-semibold p-2 w-full flex h-full bg-blue-700'>DOLICOPROSOPO</span>"
+            norma2="<span class='font-semibold p-2 w-full flex h-full bg-blue-700'>Menos de 114mm</span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>MESOPROSOPO</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>115mm - 125 mm</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>LEPTOPROSOPO</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>Mayor a 126mm</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
             name="numero2"
             title="S-HF  Altura de Silla"
             imageSrc="/images/S-HF altura de silla.png"
-            text1="Se mide de la distancia en mm desde el punto S a la horizontal de Frankfort"
-            :tabla="false"
-            imagenInfo="/images/S-HF altura de silla info.png"
+            text1="Se evalúa de la distancia en mm desde el punto S a la horizontal de Frankfort"
+            norma1="<span class='font-semibold p-2 w-full flex h-full bg-blue-700'>ALTURA DE LA SILLA DISMINUIDA</span>"
+            norma2="<span class='font-semibold p-2 w-full flex h-full bg-blue-700'>Menos de 17mm</span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>ALTURA DE LA SILLA PROMEDIO</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>18mm - 22mm</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>ALTURA DE LA SILLA AUMENTADA</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-green-700'>Mayor a 23mm</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
             name="numero2"
             title="Cd - Go ALTURA DE LA RAMA ASCENDENTE"
             imageSrc="/images/Cd-Go altura de la rama ascendente.png"
-            text1=" Distancia entre los puntos Cd y Go"
-            :tabla="false"
-            imagenInfo="/images/Cd-Go altura de la rama ascendente info.png"
+            text1="Se evalúa de la distancia en mm  entre los puntos Cd y Go"
+            norma1="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>RAMA CORTA</span>"
+            norma2="<span class='font-semibold p-2 w-full flex h-full bg-yellow-300'>Menos de 49mm</span>"
+            SD1="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>RAMA PROMEDIO</span>"
+            SD2="<span class=' font-semibold p-2 w-full flex h-full bg-red-600'>50mm - 60mm</span>"
+            rango1="<span class=' font-semibold p-2 w-full flex h-full bg-blue-300'>RAMA LARGA</span>"
+            rango2="<span class=' font-semibold p-2 w-full flex h-full bg-blue-300'>Mayor a 61mm</span>"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
           <TarjetInfoImagesBimler
             name="numero2"
             title="A´ -TM Profundidad de la cara"
             imageSrc="/images/A-TM profundidad de la cara.png"
-            text1="Se obtiene sumando dos segmentos:"
-            text2="Distancia desde el punto A' hasta la vertical por el punto T. <br/> Distancia desde la vertical por T hasta el punto TM "
+            text1="Distancia  en mm entre A´ y TM"
+            text2="se usa para comparar con la altura facial suborbital y conocer la tendencia de crecimiento"
             :tabla="false"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />
@@ -502,7 +615,8 @@ import TarjetInfoImagesBimler from '@/components/TarjetInfoImagesBimler.vue'
             name="numero2"
             title="HF-M  Altura Facial Suborbital"
             imageSrc="/images/HF_M altura facial suborbital.png"
-            text1="Se mide de la distancia en mm desde el punto M a la horizontal de Frankfort se usa para compararla con la profundidad facial y conocer la tendencia de crecimiento"
+            text1="Distancia en mm desde el punto M a la horizontal de Frankfort"
+            text2="se usa para compararla con la profundidad facial y conocer la tendencia de crecimiento"
             :tabla="false"
             citacion="Bimler, H. P. (1985). Bimler therapy: Part 1. Bimler cephalometric analysis. Journal of Clinical Orthodontics, 19(2), 102–117."
           />

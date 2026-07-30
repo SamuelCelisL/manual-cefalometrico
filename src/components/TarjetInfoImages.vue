@@ -155,14 +155,13 @@ defineProps({
               {{ anexo }}
             </p>
           </div>
-
-          <!-- CITACIÓN -->
-          <div v-if="citacion" class="flex justify-center">
-            <p class="text-center text-[10px] md:text-xs text-gray-600">
-              {{ citacion }}
-            </p>
-          </div>
         </div>
+      </div>
+      <!-- CITACIÓN -->
+      <div v-if="citacion" class="flex justify-center py-2">
+        <p class="text-center text-[10px] md:text-xs text-gray-600">
+          {{ citacion }}
+        </p>
       </div>
     </div>
   </div>

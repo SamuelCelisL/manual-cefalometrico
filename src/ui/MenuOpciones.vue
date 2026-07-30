@@ -95,16 +95,15 @@ onMounted(async () => {
     <div
       class="flex flex-col justify-center items-center border-b gap-3 border-border-primary w-full"
     >
-      <div class="w-full flex p-3">
+      <div class="w-full flex justify-center p-3">
         <img
-          src="../assets/images/image.png"
-          alt="Logo del Manual de Cefalometría"
-          class="rounded-xl"
+          src="../../public/images/logo universidad.png"
+          alt="Logo de la universidad"
+          class="rounded-xl size-30 md:size-50 lg:size-70"
         />
       </div>
       <div class="flex flex-col w-full pb-3">
         <h1 class="text-center text-text-titles text-md font-serif">MANUAL DE CEFALOMETRÍA</h1>
-        <h2 class="text-center text-text-suaves/80 text-[10px]">DIAGNÓSTICO I - ODONTOLOGICO</h2>
       </div>
     </div>
     <!-- BOTONES -->
@@ -475,6 +474,7 @@ onMounted(async () => {
           'pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans',
           seccionActiva === 'bimler' ||
           subtituloActivo === 'PuntosCefalometricosBimler' ||
+          subtituloActivo === 'AnalisisFactoresBimler' ||
           subtituloActivo === 'MedidasAngularesBimler' ||
           subtituloActivo === 'MedidasLinealesBimler'
             ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
@@ -498,6 +498,17 @@ onMounted(async () => {
           Puntos Cefalométricos
         </button>
         <button
+          @click="irASubtitulo('AnalisisFactoresBimler')"
+          :class="[
+            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
+            subtituloActivo === 'AnalisisFactoresBimler'
+              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+          ]"
+        >
+          Análisis de Factores de Bimler
+        </button>
+        <button
           @click="irASubtitulo('MedidasAngularesBimler')"
           :class="[
             ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans text-left',
@@ -508,6 +519,7 @@ onMounted(async () => {
         >
           Medidas Angulares
         </button>
+
         <button
           @click="irASubtitulo('MedidasLinealesBimler')"
           :class="[
@@ -526,7 +538,7 @@ onMounted(async () => {
       <h1
         class="text-white/30 w-full text-center text-[8px] sm:text-[10px] md:text-[12px] lg:text-md"
       >
-        Copyright © 2025 DataPioneers
+        Copyright © {{ new Date().getFullYear() }} DataPioneers
       </h1>
     </div>
   </div>

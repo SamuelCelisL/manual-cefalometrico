@@ -11,7 +11,7 @@ defineProps({
   },
   imageSrc: {
     type: String,
-    required: true,
+    required: false,
   },
   text1: {
     type: String,
@@ -26,6 +26,10 @@ defineProps({
     required: false,
   },
   text4: {
+    type: String,
+    required: false,
+  },
+  text5: {
     type: String,
     required: false,
   },
@@ -164,16 +168,20 @@ defineProps({
       <!-- BODY -->
       <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
         <!-- IMAGEN -->
-        <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
+        <div
+          v-if="imageSrc"
+          class="flex justify-center items-center md:border-r md:pr-4 border-gray-400"
+        >
           <img :src="imageSrc" :alt="title" class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain" />
         </div>
 
         <!-- CONTENIDO -->
         <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
-          <p>{{ text1 }}</p>
-          <p>{{ text2 }}</p>
-          <p v-if="text3">{{ text3 }}</p>
-          <p v-if="text4">{{ text4 }}</p>
+          <p v-html="text1"></p>
+          <p v-html="text2"></p>
+          <p v-if="text3" v-html="text3"></p>
+          <p v-if="text4" v-html="text4"></p>
+          <p v-if="text5" v-html="text5"></p>
 
           <!-- TABLA -->
           <div v-if="tabla" class="my-2 overflow-x-auto flex items-center justify-center">
@@ -216,19 +224,19 @@ defineProps({
           <p v-if="h" class="text-blue-600">{{ h }}</p>
 
           <div v-if="tabla1" class="flex gap-2">
-            <p class="text-red-600 uppercase">{{ Valores1 }}:</p>
+            <p class="text-red-600 uppercase" v-html="Valores1"></p>
             <p class="">{{ tabla1 }}</p>
           </div>
           <div v-if="tabla2" class="flex gap-2">
-            <p class="text-green-600 uppercase">{{ Valores2 }}:</p>
+            <p class="text-green-600 uppercase" v-html="Valores2"></p>
             <p class="">{{ tabla2 }}</p>
           </div>
           <div v-if="tabla3" class="flex gap-2">
-            <p class="text-yellow-600 uppercase">{{ Valores3 }}:</p>
+            <p class="text-yellow-600 uppercase" v-html="Valores3"></p>
             <p class="">{{ tabla3 }}</p>
           </div>
           <div v-if="tabla4" class="flex gap-2">
-            <p class="text-blue-600 uppercase">{{ Valores4 }}:</p>
+            <p class="text-blue-600 uppercase" v-html="Valores4"></p>
             <p class="">{{ tabla4 }}</p>
           </div>
 
@@ -237,51 +245,15 @@ defineProps({
           </div>
 
           <div v-if="anexo2" class="flex gap-2">
-            <p class="text-gray-600">{{ anexo2 }}</p>
-          </div>
-
-          <!-- CITACIÓN -->
-          <div v-if="citacion" class="flex justify-center">
-            <p class="text-center text-[10px] md:text-xs text-gray-600">
-              {{ citacion }}
-            </p>
+            <p class="text-gray-600" v-html="anexo2"></p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div v-if="name === 'TarjejtInforImages3'" class="w-full flex justify-center">
-    <div
-      class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
-    >
-      <!-- HEADER -->
-      <div class="bg-background-primary rounded-t-xl px-4 py-2">
-        <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
-          {{ title }}
-        </h2>
-      </div>
-
-      <!-- BODY -->
-      <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
-        <!-- IMAGEN -->
-        <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
-          <img :src="imageSrc" :alt="title" class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain" />
-        </div>
-
-        <!-- CONTENIDO -->
-        <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
-          <p><span class="font-semibold">PH (Plano Horizontal):</span>{{ text1 }}</p>
-          <p>{{ text2 }}</p>
-          <p v-if="text3"><span class="font-semibold">PM (Plano Mandibular):</span>{{ text3 }}</p>
-          <p v-if="text4"><span class="font-semibold">NF (Suelo Nasal):</span>{{ text4 }}</p>
-          <!-- CITACIÓN -->
-          <div v-if="citacion" class="flex justify-center">
-            <p class="text-center text-[10px] md:text-xs text-gray-600">
-              {{ citacion }}
-            </p>
-          </div>
-        </div>
+      <!-- CITACIÓN -->
+      <div v-if="citacion" class="flex justify-center py-2">
+        <p class="text-center text-[10px] md:text-xs text-gray-600">
+          {{ citacion }}
+        </p>
       </div>
     </div>
   </div>

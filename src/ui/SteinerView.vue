@@ -18,7 +18,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
           <div class="flex flex-col justify-end">
             <h1 class="text-4xl font-bold text-background-primary font-serif">Steiner</h1>
             <h3 class="text-sm font-serif text-border-primary/80">
-              Por: 1. Marcela Pabon - 2. Maria Mendez - 3. Laura Ortiz
+              Por: 1. Gledyz Marcela Pabón - 2. Maria Camila Mendez - 3. Laura Ortiz
             </h3>
           </div>
         </div>
@@ -110,7 +110,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               />
               <TarjetPoints
                 title="<span class='text-red-800/60'>ENA</span>"
-                body="Punto más anterior del proceso espinoso del maxila."
+                body="Punto más anterior del proceso espinoso del maxilar."
               />
               <TarjetPoints
                 title="<span class='text-cyan-600'>ENP</span>"
@@ -159,6 +159,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               tabla1="Protrusión maxilar"
               tabla2="Normotrusión maxilar"
               tabla3="Retrusión maxila"
+              citacion='Riedel, Richard A. "The relation of maxillary structures to cranium in malocclusion and in normal occlusion." The Angle Orthodontist 22.3 (1952): 142-145.'
             />
             <TarjetInfoImages
               title="Ángulo SNB"
@@ -171,6 +172,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               tabla1="Protrusión mandibular "
               tabla2="Normotrusión mandibular"
               tabla3="Retrusión mandibular"
+              citacion='Riedel, Richard A. "The relation of maxillary structures to cranium in malocclusion and in normal occlusion." The Angle Orthodontist 22.3 (1952): 142-145.'
             />
             <TarjetInfoImages
               title="Ángulo ANB"
@@ -183,6 +185,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               tabla1="Clase II esquelética"
               tabla2="Clase I esquelética"
               tabla3="Clase III esquelética"
+              citacion='Riedel, Richard A. "The relation of maxillary structures to cranium in malocclusion and in normal occlusion." The Angle Orthodontist 22.3 (1952): 142-145.'
             />
             <TarjetInfoImages
               title="Ángulo SND"
@@ -190,10 +193,12 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               text1="Formado por los planos S-N y N-D"
               text2="Indica la ubicación anteroposterior del mentón respecto a la base del cráneo."
               norma="76-77°"
+              SD="No Aplica"
+              rango="No Aplica"
               tabla1="Protrusión mandibular"
               tabla2="Normotrusión mandibular"
               tabla3="Retrusión mandibular"
-              citacion="Anexo: El autor no da desviaciòn estandar"
+              citacion='Riedel, Richard A. "The relation of maxillary structures to cranium in malocclusion and in normal occlusion." The Angle Orthodontist 22.3 (1952): 142-145.'
             />
           </div>
         </div>
@@ -226,10 +231,10 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               text2="Indica la inclinación del plano oclusal con respecto a la base del cráneo."
               text3="Indica la dirección de crecimiento"
               norma="14.5°"
-              tabla1="Hiperdivergente puede sugerir patrón de crecimiento/ facial vertical"
+              tabla1="Hiperdivergente"
               tabla2="Normodivergente"
-              tabla3="Hipodivergente puede sugerir patrón de crecimiento/ facial horizontal"
-              anexo="Anexo: El autor no da desviación estandar ni rango"
+              tabla3="Hipodivergente"
+              anexo="Anexo:  El autor no describe datos de desviación estándar y rango"
               citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
             />
             <TarjetInfoImages
@@ -260,10 +265,12 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               text1="Formado por el eje longitudinal del incisivo superior y el plano N-A."
               text2="Indica la inclinación anteroposterior del incisivo superior con respecto al tercio medio facial."
               norma="22°"
+              SD="No Aplica"
+              rango="No Aplica"
               tabla1="Proinclinación del incisivo superior"
-              tabla2="Normoinclinación"
+              tabla2="Normoinclinación del incisivo superior"
               tabla3="Retroinclinación del incisivo superior"
-              anexo="Anexo: El autor no da desviación estándar ni rango"
+              anexo="Anexo: El autor no describe datos de desviación estándar y rango"
               citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
             />
             <TarjetInfoImages
@@ -272,10 +279,12 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               text1="Es la distancia entre el borde incisal del incisivo superior y el plano N-A."
               text2="Indica la ubicación anteroposterior del incisivo superior."
               norma="4 mm"
+              SD="No Aplica"
+              rango="No Aplica"
               tabla1="Protrusión del incisivo superior"
-              tabla2="Normotrusión"
+              tabla2="Normotrusión del incisivo superior"
               tabla3="Retrusión del incisivo superior"
-              anexo="Anexo: El autor no da desviación estándar ni rango"
+              anexo="Anexo: El autor no describe datos de desviación estándar y rango"
               citacion='Downs, Willian B, and Aurora Illionis. "Variations in facial relationship: Their significance in treatment and prognosis." Julio 1949: 145-155'
             />
             <TarjetInfoImages
@@ -284,10 +293,12 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               text1="Formado por el eje longitudinal del incisivo superior y el plano palatino"
               text2="Indica la inclinación anteroposterior del incisivo superior con respecto a su base ósea"
               norma="106° - 112°"
+              SD="No Aplica"
+              rango="No Aplica"
               tabla1="Proinclinación del incisivo superior"
-              tabla2="Normoinclinación"
+              tabla2="Normoinclinación del incisivo superior"
               tabla3="Retroinclinación del incisivo superior"
-              anexo="Anexo: El autor no da desviación estándar ni rango"
+              anexo="Anexo: El autor no describe datos de desviación estándar y rango"
               citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
             />
             <TarjetInfoImages
@@ -299,7 +310,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               SD="+/- 5.75°"
               rango="97,25° a 108,75°"
               tabla1="Proinclinación del incisivo superior"
-              tabla2="Normoinclinación"
+              tabla2="Normoinclinación del incisivo superior"
               tabla3="Retroinclinación del incisivo superior"
               citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
             />
@@ -309,10 +320,12 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               text1="Formado por el eje longitudinal del incisivo inferior y el plano N-B"
               text2="Indica la inclinación anteroposterior del incisivo inferior."
               norma="25°"
+              SD="No aplica"
+              rango="No aplica"
               tabla1="Proinclinación del incisivo inferior"
-              tabla2="Normoinclinación"
+              tabla2="Normoinclinación del incisivo superior"
               tabla3="Retroinclinación del incisivo inferior"
-              anexo="Anexo: El autor no da desviación estándar ni rango"
+              anexo="Anexo: El autor no describe datos de desviación estándar y rango"
               citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7 "
             />
             <TarjetInfoImages
@@ -321,10 +334,12 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               text1="Es la distancia entre el borde incisal del incisivo inferior y el plano NB"
               text2="Indica la ubicación anteroposterior del incisivo inferior."
               norma="4mm"
+              SD="No aplica"
+              rango="No aplica"
               tabla1="Protrusión del incisivo inferior"
-              tabla2="Normotrusión"
+              tabla2="Normotrusión de incisivo inferior"
               tabla3="Retrusión del incisivo inferior"
-              anexo=" Anexo: El autor no da desviación estándar ni rango"
+              anexo="Anexo: El autor no describe datos de desviación estándar y rango"
               citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
             />
             <TarjetInfoImages
@@ -336,7 +351,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               SD="+/- 6.78°"
               rango="83,22° - 96,78°"
               tabla1="Proinclinación del incisivo inferior"
-              tabla2="Normoinclinación"
+              tabla2="Normoinclinación de incisivo inferior"
               tabla3="Retroinclinación del incisivo inferior"
               citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
             />
@@ -349,7 +364,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               SD="+/- 9.24°"
               rango="120,76° - 139,24°"
               tabla1="Retroinclinación de los incisivos"
-              tabla2="Normoinclinación"
+              tabla2="Normoinclinación de los incisivos"
               tabla3="Proinclinación de los incisivos"
               citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
             />

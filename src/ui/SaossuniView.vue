@@ -19,7 +19,9 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
           </h1>
           <div class="flex flex-col justify-end">
             <h1 class="text-4xl font-bold text-background-primary font-serif">Saossuni</h1>
-            <h3 class="text-sm font-serif text-border-primary/80">Por: 1. Oscar - 2. William</h3>
+            <h3 class="text-sm font-serif text-border-primary/80">
+              Por: 1. Oscar Ardila - 2. William Pedraza
+            </h3>
           </div>
         </div>
         <div class="w-full bg-gray-300 rounded">
@@ -110,6 +112,60 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
             </div>
           </div>
 
+          <!--* LOCALIZACIÓN punto CERO (0) -->
+          <div class="w-full flex justify-center">
+            <div
+              class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
+            >
+              <!-- HEADER -->
+              <div class="bg-background-primary rounded-t-xl px-4 py-2">
+                <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
+                  Localización punto cero (0)
+                </h2>
+              </div>
+
+              <!-- BODY -->
+              <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
+                <!-- IMAGEN -->
+                <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
+                  <img
+                    src="/images/Localizacion punto cero.png"
+                    alt="Localización del punto cero (0)"
+                    class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain"
+                  />
+                </div>
+
+                <!-- CONTENIDO -->
+                <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
+                  <ul class="list-disc px-3">
+                    <li>Convergencia de los 4 planos de la prolongación de los planos</li>
+                    <li>
+                      No converge los planos en un punto posterior: el punto 0 : centro de un área
+                      de 15mm de diámetro dentro del cual pasan los cuatro planos. Se empiezan a
+                      trazar líneas verticales milimétricamente separadas y en la zona donde se
+                      trace la línea de diámetro más corto entre los 15mm
+                    </li>
+                  </ul>
+
+                  <div class="flex justify-center items-center md:pr-4">
+                    <img
+                      src="/images/Localizacion punto cero info.png"
+                      alt="Localización del punto cero (0)"
+                      class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain"
+                    />
+                  </div>
+                  <!-- CITACIÓN -->
+                  <div class="flex justify-center">
+                    <p class="text-center text-[10px] md:text-xs text-gray-600">
+                      V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
+                      cephalo-facio-dental relationships , 1955
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="flex justify-center">
             <p class="text-center text-[10px] md:text-xs text-gray-600">
               V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
@@ -119,7 +175,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
 
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Planos de referencia"
               imageSrc="/images/Planos referenciales Saossuni.png"
               text1="<span class='font-semibold'>Plano supraorbitario:</span> Plano que une puntos Ro y Cla."
@@ -127,28 +183,37 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Planos de referencia"
               imageSrc="/images/Plano palatino Saossuni.png"
               text1="<span class='font-semibold'>Plano palatino:</span> plano que une los puntos ENA y ENP."
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Planos de referencia"
               imageSrc="/images/Plano oclusal.png"
               text1="<span class='font-semibold'>Plano oclusal:</span> plano bisectado que pase por la cuspide mesial de primero molares y bordes incisales de incisivos centrales."
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Planos de referencia"
               imageSrc="/images/Plano mandibular.png"
               text1="<span class='font-semibold'>Plano mandibular:</span> Plano tangente de los bordes inferiores, anterior y posterior del cuerpo mandibular."
               text2="Error en el artículo original: Sassouni realiza trazos del plano mandibular uniendo puntos Go y Me."
+              text3="En la facultad de odontología UAN utilizamos el plano mandibular que une los puntos Go - Me"
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
 
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Planos de referencia"
+              imageSrc="/images/Plano ramal.png"
+              text1="<span class='font-semibold'>Plano ramal:</span> Plano tangente de los bordes posteriores de la rama ascendente de la mandíbula."
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <!--! AQUI VOY 27/07/2026 -->
             <!--* PLANOS Y DESCRIPCIÓN -->
             <div class="w-full flex justify-center">
               <div
@@ -243,76 +308,20 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
             </div>
 
             <!--* LOCALIZACIÓN punto CERO (0) -->
-            <div class="w-full flex justify-center">
+            <!-- <div class="w-full flex justify-center">
               <div
                 class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
               >
-                <!-- HEADER -->
-                <div class="bg-background-primary rounded-t-xl px-4 py-2">
-                  <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
-                    Localización punto cero (0)
-                  </h2>
-                </div>
-
-                <!-- BODY -->
-                <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
-                  <!-- IMAGEN -->
-                  <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
-                    <img
-                      src="/images/Localizacion punto cero.png"
-                      alt="Localización del punto cero (0)"
-                      class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain"
-                    />
-                  </div>
-
-                  <!-- CONTENIDO -->
-                  <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
-                    <ul class="list-disc px-3">
-                      <li>Convergencia de los 4 planos de la prolongación de los planos</li>
-                      <li>
-                        No converge los planos en un punto posterior: el punto 0 : centro de un área
-                        de 15mm de diámetro dentro del cual pasan los cuatro planos. Se empiezan a
-                        trazar líneas verticales milimétricamente separadas y en la zona donde se
-                        trace la línea de diámetro más corto entre los 15mm
-                      </li>
-                    </ul>
-
-                    <div
-                      class="flex justify-center items-center md:border-r md:pr-4 border-gray-400"
-                    >
-                      <img
-                        src="/images/Localizacion punto cero info.png"
-                        alt="Localización del punto cero (0)"
-                        class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain"
-                      />
-                    </div>
-                    <!-- CITACIÓN -->
-                    <div class="flex justify-center">
-                      <p class="text-center text-[10px] md:text-xs text-gray-600">
-                        V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
-                        cephalo-facio-dental relationships , 1955
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                 HEADER
+            <div class="bg-background-primary rounded-t-xl px-4 py-2">
+              <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
+                TIPOS FACIALES
+              </h2>
             </div>
 
-            <!--* LOCALIZACIÓN punto CERO (0) -->
-            <div class="w-full flex justify-center">
-              <div
-                class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
-              >
-                <!-- HEADER -->
-                <div class="bg-background-primary rounded-t-xl px-4 py-2">
-                  <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
-                    TIPOS FACIALES
-                  </h2>
-                </div>
-
-                <!-- BODY -->
+            BODY
                 <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
-                  <!-- CONTENIDO -->
+                   CONTENIDO
                   <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
                     <div class="flex flex-col flex-1 text-sm md:text-base justify-center">
                       <div class="flex">
@@ -359,7 +368,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
                         </div>
                       </div>
                     </div>
-                    <!-- CITACIÓN -->
+                     CITACIÓN
                     <div class="flex justify-center">
                       <p class="text-center text-[10px] md:text-xs text-gray-600">
                         V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
@@ -369,10 +378,123 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+
+            <!-- ARCOS -->
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Arcos"
+              imageSrc="/images/Arcos arco anterior.png"
+              text1="<span class='font-semibold w-full flex justify-center'>Arco anterior</span>"
+              text2="Se traza sobre el plano Basal y el Plano mandibular. Tomando 0 como centro y punto N como radio."
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Arcos"
+              imageSrc="/images/Arcos arco medio.png"
+              text1="<span class='font-semibold w-full flex justify-center'>Arco medio</span>"
+              text2="Se traza sobre el plano Basal y el plano mandibular. Tomando 0 como centro y (Te) como radio."
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Arcos"
+              imageSrc="/images/Arcos arco posterior.png"
+              text1="<span class='font-semibold w-full flex justify-center'>Arco posterior</span>"
+              text2="Se traza sobre el plano Basal y el plano mandibular. Tomando 0 como centro y (Sp) como radio."
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Arcos"
+              imageSrc="/images/Arcos arco basal.png"
+              text1="<span class='font-semibold w-full flex justify-center'>Arco basal</span>"
+              text2="Se traza sobre el plano palatino y el Plano mandibular. Tomando 0 como centro y punto A como radio."
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <!-- EJES -->
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Ejes"
+              imageSrc="/images/Ejes incisivo superior.png"
+              text1="<span class='font-semibold w-full flex justify-center'>Incisivo superior</span>"
+              text2="Eje longitudinal que une los puntos Ls - Lsa"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Ejes"
+              imageSrc="/images/Ejes primer molar superior.png"
+              text1="<span class='font-semibold w-full flex justify-center'>Primer molar superior</span>"
+              text2="Eje que se trata perpendicular a plano oclusal que pase sobre el 6 superior"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Ejes"
+              imageSrc="/images/Ejes incisivo inferior.png"
+              text1="<span class='font-semibold w-full flex justify-center'>Incisivo inferior</span>"
+              text2="Eje longitudinal que une los puntos Li - Lia"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Ejes"
+              imageSrc="/images/Ejes primer molar inferior.png"
+              text1="<span class='font-semibold w-full flex justify-center'>Primer molar inferior</span>"
+              text2="Eje que se traza perpendicular al plano oclusal que pasa sobre el 6 inferior"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <!-- ANGULOS -->
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Ángulos"
+              imageSrc="/images/Angulos.png"
+              text1="<span class='font-semibold w-full flex justify-center'>Primer molar inferior</span>"
+              text2="Eje que se traza perpendicular al plano oclusal que pasa sobre el 6 inferior"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <!-- TIPOS FACIALES -->
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Tipos Faciales"
+              imageSrc="/images/Tipos faciales facial 1.png"
+              text1="<span class='font-semibold w-full'>Tipo facial I </span> ( plano <span class='font-semibold'>basal </span> no converge en punto cero)"
+              text2="A: pasa por encima de punto cero"
+              text3="B: pasa por debajo de punto cero"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Tipos Faciales"
+              imageSrc="/images/Tipos faciales facial 2.png"
+              text1="<span class='font-semibold w-full'>Tipo facial II </span> ( plano <span class='font-semibold'>Palatino </span> no converge en punto cero)"
+              text2="A: pasa por encima de punto cero"
+              text3="B: pasa por debajo de punto cero"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Tipos Faciales"
+              imageSrc="/images/Tipos faciales facial 3.png"
+              text1="<span class='font-semibold w-full'>Tipo facial III </span> ( plano <span class='font-semibold'>Oclusal </span> no converge en punto cero)"
+              text2="A: pasa por encima de punto cero"
+              text3="B: pasa por debajo de punto cero"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
+            <TarjejtInforImages2
+              name="TarjejtInforImages2"
+              title="Tipos Faciales"
+              imageSrc="/images/Tipos faciales facial 4.png"
+              text1="<span class='font-semibold w-full'>Tipo facial IV </span> ( plano <span class='font-semibold'>Mandibular </span> no converge en punto cero)"
+              text2="A: pasa por encima de punto cero"
+              text3="B: pasa por debajo de punto cero"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
+            />
 
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Analisis tipos de mandibular"
               imageSrc="/images/Analisis tipos de mandibular.png"
               text1="<span class='font-semibold w-full flex justify-center'>HORIZONTAL</span>"
@@ -380,7 +502,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Analisis tipos de mandibular"
               imageSrc="/images/Analisis tipos de mandibular 2.png"
               text1="<span class='font-semibold w-full flex justify-center'>CURVA</span>"
@@ -388,7 +510,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Analisis tipos de mandibular"
               imageSrc="/images/Analisis tipos de mandibular 3.png"
               text1="<span class='font-semibold w-full flex justify-center'>OBLICUA</span>"
@@ -396,7 +518,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Analisis tipos de paladar"
               imageSrc="/images/Analisis tipos de paladar.png"
               text1="<span class='font-semibold w-full flex justify-center'>HORIZONTAL</span>"
@@ -404,7 +526,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Analisis tipos de paladar"
               imageSrc="/images/Analisis tipos de paladar 2.png"
               text1="<span class='font-semibold w-full flex justify-center'>CONVEJO</span>"
@@ -412,7 +534,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
             <TarjejtInforImages2
-              name="TarjejtInforImages4"
+              name="TarjejtInforImages2"
               title="Analisis tipos de paladar"
               imageSrc="/images/Analisis tipos de paladar 3.png"
               text1="<span class='font-semibold w-full flex justify-center'>CÓNCAVO</span>"
@@ -485,19 +607,19 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
                         el texto original se toma punto de referencia ENA como radio.
                       </p>
                     </div>
-                    <!-- CITACIÓN -->
-                    <div class="flex justify-center">
-                      <p class="text-center text-[10px] md:text-xs text-gray-600">
-                        V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
-                        cephalo-facio-dental relationships , 1955
-                      </p>
-                    </div>
                   </div>
+                </div>
+                <!-- CITACIÓN -->
+                <div class="flex justify-center pb-2">
+                  <p class="text-center text-[10px] md:text-xs text-gray-600">
+                    V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
+                    cephalo-facio-dental relationships , 1955
+                  </p>
                 </div>
               </div>
             </div>
 
-            <!--* Arco Anterior -->
+            <!--* Arco medio -->
             <div class="w-full flex justify-center">
               <div
                 class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
@@ -526,7 +648,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
                       Se traza sobre el plano Basal y el plano mandibular. Tomando 0 como centro y
                       (Te) como radio.
                     </p>
-                    <p>( se referencia surco intercuspideo de 6 sup e inf )</p>
+                    <p>( se referencia surco intercuspideo de 6 sup )</p>
                     <p>Hallazgo:</p>
                     <!-- TABLA -->
                     <div class="my-2 overflow-x-auto flex items-center justify-center">
@@ -547,20 +669,81 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
                         </tbody>
                       </table>
                     </div>
-
-                    <!-- CITACIÓN -->
-                    <div class="flex justify-center">
-                      <p class="text-center text-[10px] md:text-xs text-gray-600">
-                        V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
-                        cephalo-facio-dental relationships , 1955
-                      </p>
-                    </div>
                   </div>
+                </div>
+                <!-- CITACIÓN -->
+                <div class="flex justify-center pb-2">
+                  <p class="text-center text-[10px] md:text-xs text-gray-600">
+                    V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
+                    cephalo-facio-dental relationships , 1955
+                  </p>
                 </div>
               </div>
             </div>
 
-            <!--* Arco Anterior -->
+            <!--* Arco posterior -->
+            <div class="w-full flex justify-center">
+              <div
+                class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
+              >
+                <!-- HEADER -->
+                <div class="bg-background-primary rounded-t-xl px-4 py-2">
+                  <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
+                    Arco posterior
+                  </h2>
+                </div>
+
+                <!-- BODY -->
+                <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
+                  <!-- IMAGEN -->
+                  <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
+                    <img
+                      src="/images/Arco posterior.png"
+                      alt="Arco Posterior"
+                      class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain"
+                    />
+                  </div>
+
+                  <!-- CONTENIDO -->
+                  <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
+                    <p>
+                      Se traza sobre el plano Basal y el plano mandibular. Tomando 0 como centro y
+                      (Sp) como radio.
+                    </p>
+                    <p>( se referencian puntos Sp - Go )</p>
+                    <p>Hallazgo:</p>
+                    <!-- TABLA -->
+                    <div class="my-2 overflow-x-auto flex items-center justify-center">
+                      <table class="w-auto text-[10px] sm:text-sm text-center">
+                        <tbody>
+                          <tr>
+                            <td class="p-2 font-semibold">Protrusion</td>
+                            <td class="p-2">Go por delante del arco</td>
+                          </tr>
+                          <tr>
+                            <td class="p-2 font-semibold">Normotrusion</td>
+                            <td class="p-2">Sp - Go coinciden con el arco</td>
+                          </tr>
+                          <tr>
+                            <td class="p-2 font-semibold">Retroposicion</td>
+                            <td class="p-2">Go por detras del arco</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- CITACIÓN -->
+                <div class="flex justify-center pb-2">
+                  <p class="text-center text-[10px] md:text-xs text-gray-600">
+                    V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
+                    cephalo-facio-dental relationships , 1955
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--* Arco basal -->
             <div class="w-full flex justify-center">
               <div
                 class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
@@ -610,30 +793,32 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
                         </tbody>
                       </table>
                     </div>
-
-                    <!-- CITACIÓN -->
-                    <div class="flex justify-center">
-                      <p class="text-center text-[10px] md:text-xs text-gray-600">
-                        V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
-                        cephalo-facio-dental relationships , 1955
-                      </p>
-                    </div>
                   </div>
+                </div>
+                <!-- CITACIÓN -->
+                <div class="flex justify-center pb-2">
+                  <p class="text-center text-[10px] md:text-xs text-gray-600">
+                    V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
+                    cephalo-facio-dental relationships , 1955
+                  </p>
                 </div>
               </div>
             </div>
 
-            <TarjetInfoImages
+            <TarjejtInforImages2
               title="Ángulo 1-PP (IMAX)"
               imageSrc="/images/angulo 1-PP (imax) Saossuni.png"
               text1="Formado por el eje longitudinal del incisivo superior y el plano palatino"
               text2="Indica la inclinación anteroposterior del incisivo superior con respecto a su base ósea"
-              norma="106° - 112°"
+              tituloNorma="Norma"
+              norma1="106° - 112°"
+              Valores1="Valor Aumentado:"
               tabla1="Proinclinación del incisivo superior"
+              Valores2="Valor en Norma"
               tabla2="Normoinclinación"
+              Valores3="Valor Disminuido:"
               tabla3="Retroinclinación del incisivo superior"
-              anexo="Anexo: El autor no da desviación estándar ni rango"
-              citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
 
             <TarjetInfoImages
@@ -647,7 +832,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
               tabla1="Proinclinación del incisivo inferior"
               tabla2="Normoinclinación"
               tabla3="Retroinclinación del incisivo inferior"
-              citacion="Steiner, C.C. (1953) Cephalometrics for You and Me. American Journal of Orthodontics, 39, 729755.http://dx.doi.org/10.1016/0002-9416(53)90082-7"
+              citacion="V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of cephalo-facio-dental relationships , 1955"
             />
 
             <!--* Arco Anterior -->
@@ -708,15 +893,14 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
                         </tbody>
                       </table>
                     </div>
-
-                    <!-- CITACIÓN -->
-                    <div class="flex justify-center">
-                      <p class="text-center text-[10px] md:text-xs text-gray-600">
-                        V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
-                        cephalo-facio-dental relationships , 1955
-                      </p>
-                    </div>
                   </div>
+                </div>
+                <!-- CITACIÓN -->
+                <div class="flex justify-center pb-2">
+                  <p class="text-center text-[10px] md:text-xs text-gray-600">
+                    V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
+                    cephalo-facio-dental relationships , 1955
+                  </p>
                 </div>
               </div>
             </div>
@@ -759,15 +943,14 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
 
                   <p><span class="font-semibold">Morida abierta:</span> Planos divergentes</p>
                   <p><span class="font-semibold">Morida profunda:</span> Planos convergentes</p>
-
-                  <!-- CITACIÓN -->
-                  <div class="flex justify-center">
-                    <p class="text-center text-[10px] md:text-xs text-gray-600">
-                      V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
-                      cephalo-facio-dental relationships , 1955
-                    </p>
-                  </div>
                 </div>
+              </div>
+              <!-- CITACIÓN -->
+              <div class="flex justify-center pb-2">
+                <p class="text-center text-[10px] md:text-xs text-gray-600">
+                  V. Sassouni, Philadelphia, Pa. A roentgenographic cephalometric analysis of
+                  cephalo-facio-dental relationships , 1955
+                </p>
               </div>
             </div>
           </div>

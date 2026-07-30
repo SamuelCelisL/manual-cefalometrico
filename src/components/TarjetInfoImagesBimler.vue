@@ -187,14 +187,13 @@ defineProps({
           <div v-if="anexo2" class="flex gap-2">
             <p class="text-gray-600">{{ anexo2 }}</p>
           </div>
-
-          <!-- CITACIÓN -->
-          <div v-if="citacion" class="flex justify-center">
-            <p class="text-center text-[10px] md:text-xs text-gray-600">
-              {{ citacion }}
-            </p>
-          </div>
         </div>
+      </div>
+      <!-- CITACIÓN -->
+      <div v-if="citacion" class="flex justify-center pb-2">
+        <p class="text-center text-[10px] md:text-xs text-gray-600">
+          {{ citacion }}
+        </p>
       </div>
     </div>
   </div>
@@ -225,17 +224,17 @@ defineProps({
           <div v-if="tabla" class="my-2 overflow-x-auto flex items-center justify-center">
             <table class="w-auto text-[10px] sm:text-sm text-center border-gray-600">
               <tbody>
-                <tr class="">
+                <tr>
                   <td v-if="norma1" class="border" v-html="norma1"></td>
                   <td v-if="SD1" class="border" v-html="SD1"></td>
                   <td v-if="rango1" class="border" v-html="rango1"></td>
                 </tr>
-                <tr v-if="norma2 || SD2 || rango2" class="">
+                <tr v-if="norma2 || SD2 || rango2">
                   <td v-if="norma2" class="border" v-html="norma2"></td>
                   <td v-if="SD2" class="border" v-html="SD2"></td>
                   <td v-if="rango2" class="border" v-html="rango2"></td>
                 </tr>
-                <tr v-if="norma3 || SD3 || rango3" class="">
+                <tr v-if="norma3 || SD3 || rango3">
                   <td v-if="norma3" class="border" v-html="norma3"></td>
                   <td v-if="SD3" class="border" v-html="SD3"></td>
                   <td v-if="rango3" class="border" v-html="rango3"></td>
@@ -258,14 +257,13 @@ defineProps({
           <div v-if="anexo" class="flex gap-2">
             <p><span class="font-semibold">Anexo:</span> <span v-html="anexo"></span></p>
           </div>
-
-          <!-- CITACIÓN -->
-          <div v-if="citacion" class="flex justify-center">
-            <p class="text-center text-[10px] md:text-xs text-gray-600">
-              {{ citacion }}
-            </p>
-          </div>
         </div>
+      </div>
+      <!-- CITACIÓN -->
+      <div v-if="citacion" class="flex justify-center pb-2">
+        <p class="text-center text-[10px] md:text-xs text-gray-600">
+          {{ citacion }}
+        </p>
       </div>
     </div>
   </div>

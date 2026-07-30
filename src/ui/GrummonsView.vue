@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TarjetPoints from '@/components/TarjetPoints.vue'
+// import TarjetPoints from '@/components/TarjetPoints.vue'
 import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
 import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
 </script>
@@ -37,7 +37,7 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             <TarjetPoints
               title="Ag"
               body="Escotadura antegonial, punto más profundo de la escotadura antegonial."
@@ -75,7 +75,15 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
             <TarjetPoints title="A1" body="Borde del incisivo central superior." />
             <TarjetPoints title="B1" body="Borde del incisivo central inferior." />
             <TarjetPoints title="MSR" body="Linea de referencia sagital media en Crista Galli." />
-          </div>
+          </div> -->
+
+          <!-- INTRODUCCIÓN -->
+          <TarjejtInforImages2
+            title="Introducción"
+            text1="<p class='text-xl text-gray-700 text-center'>Para el análisis de esta cefalometría se debe obtener una radiografía anteroposterior del paciente a evaluar.</p>"
+            text2="<p class='text-xl text-gray-700 text-center'>Esta cefalometría es aquella que no es normativa ya que no tiene valores establecidos para comparar a diferencia de las otras cefalometrías, esta se realiza solo si el paciente presenta alguna asimetría o desviación y se quiere confirmar el diagnóstico para poder definir un correcto plan de tratamiento.</p>"
+            text3="<p class='text-xl text-gray-700 text-center'>Los valores obtenidos de esta cefalometría se deben comparar con el mismo paciente es decir se comparan los valores de la parte derecha con la parte izquierda y se toman las respectivas decisiones.</p>"
+          />
 
           <!-- IMAGEN Con puntos Cefalométricos -->
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
@@ -130,6 +138,13 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
                     </p>
                   </div>
                 </div>
+                <!-- CITACIÓN -->
+                <div class="flex justify-center pb-2">
+                  <p class="text-center text-[10px] md:text-xs text-gray-600">
+                    Grummons, D., Martin A., Kappeiny July (1987), A frontal asymmetry analysis.,
+                    pages 448- 465
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -138,14 +153,16 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
             <TarjejtInforImages2
               title="Plano de Referencia MSR"
               imageSrc="/images/Plano de referencia MSR.png"
-              text1="Plano que pase de Cg a ENA hacia la zona mentoniana."
-              text2="La mitad del plano Z-Z a ENA"
+              text1="Plano perpendicular a Z-Z que pase de Cg a ENA hacia la zona mentoniana"
+              citacion="Grummons, D., Martin A., Kappeiny July (1987), A frontal asymmetry analysis., pages 448- 465"
             />
             <TarjejtInforImages2
               title="Plano de Referencia MSR"
               imageSrc="/images/Plano de referencia MSR 2.png"
-              text1="Plano que pase de Cg a ENA hacia la zona mentoniana."
-              text2="Trazo que pase por la mitad del plano Z-Z y del plano Fr-Fr (Asimetría facial superior)"
+              text1="Para asimetría facial superior:"
+              text2="Plano que pase de Cg a ENA hacia la zona mentoniana"
+              text3="Trazo que pase por la mitad del plano Z-Z y del plano Fr-Fr"
+              citacion="Grummons, D., Martin A., Kappeiny July (1987), A frontal asymmetry analysis., pages 448- 465"
             />
           </div>
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
@@ -285,18 +302,34 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
             <TarjetInfoImagesGrummons
               title="Morfología Mandibular"
               imageSrc="/images/Morfologia mandibular.png"
-              text1="Mide el paralelismo de los planos frente a MSR."
+              text1="Medida lineal y angular"
               viñeta1="Longitud total mandibular (Co-Me)"
               viñeta2="Altura de la rama (Co-Ag)"
               viñeta3="Longitud del cuerpo (Ag-Me)"
               viñeta4="Ángulo goniaco"
               viñeta5="Línea de <span class='font-semibold'>ENA a Me</span> como línea divisoria"
-              Medida1="<span class='text-green-600 font-semibold'>Co-Me</span>"
-              Medida2="<span class='text-blue-600 font-semibold'>Ag-Me</span>"
-              Medida3="<span class='text-pink-600 font-semibold'>Co-Ag</span>"
-              Medida4="<span class='text-orange-500 font-semibold'>CO-Ag-Me</span>"
-              derecho4="Ángulo "
-              izquierdo4="Ángulo "
+              :medidas="[
+                {
+                  medida: `<span class='text-green-600 font-semibold'>Co-Me</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-blue-600 font-semibold'>Ag-Me</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-pink-600 font-semibold'>Co-Ag</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-orange-500 font-semibold'>CO-Ag-Me</span>`,
+                  derecho: 'Ángulo',
+                  izquierdo: 'Ángulo',
+                },
+              ]"
             />
 
             <TarjetInfoImagesGrummons
@@ -305,9 +338,23 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
               viñeta1="Construcción de 2 polígonos"
               viñeta2="Co-Ag-Me y la intersección del plano Co-Co al plano MSR"
               viñeta3="Se debe realizar una superposición de los polígonos y determinar simetría o asimetría"
-              Medida1="Vertical <span class='text-blue-600 font-semibold'>Co-Ag</span>"
-              Medida2=" Horizontal <span class='text-green-600 font-semibold'>Co-MSR</span>"
-              Medida3="Transversal <span class='text-pink-600 font-semibold'>Ag-Me</span>"
+              :medidas="[
+                {
+                  medida: `Vertical <span class='text-blue-600 font-semibold'>Co-Ag</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `Horizontal <span class='text-green-600 font-semibold'>Co-MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `Transversal <span class='text-pink-600 font-semibold'>Ag-Me</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+              ]"
             />
 
             <TarjetInfoImagesGrummons
@@ -316,10 +363,28 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
               viñeta1="Perpendicular de J a MSR"
               viñeta2="Perpendicular de Ag a MSR"
               viñeta3="Los 4 puntos se unen a Cg"
-              Medida1="<span class='text-green-600 font-semibold'>J - MSR</span>"
-              Medida2="<span class='text-blue-600 font-semibold'> Ag - MSR</span>"
-              Medida3="<span class='text-green-600 font-semibold'>Cg - J</span>"
-              Medida4="<span class='text-blue-600 font-semibold'>Cg - Ag</span>"
+              :medidas="[
+                {
+                  medida: `<span class='text-green-600 font-semibold'>J - MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-blue-600 font-semibold'> Ag - MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-green-600 font-semibold'>Cg - J</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-blue-600 font-semibold'>Cg - Ag</span>`,
+                  derecho: 'Ángulo',
+                  izquierdo: 'Ángulo',
+                },
+              ]"
             />
 
             <TarjetInfoImagesGrummons
@@ -327,18 +392,56 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
               imageSrc="/images/Asimetria lineal.png"
               text1="Evaluar las distancias lineales desde:"
               viñeta1="Co, Nc, J, Ag, al plano de referencia MSR."
-              Medida1="<span class='text-green-600 font-semibold'>Co - MSR</span>"
-              Medida2="<span class='text-blue-600 font-semibold'>Nc - MSR</span>"
-              Medida3="<span class='text-green-600 font-semibold'>J - MSR</span>"
-              Medida4="<span class='text-blue-600 font-semibold'>Ag - MSR</span>"
-              Medida5="<span class='text-green-600 font-semibold'>Me - MSR</span>"
+              :medidas="[
+                {
+                  medida: `<span class='text-green-600 font-semibold'>Z - MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-blue-600 font-semibold'>ZA - MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-green-600 font-semibold'>Co - MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-blue-600 font-semibold'>Nc - MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-green-600 font-semibold'>J - MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-blue-600 font-semibold'>Ag - MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+                {
+                  medida: `<span class='text-green-600 font-semibold'>Me - MSR</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+              ]"
             />
 
             <TarjetInfoImagesGrummons
               title="Relación Maxilo-Mandibular"
               imageSrc="/images/Relacion maxilo-mandibular.png"
               viñeta1="Distancia lineal desde las cúspides vestibulares de los primeros molares superiores a la perpendicular del proceso yugal (J)."
-              Medida1="<span class='text-green-600 font-semibold'>J - Plano Oclusal</span>"
+              :medidas="[
+                {
+                  medida: `<span class='text-green-600 font-semibold'>J - Plano Oclusal</span>`,
+                  derecho: 'mm',
+                  izquierdo: 'mm',
+                },
+              ]"
             />
 
             <!-- TARJETA 7 -->
@@ -464,34 +567,11 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
               </div>
             </div>
 
-            <!-- TARJETA 8 -->
-            <div class="w-full flex justify-center">
-              <div
-                class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
-              >
-                <!-- HEADER -->
-                <div class="bg-background-primary rounded-t-xl px-4 py-2">
-                  <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
-                    Correción del Articulo original
-                  </h2>
-                </div>
-
-                <!-- BODY -->
-                <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
-                  <!-- CONTENIDO -->
-                  <div class="flex flex-col gap-2 flex-1 text-sm md:text-base justify-center">
-                    <p class="text-lg text-gray-600">
-                      En el articulo original se muestra en la imagen de las proporciones verticales
-                      que se toman la medida desde los puntos Z-Z pero realmente se toma desde el
-                      punto crista galli, en el articulo original no se especifica como sacar las
-                      proporciones exactas sino solo la división de las medidas, para obtener las
-                      respectivas proporciones a esa operación matematica se le multiplica por 100
-                      para obtener el respectivo porcentaje.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <TarjejtInforImages2
+              title="Corrección del Artículo original"
+              text1="<p class='text-xl text-gray-700'>En el artículo original, la imagen de las proporciones verticales indica que las mediciones se realizan entre los puntos Z–Z; sin embargo, en la práctica, la referencia se toma desde el punto crista galli.</p>"
+              text2="<p class='text-xl text-gray-700'>El artículo no especifica de manera detallada cómo calcular las proporciones exactas, sino que se limita a mostrar la división de las medidas obtenidas. Para expresar dichas proporciones en términos porcentuales, es necesario multiplicar el resultado de esta operación matemática por 100.</p>"
+            />
           </div>
         </div>
       </div>

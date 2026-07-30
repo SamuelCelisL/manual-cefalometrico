@@ -29,91 +29,28 @@
           <h2 class="text-2xl font-bold text-background-primary font-serif">Análisis de Wits</h2>
           <div class="flex flex-col justify-center items-center gap-4 mb-2">
             <div class="w-full flex justify-center">
-              <div
-                class="flex flex-col rounded-xl shadow-lg shadow-gray-400 hover:scale-[1.02] transition-all duration-200 w-full max-w-5xl"
-              >
-                <!-- HEADER -->
-                <div class="bg-background-primary rounded-t-xl px-4 py-2">
-                  <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-text-suaves">
-                    Wits = Distancia entre AO y BO
-                  </h2>
-                </div>
-
-                <!-- BODY -->
-                <div class="flex flex-col md:flex-row rounded-b-xl p-3 gap-4">
-                  <!-- IMAGEN -->
-                  <div class="flex justify-center items-center md:border-r md:pr-4 border-gray-400">
-                    <img
-                      src="/images/wits = distancia entre ao y bo.png"
-                      alt="Wits = Distancia entre AO y BO"
-                      class="w-40 sm:w-52 md:w-64 lg:w-72 object-contain"
-                    />
-                  </div>
-
-                  <!-- CONTENIDO -->
-                  <div class="flex flex-col gap-2 flex-1 text-sm md:text-base">
-                    <p>
-                      Al plano oclusal bisectado se proyectan líneas perpendiculares desde A y B,
-                      formando puntos AO y BO, se mide la distancia horizontal entre ellos.
-                      Determina la relación anteroposterior entre maxilar superior e inferior
-                    </p>
-                    <p>AO anterior a BO = valor positivo (+).</p>
-                    <p>BO anterior a AO = valore negativo (-).</p>
-
-                    <!-- TABLA -->
-                    <div class="my-2 overflow-x-auto flex items-center justify-center">
-                      <table
-                        class="w-auto text-[10px] sm:text-sm text-center border border-gray-300"
-                      >
-                        <thead class="border-b border-gray-400 bg-blue-200">
-                          <tr>
-                            <th class="uppercase px-5 py-1 border border-gray-400"></th>
-                            <th class="uppercase px-2 py-1 border border-gray-400">Norma</th>
-                            <th class="uppercase px-2 py-1 border border-gray-400">SD</th>
-                            <th class="uppercase px-2 py-1 border border-gray-400">Rango</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr class="border-t border-gray-300">
-                            <td class="p-2 border border-gray-400">Hombres</td>
-                            <td class="p-2 border border-gray-400">-1mm</td>
-                            <td class="p-2 border border-gray-400">+/- 1.9</td>
-                            <td class="p-2 border border-gray-400">-2.9 a 0.9</td>
-                          </tr>
-                          <tr class="border-t border-gray-300">
-                            <td class="p-2 border border-gray-400">Mujeres</td>
-                            <td class="p-2 border border-gray-400">0</td>
-                            <td class="p-2 border border-gray-400">+/-1.77</td>
-                            <td class="p-2 border border-gray-400">-1.77 a 1.77</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-
-                    <div class="flex gap-2">
-                      <p class="text-red-600 uppercase">Valores positivos fuera de la norma:</p>
-                      <p class="">Clase II esquelética</p>
-                    </div>
-                    <div class="flex gap-2">
-                      <p class="text-green-600 uppercase">Valores en Norma:</p>
-                      <p class="">Clase I esquelética</p>
-                    </div>
-                    <div class="flex gap-2">
-                      <p class="text-yellow-600 uppercase">VALORES NEGATIVOS FUERA DE LA NORMA:</p>
-                      <p class="">Clase III esquelética</p>
-                    </div>
-
-                    <!-- CITACIÓN -->
-                    <div class="flex justify-center">
-                      <p class="text-center text-[10px] md:text-xs text-gray-600">
-                        Jacobson A. The “Wits” appraisal of jaw disharmony. American Journal of
-                        Orthodontics [Internet]. 1975 Feb 1;67(2):125–38. Available from:
-                        https://www.ncbi.nlm.nih.gov/pubmed/1054214
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <TarjejtInforImages2
+                title="Wits = Distancia entre AO y BO"
+                imageSrc="/images/wits = distancia entre ao y bo.png"
+                text1="  Al plano oclusal bisectado se proyectan líneas perpendiculares desde A y B,formando puntos AO y BO, se mide la distancia horizontal entre ellos. Determina la relación anteroposterior entre maxilar superior e inferior"
+                text2="AO anterior a BO = valor positivo (+)."
+                text3="BO anterior a AO = valore negativo (-)."
+                tituloFila1="Hombres"
+                norma1="-1mm"
+                SD1="+/- 1.9"
+                rango1="-2.9 a 0.9"
+                tituloFila2="Mujeres"
+                norma2="0"
+                SD2="+/-1.77"
+                rango2=" -1.77mm a 1.77mm"
+                Valores1="Valores positivos fuera de la norma:"
+                tabla1="Clase II esquelética"
+                Valores2="Valores en norma:"
+                tabla2="Clase I esquelética"
+                Valores3="Valores negativos fuera de la norma:"
+                tabla3="Clase III esquelética"
+                citacion="  Jacobson A. The “Wits” appraisal of jaw disharmony. American Journal of Orthodontics [Internet]. 1975 Feb 1;67(2):125–38. Available from: https://www.ncbi.nlm.nih.gov/pubmed/1054214"
+              />
             </div>
           </div>
         </div>
@@ -121,3 +58,7 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import TarjejtInforImages2 from '@/components/TarjejtInforImages2.vue'
+</script>
