@@ -13,7 +13,10 @@
         </h3>
         <h1 class="text-4xl text-white font-serif py-3">
           Manual de
-          <span class="text-text-titles text-md font-serif">Diagnóstico I</span>
+          <span class="text-text-titles text-md font-serif"
+            >Diagnóstico I <span class="text-white"> - </span> Posgrado de Ortodoncia</span
+          >
+          <span> sede Circunvalar Bogotá</span>
         </h1>
         <p class="text-text-suaves/60">
           Guía de referencia para el análisis esquelético, dental y de tejidos blandos mediante las
