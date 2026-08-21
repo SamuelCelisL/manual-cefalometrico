@@ -37,46 +37,6 @@ import TarjetInfoImagesGrummons from '@/components/TarjetInfoImagesGrummons.vue'
             </h2>
           </div>
 
-          <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <TarjetPoints
-              title="Ag"
-              body="Escotadura antegonial, punto más profundo de la escotadura antegonial."
-            />
-            <TarjetPoints
-              title="ANS"
-              body="Espina nasal anterior, es la proyección más anterior del piso de la cavidad nasal."
-            />
-            <TarjetPoints
-              title="Cg"
-              body="Apófisis Crista Galli, punto más superior del hueso etmoides."
-            />
-            <TarjetPoints
-              title="Co"
-              body="Condilion ,Punto posterosuperior sobre la curvatura de la cabeza del cóndilo."
-            />
-            <TarjetPoints
-              title="J"
-              body="Proceso j es el punto de unión entre la tuberosidad maxilar y la raíz vertical del cigoma."
-            />
-            <TarjetPoints
-              title="Fr."
-              body="Foramen redondo: Es un agujero circular en el hueso esfenoidal que conecta la fosa craneal media con la fosa pterigopalatina."
-            />
-            <TarjetPoints title="Me" body="Mentón, punto más anterior de la sínfisis mandibular." />
-            <TarjetPoints title="Nc" body="Cavidad nasal." />
-            <TarjetPoints
-              title="Z"
-              body="Punto más interno de la sutura Cigomático-frontal que coincide con el reborde orbitario."
-            />
-            <TarjetPoints
-              title="ZA"
-              body="Arco Cigomático: centro de la raíz del arco cigomático."
-            />
-            <TarjetPoints title="A1" body="Borde del incisivo central superior." />
-            <TarjetPoints title="B1" body="Borde del incisivo central inferior." />
-            <TarjetPoints title="MSR" body="Linea de referencia sagital media en Crista Galli." />
-          </div> -->
-
           <!-- INTRODUCCIÓN -->
           <TarjejtInforImages2
             title="Introducción"

@@ -8,11 +8,7 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
       <!-- TITULO SECCIÓN -->
       <div class="w-full flex flex-col">
         <div class="w-full flex pb-2 gap-2">
-          <h1
-            class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles"
-            id="inicioSteiner"
-            data-seccion
-          >
+          <h1 class="flex justify-end items-end text-5xl font-semibold font-serif text-text-titles">
             01
           </h1>
           <div class="flex flex-col justify-end">

@@ -2,8 +2,8 @@
 import IconsSVG from '@/components/IconsSVG.vue'
 import { ref, onMounted, nextTick } from 'vue'
 
-const seccionActiva = ref('inicioSteiner')
-const subtituloActivo = ref('inicioSteiner')
+const seccionActiva = ref('cabeceraPage')
+const subtituloActivo = ref('cabeceraPage')
 const menuAbierto = ref<string | null>(null)
 
 const roleUser = ref<string>('')
@@ -31,6 +31,7 @@ const irASubtitulo = (id: string) => {
 }
 
 const obtenerSeccionPadre = (id: string) => {
+  if (id.startsWith('cabeceraPage')) return 'cabeceraPage'
   if (id.startsWith('inicioSteiner')) return 'inicioSteiner'
   if (id.startsWith('TrazoCefalometricoSteiner')) return 'TrazoCefalometricoSteiner'
   if (id.startsWith('PuntosCefalometricosSteiner')) return 'PuntosCefalometricosSteiner'
@@ -99,11 +100,16 @@ onMounted(async () => {
         <img
           src="../../public/images/logo universidad.png"
           alt="Logo de la universidad"
-          class="rounded-xl size-30 md:size-50 lg:size-70"
+          class="rounded-xl size-30 md:size-50"
         />
       </div>
       <div class="flex flex-col w-full pb-3">
         <h1 class="text-center text-text-titles text-md font-serif">MANUAL DE CEFALOMETRÍA</h1>
+        <h4 class="text-center text-[12px] text-text-suaves/80 font-sans">Dirigido por</h4>
+        <h4 class="text-center text-[12px] text-text-suaves/80 font-sans">
+          Iván Rodríguez Mancilla, Docente
+        </h4>
+        <h4 class="text-center text-[12px] text-text-suaves/80 font-sans">2026-1</h4>
       </div>
     </div>
     <!-- BOTONES -->
@@ -112,7 +118,17 @@ onMounted(async () => {
       <button
         :class="[
           ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-          seccionActiva === 'inicioSteiner' ||
+          seccionActiva === 'cabeceraPage'
+            ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
+            : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
+        ]"
+        @click="irASubtitulo('cabeceraPage')"
+      >
+        Inicio
+      </button>
+      <button
+        :class="[
+          ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
           seccionActiva === 'TrazoCefalometricoSteiner' ||
           seccionActiva === 'PuntosCefalometricosSteiner' ||
           seccionActiva === 'relacionVerticalSteiner' ||
@@ -126,17 +142,6 @@ onMounted(async () => {
         Steiner
       </button>
       <div v-if="menuAbierto === 'steinerView'" class="w-full pl-5 flex flex-col">
-        <button
-          @click="irASubtitulo('inicioSteiner')"
-          :class="[
-            ' pl-5 py-2 flex gap-2 items-center w-full transition-all duration-200 cursor-pointer font-sans ',
-            subtituloActivo === 'inicioSteiner'
-              ? 'text-text-titles bg-border-primary/40 border-border-primary border-l-5'
-              : 'bg-none hover:bg-border-primary/20 text-text-suaves/80 hover:border-l-5 border-border-primary hover:text-text-titles',
-          ]"
-        >
-          Inicio
-        </button>
 
         <button
           @click="irASubtitulo('TrazoCefalometricoSteiner')"

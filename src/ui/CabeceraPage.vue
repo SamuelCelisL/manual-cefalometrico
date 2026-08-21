@@ -1,10 +1,14 @@
 <template>
   <div
-    class="w-full md:h-70 flex p-4 border-l-2 border-border-primary bg-linear-to-r from-background-primary to-background-secondary"
+    class="w-full flex p-4 border-l-2 border-border-primary bg-linear-to-r from-background-primary to-background-secondary"
   >
-    <div class="w-full flex flex-col md:flex-row justify-center items-center">
+    <div class="w-full flex flex-col justify-center items-center">
       <div class="flex flex-col md:w-[80%] p-4">
-        <h3 class="text-border-primary text-md font-semibold text-[12px]">
+        <h3
+          class="text-border-primary text-md font-semibold text-[12px]"
+          id="cabeceraPage"
+          data-seccion
+        >
           ANÁLISIS CEFALOMÉTRICO - MCNAMARA
         </h3>
         <h1 class="text-4xl text-white font-serif py-3">
@@ -17,8 +21,8 @@
           crecimiento.
         </p>
       </div>
-      <div class="md:w-[20%] p-2 h-70 flex justify-center">
-        <img src="../assets/images/Imagen2.png" alt="Foto de Ejemplo" />
+      <div class="md:w-full p-2 flex justify-center">
+        <img src="../../public/images/imagenInicio.jpeg" alt="Foto de Ejemplo" />
       </div>
     </div>
   </div>
