@@ -14,7 +14,8 @@ import TarjetInfoImages from '@/components/TarjetInfoImages.vue'
           <div class="flex flex-col justify-end">
             <h1 class="text-4xl font-bold text-background-primary font-serif">Steiner</h1>
             <h3 class="text-sm font-serif text-border-primary/80">
-              Por: 1. Gledyz Marcela Pabón - 2. Maria Camila Mendez - 3. Laura Ortiz - 4. Zamanyi Vargas
+              Por: 1. Gledyz Marcela Pabón - 2. Maria Camila Mendez - 3. Laura Ortiz - 4. Zamanyi
+              Vargas
             </h3>
           </div>
         </div>
